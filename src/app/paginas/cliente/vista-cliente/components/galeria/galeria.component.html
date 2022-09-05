@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="!fueClickeado">
     <div class="col" *ngFor="let info of informacionDisponible">
         <a (click)="clickearMarcar(info)">
             <div class="card h-100">
@@ -10,3 +10,5 @@
         </a>
     </div>
 </div>
+<app-vista-detallada *ngIf="fueClickeado" (fueClickeadoCambio)="escucharRespuesta()" [fueClickeado]="fueClickeado">
+</app-vista-detallada>

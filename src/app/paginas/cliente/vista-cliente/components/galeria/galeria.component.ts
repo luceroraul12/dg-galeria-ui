@@ -9,18 +9,26 @@ import { Sabor } from '../../../../../interfaces/sabor.interface';
 })
 export class GaleriaComponent implements OnInit {
 
+  public fueClickeado: boolean;
+
   get informacionDisponible(){
     return this.clienteService.saboresDisponibles;
   }
 
-  constructor(private clienteService: ClienteService) { }
+  constructor(private clienteService: ClienteService) { 
+    this.fueClickeado = false;
+  }
 
   ngOnInit(): void {
   }
 
   clickearMarcar(SaborElegido: Sabor){
     console.log(SaborElegido);
-    
+    this.fueClickeado = true;
+  }
+
+  escucharRespuesta(){
+    this.fueClickeado = false;
   }
 
 }

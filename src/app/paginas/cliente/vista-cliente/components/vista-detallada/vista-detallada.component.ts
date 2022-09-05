@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaDetalladaComponent implements OnInit {
 
+  @Input() fueClickeado!: boolean;
+  @Output() fueClickeadoCambio = new EventEmitter<boolean>();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  volver(){
+    this.fueClickeadoCambio.emit(this.fueClickeado);
   }
 
 }
