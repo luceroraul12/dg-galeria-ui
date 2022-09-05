@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VistaClienteComponent } from './vista-cliente/vista-cliente.component';
+import { GaleriaComponent } from './vista-cliente/components/galeria/galeria.component';
 
 
 
 @NgModule({
   declarations: [
-    VistaClienteComponent
+    VistaClienteComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule
