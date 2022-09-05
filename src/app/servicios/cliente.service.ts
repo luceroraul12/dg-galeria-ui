@@ -1,10 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Marca } from '../interfaces/marca.interface';
+import { Formato } from '../interfaces/formato.interface';
+import { Sabor } from '../interfaces/sabor.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
+
+  private _formatosDePrueba: Formato[] = [
+    {
+      tipo: "500 ml"
+    },
+    {
+      tipo: "750 ml"
+    },
+    {
+      tipo: "1,25 lts"
+    },
+    {
+      tipo: "2.25 lts"
+    },
+    {
+      tipo: "3 lts"
+    }
+  ]
 
   private _marcasDePrueba: Marca[] = [
     {
@@ -33,8 +53,34 @@ export class ClienteService {
     }
   ]
 
+  private _saboresDePrueba: Sabor[] = [
+    {
+      formatos: this._formatosDePrueba,
+      marca: this._marcasDePrueba[0],
+      nombre: "Coca"
+    },
+    {
+      formatos: this._formatosDePrueba,
+      marca: this._marcasDePrueba[0],
+      nombre: "Limón"
+    },
+    {
+      formatos: this._formatosDePrueba,
+      marca: this._marcasDePrueba[0],
+      nombre: "Naranja"
+    },
+  ]
+
   get marcasDisponibles(){
-    return [...this._marcasDePrueba]
+    return [...this._marcasDePrueba];
+  }
+
+  get formatosDisponibles(){
+    return [...this._formatosDePrueba];
+  }
+
+  get saboresDisponibles(){
+    return [...this._saboresDePrueba];
   }
 
 
