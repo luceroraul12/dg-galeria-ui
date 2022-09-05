@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../../../../../servicios/cliente.service';
+import { Sabor } from '../../../../../interfaces/sabor.interface';
 
 @Component({
   selector: 'app-galeria',
@@ -8,13 +9,18 @@ import { ClienteService } from '../../../../../servicios/cliente.service';
 })
 export class GaleriaComponent implements OnInit {
 
-  get marcasDisponibles(){
-    return this.clienteService.marcasDisponibles;
+  get informacionDisponible(){
+    return this.clienteService.saboresDisponibles;
   }
 
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
+  }
+
+  clickearMarcar(SaborElegido: Sabor){
+    console.log(SaborElegido);
+    
   }
 
 }
