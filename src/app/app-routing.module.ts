@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: "administrador",
     component: VistaAdministradorComponent
+  },
+  {
+    path: "**",
+    redirectTo: "cliente"
   }
 ];
 
