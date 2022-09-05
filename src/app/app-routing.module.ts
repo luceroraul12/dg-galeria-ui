@@ -5,12 +5,12 @@ import { VistaClienteComponent } from './paginas/cliente/vista-cliente/vista-cli
 
 const routes: Routes = [
   {
-    path: "/cliente",
+    path: "cliente",
     component: VistaClienteComponent
   },
   {
-    path: "/administrador",
-    component: VistaClienteComponent
+    path: "administrador",
+    component: VistaAdministradorComponent
   }
 ];
 
