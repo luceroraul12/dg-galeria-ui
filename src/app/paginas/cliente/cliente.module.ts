@@ -4,19 +4,13 @@ import { VistaClienteComponent } from './vista-cliente/vista-cliente.component';
 import { GaleriaComponent } from './vista-cliente/components/galeria/galeria.component';
 import { VistaDetalladaComponent } from './vista-cliente/components/vista-detallada/vista-detallada.component';
 
-
-
 @NgModule({
   declarations: [
     VistaClienteComponent,
     GaleriaComponent,
-    VistaDetalladaComponent
+    VistaDetalladaComponent,
   ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    VistaClienteComponent
-  ]
+  imports: [CommonModule],
+  exports: [VistaClienteComponent],
 })
-export class ClienteModule { }
+export class ClienteModule {}
