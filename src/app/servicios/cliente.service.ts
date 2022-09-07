@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {
   Formato,
@@ -26,12 +26,12 @@ export class ClienteService {
   }
 
   saboresCreadosByIdMarca(idMarca: string): Observable<GaleriaResponse> {
-    let url: string = `${this.urlApi}/sabores`;
+    let url: string = `${this.urlApi}/sabores?id-marca=${idMarca}`;
     return this.http.get<GaleriaResponse>(url);
   }
 
   saboresCreadosByIdMarcayStock(idMarca: string): Observable<GaleriaResponse> {
-    let url: string = `${this.urlApi}/sabores/con-stock`;
+    let url: string = `${this.urlApi}/sabores/con-stock?id-marca=${idMarca}`;
     return this.http.get<GaleriaResponse>(url);
   }
 }
