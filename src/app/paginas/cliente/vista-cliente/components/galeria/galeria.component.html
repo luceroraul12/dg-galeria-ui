@@ -1,14 +1,22 @@
 <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="!fueClickeado">
-    <div class="col" *ngFor="let info of informacionDisponible">
-        <a (click)="clickearMarcar(info)">
-            <div class="card h-100">
-                <img [src]="info.marca.enlaceImagen" class="card-img-top" alt="info.marca.nombre">
-                <div class="card-body">
-                    <h5 class="card-title">{{info.marca.nombre}}</h5>
-                </div>
-            </div>
-        </a>
-    </div>
+  <div class="col" *ngFor="let info of informacionDisponible">
+    <a (click)="clickearMarcar(info)">
+      <div class="card h-100">
+        <img
+          [src]="info.marca.enlace"
+          class="card-img-top"
+          alt="info.marca.nombre"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ info.marca.nombre }}</h5>
+        </div>
+      </div>
+    </a>
+  </div>
 </div>
-<app-vista-detallada *ngIf="fueClickeado" (fueClickeadoCambio)="escucharRespuesta()" [fueClickeado]="fueClickeado">
+<app-vista-detallada
+  *ngIf="fueClickeado"
+  (fueClickeadoCambio)="escucharRespuesta()"
+  [fueClickeado]="fueClickeado"
+>
 </app-vista-detallada>
