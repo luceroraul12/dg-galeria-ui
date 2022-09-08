@@ -1,5 +1,5 @@
 <div class="vistas">
-  <p>vista-detallada works!</p>
+  <h1 *ngIf="marcaElegida">{{ marcaElegida.nombre }}</h1>
   <button routerLink="/cliente">volver</button>
 
   <div *ngFor="let sabor of saboresDisponibles">
