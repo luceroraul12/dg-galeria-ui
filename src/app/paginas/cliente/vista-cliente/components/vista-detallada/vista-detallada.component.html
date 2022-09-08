@@ -1,10 +1,25 @@
 <div class="vistas">
-  <h1 *ngIf="marcaElegida">{{ marcaElegida.nombre }}</h1>
-  <button routerLink="/cliente">volver</button>
-
-  <div *ngFor="let sabor of saboresDisponibles">
-    <h1>{{ sabor.marca.nombre }} - {{ sabor.nombre }}</h1>
+  <div class="col">
+    <div class="row">
+      <h1 *ngIf="marcaElegida">Marca: {{ marcaElegida.nombre }}</h1>
+      <button routerLink="/cliente">volver</button>
+    </div>
   </div>
 
-  <button routerLink="/cliente">volver</button>
+  <div *ngFor="let sabor of saboresDisponibles">
+    <hr />
+
+    <h1>{{ sabor.nombreSabor }}</h1>
+    <ol>
+      <li *ngFor="let formato of sabor.formatos; let i = index">
+        {{ formato.tipo }} - {{ sabor.estadosStock[i] }}
+      </li>
+    </ol>
+  </div>
+  <hr />
+  <div class="col">
+    <div class="row">
+      <button routerLink="/cliente" class="">volver</button>
+    </div>
+  </div>
 </div>
