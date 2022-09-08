@@ -10,10 +10,6 @@ import { Marca, Sabor } from '../../../../../interfaces/galeria.interface';
 export class GaleriaComponent implements OnInit {
   public fueClickeado: boolean;
 
-  // get informacionDisponible(){
-  //   return this.clienteService.saboresDisponibles;
-  // }
-
   public informacionDisponible: Sabor[] = [];
 
   public marcasCreadas: Marca[] = [];
