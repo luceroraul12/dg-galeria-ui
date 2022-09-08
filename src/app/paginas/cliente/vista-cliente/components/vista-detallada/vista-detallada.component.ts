@@ -1,7 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClienteService } from '../../../../../servicios/cliente.service';
-import { Sabor, Marca } from '../../../../../interfaces/galeria.interface';
+import {
+  Sabor,
+  Marca,
+  SaborResumido,
+} from '../../../../../interfaces/galeria.interface';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -12,7 +16,7 @@ export class VistaDetalladaComponent implements OnInit {
   public marcaElegida!: Marca;
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
 
-  public saboresDisponibles: Sabor[] = [];
+  public saboresDisponibles: SaborResumido[] = [];
 
   private idMarca: string = '';
 
@@ -29,10 +33,9 @@ export class VistaDetalladaComponent implements OnInit {
           (respuesta) => (this.marcaElegida = respuesta.marcaTrabajada)
         );
       this.clienteService
-        .saboresCreadosByIdMarcayStock(idMarca)
+        .saboresCreadosByIdMarcaParaVer(idMarca)
         .subscribe(
-          (respuesta) =>
-            (this.saboresDisponibles = respuesta.saboresDisponibles)
+          (respuesta) => (this.saboresDisponibles = respuesta.saboresResumidos)
         );
     });
   }
