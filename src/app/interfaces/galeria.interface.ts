@@ -3,9 +3,16 @@ export interface GaleriaResponse {
   marcasCreadas: Marca[];
   saboresDisponibles: Sabor[];
   saboresCreados: Sabor[];
+  saboresResumidos: SaborResumido[];
   formatoTrabajado: Formato;
   marcaTrabajada: Marca;
   saborTrabajado: Sabor;
+}
+
+export interface SaborResumido {
+  nombreSabor: string;
+  formatos: Formato[];
+  estadosStock: boolean[];
 }
 
 export interface Sabor {
