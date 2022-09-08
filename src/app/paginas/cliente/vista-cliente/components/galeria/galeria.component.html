@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="!fueClickeado">
   <div class="col" *ngFor="let marca of marcasCreadas">
-    <a (click)="clickearMarcar(marca)">
+    <a (click)="clickearMarcar(marca)" routerLink="/cliente/{{ marca.id }}">
       <div class="card h-100">
         <img [src]="marca.enlace" class="card-img-top" alt="marca.nombre" />
         <div class="card-body">
