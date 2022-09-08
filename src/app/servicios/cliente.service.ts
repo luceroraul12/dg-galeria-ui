@@ -35,6 +35,11 @@ export class ClienteService {
     return this.http.get<GaleriaResponse>(url);
   }
 
+  saboresCreadosByIdMarcaParaVer(idMarca: string): Observable<GaleriaResponse> {
+    let url: string = `${this.urlApi}/sabores/ver?id-marca=${idMarca}`;
+    return this.http.get<GaleriaResponse>(url);
+  }
+
   saboresCreadosByIdMarcayStock(idMarca: string): Observable<GaleriaResponse> {
     let url: string = `${this.urlApi}/sabores/con-stock?id-marca=${idMarca}`;
     return this.http.get<GaleriaResponse>(url);
