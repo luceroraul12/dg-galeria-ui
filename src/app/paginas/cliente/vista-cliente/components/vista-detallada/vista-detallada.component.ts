@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClienteService } from '../../../../../servicios/cliente.service';
-import { Sabor } from '../../../../../interfaces/galeria.interface';
+import { Sabor, Marca } from '../../../../../interfaces/galeria.interface';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -9,6 +9,7 @@ import { Sabor } from '../../../../../interfaces/galeria.interface';
   styleUrls: ['./vista-detallada.component.css'],
 })
 export class VistaDetalladaComponent implements OnInit {
+  public marcaElegida!: Marca;
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
 
   public saboresDisponibles: Sabor[] = [];
@@ -21,13 +22,18 @@ export class VistaDetalladaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activateRoute.params.subscribe(
-      ({ idMarca }) => (this.idMarca = idMarca)
-    );
-    this.clienteService
-      .saboresCreadosByIdMarcayStock(this.idMarca)
-      .subscribe(
-        (respuesta) => (this.saboresDisponibles = respuesta.saboresDisponibles)
-      );
+    this.activateRoute.params.subscribe(({ idMarca }) => {
+      this.clienteService
+        .marcaById(idMarca)
+        .subscribe(
+          (respuesta) => (this.marcaElegida = respuesta.marcaTrabajada)
+        );
+      this.clienteService
+        .saboresCreadosByIdMarcayStock(idMarca)
+        .subscribe(
+          (respuesta) =>
+            (this.saboresDisponibles = respuesta.saboresDisponibles)
+        );
+    });
   }
 }
