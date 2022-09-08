@@ -8,28 +8,15 @@ import { Marca, Sabor } from '../../../../../interfaces/galeria.interface';
   styleUrls: ['./galeria.component.css'],
 })
 export class GaleriaComponent implements OnInit {
-  public fueClickeado: boolean;
-
   public informacionDisponible: Sabor[] = [];
 
   public marcasCreadas: Marca[] = [];
 
-  constructor(private clienteService: ClienteService) {
-    this.fueClickeado = false;
-  }
+  constructor(private clienteService: ClienteService) {}
 
   ngOnInit(): void {
     this.clienteService.marcasCreadas().subscribe((respuesta) => {
       this.marcasCreadas = respuesta.marcasCreadas;
     });
-  }
-
-  clickearMarcar(marcaElegida: Marca) {
-    console.log(marcaElegida);
-    this.fueClickeado = true;
-  }
-
-  escucharRespuesta() {
-    this.fueClickeado = false;
   }
 }

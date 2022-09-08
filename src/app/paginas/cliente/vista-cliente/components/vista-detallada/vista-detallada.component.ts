@@ -9,7 +9,6 @@ import { Sabor } from '../../../../../interfaces/galeria.interface';
   styleUrls: ['./vista-detallada.component.css'],
 })
 export class VistaDetalladaComponent implements OnInit {
-  @Input() fueClickeado!: boolean;
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
 
   public saboresDisponibles: Sabor[] = [];
@@ -30,9 +29,5 @@ export class VistaDetalladaComponent implements OnInit {
       .subscribe(
         (respuesta) => (this.saboresDisponibles = respuesta.saboresDisponibles)
       );
-  }
-
-  volver() {
-    this.fueClickeadoCambio.emit(this.fueClickeado);
   }
 }
