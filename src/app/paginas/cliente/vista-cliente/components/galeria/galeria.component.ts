@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../../../../../servicios/cliente.service';
 import { Marca, Sabor } from '../../../../../interfaces/galeria.interface';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-galeria',
