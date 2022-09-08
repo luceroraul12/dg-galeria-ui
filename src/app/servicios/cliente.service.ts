@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import {
   Formato,
   GaleriaResponse,
@@ -17,6 +17,11 @@ export class ClienteService {
 
   formatosCreados(): Observable<GaleriaResponse> {
     let url: string = `${this.urlApi}/formatos`;
+    return this.http.get<GaleriaResponse>(url);
+  }
+
+  marcaById(idMarca: string): Observable<GaleriaResponse> {
+    let url: string = `${this.urlApi}/marca?id-marca=${idMarca}`;
     return this.http.get<GaleriaResponse>(url);
   }
 
