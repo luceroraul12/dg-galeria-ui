@@ -1,8 +1,10 @@
-<p>vista-detallada works!</p>
-<button routerLink="/cliente">volver</button>
+<div class="vistas">
+  <p>vista-detallada works!</p>
+  <button routerLink="/cliente">volver</button>
 
-<div *ngFor="let sabor of saboresDisponibles">
-  <h1>{{ sabor.marca.nombre }} - {{ sabor.nombre }}</h1>
+  <div *ngFor="let sabor of saboresDisponibles">
+    <h1>{{ sabor.marca.nombre }} - {{ sabor.nombre }}</h1>
+  </div>
+
+  <button routerLink="/cliente">volver</button>
 </div>
-
-<button routerLink="/cliente">volver</button>
