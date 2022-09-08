@@ -10,6 +10,7 @@
     <div class="card text-center">
       <div class="card-body">
         <h1>{{ sabor.nombreSabor }}</h1>
+        <strong>Formatos:</strong>
         <ul class="list-group">
           <li
             *ngFor="let formato of sabor.formatos; let i = index"
@@ -19,11 +20,11 @@
               *ngIf="sabor.estadosStock[i]; else opcional"
               class="alert alert-success"
             >
-              {{ formato.tipo }} - {{ sabor.estadosStock[i] }}
+              {{ formato.tipo }}
             </div>
             <ng-template #opcional>
               <div class="alert alert-danger">
-                {{ formato.tipo }} - {{ sabor.estadosStock[i] }}
+                {{ formato.tipo }} - SIN STOCK
               </div>
             </ng-template>
           </li>
