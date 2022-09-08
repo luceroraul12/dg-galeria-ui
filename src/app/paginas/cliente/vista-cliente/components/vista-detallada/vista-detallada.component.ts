@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClienteService } from '../../../../../servicios/cliente.service';
+import { Sabor } from '../../../../../interfaces/galeria.interface';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -10,6 +11,8 @@ import { ClienteService } from '../../../../../servicios/cliente.service';
 export class VistaDetalladaComponent implements OnInit {
   @Input() fueClickeado!: boolean;
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
+
+  public saboresDisponibles: Sabor[] = [];
 
   private idMarca: string = '';
 
@@ -24,7 +27,9 @@ export class VistaDetalladaComponent implements OnInit {
     );
     this.clienteService
       .saboresCreadosByIdMarcayStock(this.idMarca)
-      .subscribe(console.log);
+      .subscribe(
+        (respuesta) => (this.saboresDisponibles = respuesta.saboresDisponibles)
+      );
   }
 
   volver() {
