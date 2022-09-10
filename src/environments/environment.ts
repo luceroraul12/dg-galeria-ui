@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  apiFormato: 'http://localhost:8080/formatos',
+  apiMarca: 'http://localhost:8080/marcas',
+  apiSabor: 'http://localhost:8080/sabores',
+  apiSaborAsociado: 'http://localhost:8080/sabores-asociados',
+  apiSaborFormateado: 'http://localhost:8080/sabores-formateados',
 };
 
 /*
