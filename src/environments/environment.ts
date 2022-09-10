@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-
+  apiCliente: 'http://localhost:8080/cliente',
   apiFormato: 'http://localhost:8080/formatos',
   apiMarca: 'http://localhost:8080/marcas',
   apiSabor: 'http://localhost:8080/sabores',
