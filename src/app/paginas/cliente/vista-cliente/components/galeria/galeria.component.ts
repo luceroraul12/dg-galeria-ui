@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ClienteService } from '../../../../../servicios/cliente.service';
-import { Marca, Sabor } from '../../../../../interfaces/galeria.interface';
-import { Subject } from 'rxjs';
+import { Marca } from 'src/app/interfaces/marca.interface';
+import { Sabor } from 'src/app/interfaces/sabor.interface';
+import { MarcaService } from '../../../../../servicios/marca.service';
 
 @Component({
   selector: 'app-galeria',
@@ -13,11 +13,11 @@ export class GaleriaComponent implements OnInit {
 
   public marcasCreadas: Marca[] = [];
 
-  constructor(private clienteService: ClienteService) {}
+  constructor(private marcaService: MarcaService) {}
 
   ngOnInit(): void {
-    this.clienteService.marcasCreadas().subscribe((respuesta) => {
-      this.marcasCreadas = respuesta.marcasCreadas;
+    this.marcaService.getAllMarcas().subscribe((respuesta) => {
+      this.marcasCreadas = respuesta.marcasTrabajadas;
     });
   }
 }
