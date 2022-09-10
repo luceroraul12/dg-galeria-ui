@@ -17,6 +17,7 @@ import { BuscadorSaborComponent } from './vista-administrador/sabor/sabor-estado
 import { TablaSaborComponent } from './vista-administrador/sabor/sabor-estado/components/tabla-sabor/tabla-sabor.component';
 import { AsignacionMarcaSaborComponent } from './vista-administrador/asignacion/asignacion-marca-sabor/asignacion-marca-sabor.component';
 import { AsignacionSaborFormatoComponent } from './vista-administrador/asignacion/asignacion-sabor-formato/asignacion-sabor-formato.component';
+import { TablaFormatoComponent } from './vista-administrador/formato/components/tabla-formato/tabla-formato.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AsignacionSaborFormatoComponent } from './vista-administrador/asignacio
     TablaSaborComponent,
     AsignacionMarcaSaborComponent,
     AsignacionSaborFormatoComponent,
+    TablaFormatoComponent,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
