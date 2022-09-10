@@ -14,7 +14,7 @@ import { SaborEstadoComponent } from './vista-administrador/sabor/sabor-estado/s
 import { BuscadorMarcaComponent } from './vista-administrador/marca/marca-estado/components/buscador-marca/buscador-marca.component';
 import { TablaMarcaComponent } from './vista-administrador/marca/marca-estado/components/tabla-marca/tabla-marca.component';
 import { BuscadorSaborComponent } from './vista-administrador/sabor/sabor-estado/components/buscador-sabor/buscador-sabor.component';
-import { TablaSaborComponent } from './vista-administrador/sabor/sabor-estado/components/tabla-sabor/tabla-sabor.component';
+import { TablaSaborComponent } from './vista-administrador/sabor/components/tabla-sabor/tabla-sabor.component';
 import { AsignacionMarcaSaborComponent } from './vista-administrador/asignacion/asignacion-marca-sabor/asignacion-marca-sabor.component';
 import { AsignacionSaborFormatoComponent } from './vista-administrador/asignacion/asignacion-sabor-formato/asignacion-sabor-formato.component';
 import { TablaFormatoComponent } from './vista-administrador/formato/components/tabla-formato/tabla-formato.component';

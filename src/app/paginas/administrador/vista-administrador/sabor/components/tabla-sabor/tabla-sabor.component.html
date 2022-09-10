@@ -3,7 +3,13 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Marcas</th>
-            <th scope="col">Estados</th>
+            <ng-container *ngIf="tipoDeTabla == 'determinado'; else elseTemplate">
+                <th scope="col">Opciones</th>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <th scope="col">Estados</th>
+            </ng-template>
+
         </tr>
     </thead>
     <tbody>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SaborService } from '../../../../../../../servicios/sabor.service';
-import { Sabor } from '../../../../../../../interfaces/sabor.interface';
+import { SaborService } from '../../../../../../servicios/sabor.service';
+import { Sabor } from '../../../../../../interfaces/sabor.interface';
 
 @Component({
   selector: 'app-tabla-sabor',
