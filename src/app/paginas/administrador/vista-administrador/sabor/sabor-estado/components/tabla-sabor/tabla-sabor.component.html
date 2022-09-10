@@ -7,9 +7,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>MARCA TEXTO DE PRUEBA</td>
+        <tr *ngFor="let sabor of saboresCreados; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{sabor.nombre}}</td>
             <td>
                 <div class="form-check form-switch form-check-reverse">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
