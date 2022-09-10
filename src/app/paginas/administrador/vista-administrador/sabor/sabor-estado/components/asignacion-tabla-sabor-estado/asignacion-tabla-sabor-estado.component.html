@@ -1,1 +1,26 @@
 <p>asignacion-tabla-sabor-estado works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marcas</th>
+            <th scope="col">Sabores</th>
+            <th scope="col">Formatos</th>
+            <th scope="col">Estados</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sabor of saboresFormateados; let i = index"
+            [ngClass]="sabor.estadoStock ? 'table-success' : 'table-warning'">
+            <th scope="row">{{i+1}}</th>
+            <td>{{sabor.saborAsociado.marca.nombre}}</td>
+            <td>{{sabor.saborAsociado.sabor.nombre}}</td>
+            <td>{{sabor.formato.tipo}}</td>
+            <td>
+                <div class="form-check form-switch form-check-reverse">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
