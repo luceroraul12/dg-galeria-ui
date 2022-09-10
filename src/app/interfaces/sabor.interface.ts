@@ -1,5 +1,5 @@
 export interface SaborResponse {
-  Sabor: Sabor[];
+  saboresTrabajados: Sabor[];
   saborTrabajado: Sabor;
   mensaje: string;
 }
