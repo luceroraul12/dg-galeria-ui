@@ -10,6 +10,8 @@ export class VistaAdministradorComponent implements OnInit {
   public urlFormato: string = environment.urlImgFormato;
   public urlMarca: string = environment.urlImgMarca;
   public urlSabor: string = environment.urlImgSabor;
+  public urlAsingacionMarcaSabor: string =
+    environment.urlImgAsignacionMarcaSabor;
 
   constructor() {}
 
