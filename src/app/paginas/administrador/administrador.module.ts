@@ -11,6 +11,8 @@ import { SaborComponent } from './vista-administrador/sabor/sabor.component';
 import { SharedModule } from '../../shared/shared.module';
 import { MarcaEstadoComponent } from './vista-administrador/marca/marca-estado/marca-estado.component';
 import { SaborEstadoComponent } from './vista-administrador/sabor/sabor-estado/sabor-estado.component';
+import { BuscadorMarcaComponent } from './vista-administrador/marca/marca-estado/components/buscador-marca/buscador-marca.component';
+import { TablaMarcaComponent } from './vista-administrador/marca/marca-estado/components/tabla-marca/tabla-marca.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { SaborEstadoComponent } from './vista-administrador/sabor/sabor-estado/s
     SaborComponent,
     MarcaEstadoComponent,
     SaborEstadoComponent,
+    BuscadorMarcaComponent,
+    TablaMarcaComponent,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
