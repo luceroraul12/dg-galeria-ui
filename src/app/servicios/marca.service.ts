@@ -14,6 +14,12 @@ export class MarcaService {
     return this.http.get<MarcaResponse>(environment.apiMarca);
   }
 
+  getById(idMarca: string): Observable<MarcaResponse> {
+    let url = `${environment.apiMarca}/by-id`;
+    let params: HttpParams = new HttpParams().set('id', idMarca);
+    return this.http.get<MarcaResponse>(url, { params });
+  }
+
   crearMarca(tipo: string): Observable<MarcaResponse> {
     let params: HttpParams = new HttpParams().set('tipo', tipo);
     return this.http.post<MarcaResponse>(environment.apiMarca, params);
