@@ -1,5 +1,5 @@
 <div class="vistas">
-  <h1 class="text-center">CREAR - MODIFICAR - ELIMINAR</h1>
+  <h1 class="text-center">1 - CREACIÓN</h1>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <a routerLink="/administrador/formatos">
@@ -32,8 +32,31 @@
       </a>
     </div>
   </div>
+  <h1 class="text-center">2 - ASIGNACIÓN</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <a routerLink="/administrador/marcas">
+        <div class="card text-bg-warning  mb-3">
+          <img [src]="urlMarca" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Marcas - Sabores</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a routerLink="/administrador/sabores">
+        <div class="card text-bg-warning  mb-3">
+          <img [src]="urlSabor" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Sabores - Formatos</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
   <hr />
-  <h1 class="text-center">ESTADO DE STOCK</h1>
+  <h1 class="text-center">3 - ESTADO DE STOCK</h1>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <a routerLink="/administrador/marcas/estado">
