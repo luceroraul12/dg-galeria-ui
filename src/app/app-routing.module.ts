@@ -6,7 +6,7 @@ import { VistaDetalladaComponent } from './paginas/cliente/vista-cliente/compone
 import { FormatoComponent } from './paginas/administrador/vista-administrador/formato/formato.component';
 import { MarcaComponent } from './paginas/administrador/vista-administrador/marca/marca.component';
 import { SaborComponent } from './paginas/administrador/vista-administrador/sabor/sabor.component';
-import { MarcaEstadoComponent } from './paginas/administrador/vista-administrador/marca/components/marca-formulario/marca-estado/marca-estado.component';
+import { MarcaEstadoComponent } from './paginas/administrador/vista-administrador/marca/marca-estado/marca-estado.component';
 import { SaborEstadoComponent } from './paginas/administrador/vista-administrador/sabor/sabor-estado/sabor-estado.component';
 
 const routes: Routes = [
