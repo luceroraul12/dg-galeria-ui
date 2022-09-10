@@ -8,6 +8,8 @@ import { MarcaComponent } from './paginas/administrador/vista-administrador/marc
 import { SaborComponent } from './paginas/administrador/vista-administrador/sabor/sabor.component';
 import { MarcaEstadoComponent } from './paginas/administrador/vista-administrador/marca/marca-estado/marca-estado.component';
 import { SaborEstadoComponent } from './paginas/administrador/vista-administrador/sabor/sabor-estado/sabor-estado.component';
+import { AsignacionMarcaSaborComponent } from './paginas/administrador/vista-administrador/asignacion/asignacion-marca-sabor/asignacion-marca-sabor.component';
+import { AsignacionSaborFormatoComponent } from './paginas/administrador/vista-administrador/asignacion/asignacion-sabor-formato/asignacion-sabor-formato.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'administrador/sabores/estado',
     component: SaborEstadoComponent,
+  },
+  {
+    path: 'administrador/asignacion/marcasabor',
+    component: AsignacionMarcaSaborComponent,
+  },
+  {
+    path: 'administrador/asignacion/saborformato',
+    component: AsignacionSaborFormatoComponent,
   },
   {
     path: '**',
