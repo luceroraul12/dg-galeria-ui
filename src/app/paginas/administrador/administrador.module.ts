@@ -8,6 +8,7 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { FormatoComponent } from './vista-administrador/formato/formato.component';
 import { MarcaComponent } from './vista-administrador/marca/marca.component';
 import { SaborComponent } from './vista-administrador/sabor/sabor.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { SaborComponent } from './vista-administrador/sabor/sabor.component';
     MarcaComponent,
     SaborComponent,
   ],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
 })
 export class AdministradorModule {}
