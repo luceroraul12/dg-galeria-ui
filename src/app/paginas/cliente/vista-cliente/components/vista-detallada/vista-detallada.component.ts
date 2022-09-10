@@ -5,6 +5,11 @@ import { MarcaService } from '../../../../../servicios/marca.service';
 import { SaborService } from '../../../../../servicios/sabor.service';
 import { Sabor } from 'src/app/interfaces/sabor.interface';
 import { SaborFormateado } from '../../../../../interfaces/saborformateado.interface';
+import { SaborFormateadoService } from '../../../../../servicios/sabor-formateado.service';
+import { SaborAsociadoService } from '../../../../../servicios/sabor-asociado.service';
+import { SaborAsociado } from 'src/app/interfaces/saborasociado.interface';
+import { ClienteService } from '../../../../../servicios/cliente.service';
+import { SaboresResumido } from '../../../../../interfaces/cliente.interface';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -16,14 +21,20 @@ export class VistaDetalladaComponent implements OnInit {
 
   private idMarca: string = '';
   public marcaElegida!: Marca;
-  public saboresDisponibles!: Sabor[];
-  public saboresFormateados!: SaborFormateado[];
+  public saboresCreados!: SaboresResumido[];
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private marcaService: MarcaService,
-    private saborService: SaborService
+    private clienteService: ClienteService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activateRoute.params.subscribe(({ idMarca }) => {
+      console.log(idMarca);
+      this.clienteService.resumen(idMarca).subscribe((respuesta) => {
+        this.marcaElegida = respuesta.resumen.marcaElegida;
+        this.saboresCreados = respuesta.resumen.saboresResumidos;
+      });
+    });
+  }
 }
