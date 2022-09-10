@@ -13,6 +13,8 @@ import { MarcaEstadoComponent } from './vista-administrador/marca/marca-estado/m
 import { SaborEstadoComponent } from './vista-administrador/sabor/sabor-estado/sabor-estado.component';
 import { BuscadorMarcaComponent } from './vista-administrador/marca/marca-estado/components/buscador-marca/buscador-marca.component';
 import { TablaMarcaComponent } from './vista-administrador/marca/marca-estado/components/tabla-marca/tabla-marca.component';
+import { BuscadorSaborComponent } from './vista-administrador/sabor/sabor-estado/components/buscador-sabor/buscador-sabor.component';
+import { TablaSaborComponent } from './vista-administrador/sabor/sabor-estado/components/tabla-sabor/tabla-sabor.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { TablaMarcaComponent } from './vista-administrador/marca/marca-estado/co
     SaborEstadoComponent,
     BuscadorMarcaComponent,
     TablaMarcaComponent,
+    BuscadorSaborComponent,
+    TablaSaborComponent,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
