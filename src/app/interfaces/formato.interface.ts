@@ -7,4 +7,5 @@ export interface FormatoResponse {
 export interface Formato {
   id: number;
   tipo: string;
+  estadoStock: boolean;
 }
