@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Marca } from 'src/app/interfaces/marca.interface';
-import { MarcaService } from 'src/app/servicios/marca.service';
+import { MarcaService } from 'src/app/services/marca.service';
 
 @Component({
   selector: 'app-tabla-marca',

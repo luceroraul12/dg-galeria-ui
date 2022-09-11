@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SaborFormateadoService } from 'src/app/services/sabor-formateado.service';
 import { SaborFormateado } from '../../../../../../../interfaces/saborformateado.interface';
-import { SaborFormateadoService } from '../../../../../../../servicios/sabor-formateado.service';
 
 @Component({
   selector: 'app-asignacion-tabla-sabor-estado',

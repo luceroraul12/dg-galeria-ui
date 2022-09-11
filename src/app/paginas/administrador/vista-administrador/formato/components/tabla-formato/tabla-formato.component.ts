@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormatoService } from 'src/app/services/formato.service';
 import { Formato } from '../../../../../../interfaces/formato.interface';
-import { FormatoService } from '../../../../../../servicios/formato.service';
 
 @Component({
   selector: 'app-tabla-formato',

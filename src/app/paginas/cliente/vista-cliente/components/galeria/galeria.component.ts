@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Marca } from 'src/app/interfaces/marca.interface';
 import { Sabor } from 'src/app/interfaces/sabor.interface';
-import { MarcaService } from '../../../../../servicios/marca.service';
+import { MarcaService } from 'src/app/services/marca.service';
 
 @Component({
   selector: 'app-galeria',
