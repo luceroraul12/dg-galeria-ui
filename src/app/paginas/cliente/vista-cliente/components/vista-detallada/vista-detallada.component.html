@@ -2,19 +2,13 @@
   <app-botonera-retorno ruta="cliente"></app-botonera-retorno>
 
   <div *ngFor="let sabor of saboresCreados" class="mt-3 mb-3">
-    <div class="card text-center">
+    <div class="card text-center text-bg-secondary">
       <div class="card-body">
         <h1>{{ sabor.nombreSabor }}</h1>
         <strong>Estado de Formatos</strong>
         <ul class="list-group">
-          <li
-            *ngFor="let formato of sabor.formatosDisponibles"
-            class="align-items-center"
-          >
-            <div
-              class="alert alert-success"
-              *ngIf="formato.estadoStock; else opcional"
-            >
+          <li *ngFor="let formato of sabor.formatosDisponibles" class="align-items-center">
+            <div class="alert alert-success" *ngIf="formato.estadoStock; else opcional">
               {{ formato.tipo }}
             </div>
             <ng-template #opcional>
