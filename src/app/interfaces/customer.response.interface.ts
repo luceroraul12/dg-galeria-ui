@@ -1,27 +1,12 @@
-export interface StockDataResponse {
-  customerResult: CustomerResult;
-  message: string;
-}
+import { Brand } from './brand.interface';
+import { DrinkContainer } from './drink-container.interface';
 
-export interface CustomerResult {
-  brandSelected: BrandSelected;
+export interface CustomerResponse {
+  brandSelected: Brand;
   tasteResults: TasteResult[];
-}
-
-export interface BrandSelected {
-  id: number;
-  brandName: string;
-  url: string;
-  isStocked: boolean;
 }
 
 export interface TasteResult {
   tasteName: string;
-  drinkContainersAvailable: DrinkContainersAvailable[];
-}
-
-export interface DrinkContainersAvailable {
-  id: number;
-  containerName: string;
-  isStocked: boolean;
+  drinkContainersAvailable: DrinkContainer[];
 }
