@@ -8,11 +8,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let formato of formatosCreados; let i = index">
+        <tr *ngFor="let item of drinkContainerCreated; let i = index">
             <th scope="row">{{i+1}}</th>
-            <td>{{formato.containerName}}</td>
+            <td>{{item.containerName}}</td>
             <td>
-                <app-table-buttons></app-table-buttons>
+                <app-table-buttons [rowDataSelected]="item" (delete)="delete(item)" (update)="update(item)">
+                </app-table-buttons>
             </td>
         </tr>
     </tbody>
