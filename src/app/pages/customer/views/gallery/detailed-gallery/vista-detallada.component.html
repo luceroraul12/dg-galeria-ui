@@ -4,16 +4,16 @@
   <div *ngFor="let sabor of saboresCreados" class="mt-3 mb-3">
     <div class="card text-center text-bg-secondary">
       <div class="card-body">
-        <h1>{{ sabor.nombreSabor }}</h1>
+        <h1>{{ sabor.tasteName }}</h1>
         <strong>Estado de Formatos</strong>
         <ul class="list-group">
-          <li *ngFor="let formato of sabor.formatosDisponibles" class="align-items-center">
-            <div class="alert alert-success" *ngIf="formato.estadoStock; else opcional">
-              {{ formato.tipo }}
+          <li *ngFor="let formato of sabor.drinkContainersAvailable" class="align-items-center">
+            <div class="alert alert-success" *ngIf="formato.isStocked; else opcional">
+              {{ formato.containerName }}
             </div>
             <ng-template #opcional>
               <div class="alert alert-danger">
-                {{ formato.tipo }} - SIN STOCK
+                {{ formato.containerName }} - SIN STOCK
               </div>
             </ng-template>
           </li>
