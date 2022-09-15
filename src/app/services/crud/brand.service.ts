@@ -8,7 +8,8 @@ import { CrudService } from './crud-abstract.service';
   providedIn: 'root',
 })
 export class BrandService extends CrudService<Brand> {
+  urlApi: string = environment.apiMarca;
   constructor(http: HttpClient) {
-    super(http, environment.apiMarca);
+    super(http);
   }
 }
