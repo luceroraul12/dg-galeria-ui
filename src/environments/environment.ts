@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiCliente: 'http://localhost:8080/cliente',
+  apiCliente: 'http://localhost:8080/customer',
   apiFormato: 'http://localhost:8080/drink-containers',
   apiMarca: 'http://localhost:8080/brands',
   apiSabor: 'http://localhost:8080/tastees',
