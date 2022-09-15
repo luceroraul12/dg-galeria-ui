@@ -3,13 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  // https://dg-galeria-api.herokuapp.com/
   production: false,
-  apiCliente: 'http://localhost:8080/customer',
-  apiFormato: 'http://localhost:8080/drink-containers',
-  apiMarca: 'http://localhost:8080/brands',
-  apiSabor: 'http://localhost:8080/tastees',
-  apiSaborAsociado: 'http://localhost:8080/branded-taste',
-  apiSaborFormateado: 'http://localhost:8080/drink-containered-taste',
+  // apiCliente: 'http://localhost:8080/customer',
+  apiCliente: 'http://dg-galeria-api.herokuapp.com/customer',
+  // apiFormato: 'http://localhost:8080/drink-containers',
+  apiFormato: 'http://dg-galeria-api.herokuapp.com/drink-containers',
+  // apiMarca: 'http://localhost:8080/brands',
+  apiMarca: 'https://dg-galeria-api.herokuapp.com/brands',
+
+  // apiSabor: 'http://localhost:8080/tastees',
+  apiSabor: 'http://dg-galeria-api.herokuapp.com/tastees',
+  // apiSaborAsociado: 'http://localhost:8080/branded-taste',
+  apiSaborAsociado: 'http://dg-galeria-api.herokuapp.com/branded-taste',
+  // apiSaborFormateado: 'http://localhost:8080/drink-containered-taste',
+  apiSaborFormateado:
+    'http://dg-galeria-api.herokuapp.com/drink-containered-taste',
   urlImgFormato:
     'https://static.vecteezy.com/system/resources/previews/005/673/823/non_2x/hand-drawn-simple-different-glass-bottles-wallpaper-vector.jpg',
   urlImgMarca:
