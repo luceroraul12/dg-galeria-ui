@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Brand } from 'src/app/interfaces/brand.interface';
+import { BrandService } from 'src/app/services/crud/brand.service';
 
 @Component({
   selector: 'app-galeria',
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class GaleriaComponent implements OnInit {
   public informacionDisponible: any[] = [];
 
-  public marcasCreadas: any[] = [];
+  public marcasCreadas: Brand[] = [];
 
-  constructor() {}
+  constructor(private brandService: BrandService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.brandService
+      .read()
+      .subscribe((response) => (this.marcasCreadas = response.stockDataResult));
+  }
 }

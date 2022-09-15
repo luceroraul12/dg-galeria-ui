@@ -2,7 +2,7 @@
   <div class="col" *ngFor="let marca of marcasCreadas">
     <a routerLink="/cliente/{{ marca.id }}">
       <div class="card h-100">
-        <img [src]="marca.enlace" class="card-img-top" alt="marca.nombre" />
+        <img [src]="marca.url" class="card-img-top" alt="marca.nombre" />
       </div>
     </a>
   </div>
