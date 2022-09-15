@@ -12,13 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let marca of marcasCreadas; let i = index" [ngClass]="marca ? 'table-success' : 'table-warning'">
+        <tr *ngFor="let item of marcasCreadas; let i = index"
+            [ngClass]="item.isStocked ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
-            <td>{{marca.brandName}}</td>
+            <td>{{item.brandName}}</td>
             <ng-container *ngIf="tipoDeTabla == 'determinado'; else elseTemplate">
                 <td>
                     <div class="row">
-                        <app-table-buttons></app-table-buttons>
+                        <app-table-buttons (delete)="delete(item)" (update)="update(item)"
+                            (changeStockState)="changeStockState(item)"></app-table-buttons>
                     </div>
                 </td>
             </ng-container>
