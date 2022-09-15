@@ -1,5 +1,5 @@
 <div class="vistas card p-3">
-    <p>Marcas asociadas a sabores</p>
+    <app-botonera-retorno routerLink="/administrador"></app-botonera-retorno>
     <table class="table">
         <thead>
             <tr>
@@ -16,10 +16,11 @@
                 <td>{{brandedTaste.brand.brandName}}</td>
                 <td>{{brandedTaste.taste.tasteName}}</td>
                 <td>
-                    add botones
+                    <app-table-buttons></app-table-buttons>
                 </td>
 
             </tr>
         </tbody>
     </table>
+    <app-botonera-retorno></app-botonera-retorno>
 </div>
