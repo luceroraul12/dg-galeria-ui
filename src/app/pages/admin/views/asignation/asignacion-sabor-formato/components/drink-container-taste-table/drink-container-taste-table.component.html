@@ -1,28 +1,25 @@
-<p>drink-container-taste-table works!</p>
-<div class="vistas card p-3">
-    <p>Marcas asociadas a sabores</p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Marcas</th>
-                <th scope="col">Sabores</th>
-                <th scope="col">Formatos</th>
-                <th scope="col">Opciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let drinkContainerTaste of drinkContainerTasteData let i = index"
-                [ngClass]="drinkContainerTaste.isStocked ? 'table-success' : 'table-warning'">
-                <th scope="row">{{i+1}}</th>
-                <td>{{drinkContainerTaste.brandedTaste.brand.brandName}}</td>
-                <td>{{drinkContainerTaste.brandedTaste.taste.tasteName}}</td>
-                <td>{{drinkContainerTaste.drinkContainer.containerName}}</td>
-                <td>
-                    add botones
-                </td>
+<p>Marcas asociadas a sabores</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marcas</th>
+            <th scope="col">Sabores</th>
+            <th scope="col">Formatos</th>
+            <th scope="col">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let drinkContainerTaste of drinkContainerTasteData let i = index"
+            [ngClass]="drinkContainerTaste.isStocked ? 'table-success' : 'table-warning'">
+            <th scope="row">{{i+1}}</th>
+            <td>{{drinkContainerTaste.brandedTaste.brand.brandName}}</td>
+            <td>{{drinkContainerTaste.brandedTaste.taste.tasteName}}</td>
+            <td>{{drinkContainerTaste.drinkContainer.containerName}}</td>
+            <td>
+                add botones
+            </td>
 
-            </tr>
-        </tbody>
-    </table>
-</div>
+        </tr>
+    </tbody>
+</table>
