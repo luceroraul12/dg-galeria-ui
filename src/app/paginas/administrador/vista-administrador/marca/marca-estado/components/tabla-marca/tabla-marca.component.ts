@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Marca } from 'src/app/interfaces/marca.interface';
-import { MarcaService } from 'src/app/services/marca.service';
 
 @Component({
   selector: 'app-tabla-marca',
@@ -8,14 +6,10 @@ import { MarcaService } from 'src/app/services/marca.service';
   styleUrls: ['./tabla-marca.component.css'],
 })
 export class TablaMarcaComponent implements OnInit {
-  public marcasCreadas: Marca[] = [];
+  public marcasCreadas: any[] = [];
   @Input() tipoDeTabla: string = 'determinado';
 
-  constructor(private marcaService: MarcaService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.marcaService.getAllMarcas().subscribe((respuesta) => {
-      this.marcasCreadas = respuesta.marcasTrabajadas;
-    });
-  }
+  ngOnInit(): void {}
 }

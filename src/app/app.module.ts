@@ -7,11 +7,6 @@ import { AppComponent } from './app.component';
 import { AdministradorModule } from './paginas/administrador/administrador.module';
 import { ClienteModule } from './paginas/cliente/cliente.module';
 import { MenuModule } from './menu/menu.module';
-import { FormatoService } from './services/formato.service';
-import { MarcaService } from './services/marca.service';
-import { SaborService } from './services/sabor.service';
-import { SaborAsociadoService } from './services/sabor-asociado.service';
-import { SaborFormateadoService } from './services/sabor-formateado.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,13 +18,7 @@ import { SaborFormateadoService } from './services/sabor-formateado.service';
     AdministradorModule,
     ClienteModule,
   ],
-  providers: [
-    FormatoService,
-    MarcaService,
-    SaborService,
-    SaborAsociadoService,
-    SaborFormateadoService,
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

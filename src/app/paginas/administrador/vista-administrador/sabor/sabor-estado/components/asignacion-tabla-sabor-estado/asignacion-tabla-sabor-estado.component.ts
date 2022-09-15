@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SaborFormateadoService } from 'src/app/services/sabor-formateado.service';
-import { SaborFormateado } from '../../../../../../../interfaces/saborformateado.interface';
 
 @Component({
   selector: 'app-asignacion-tabla-sabor-estado',
@@ -8,16 +6,9 @@ import { SaborFormateado } from '../../../../../../../interfaces/saborformateado
   styleUrls: ['./asignacion-tabla-sabor-estado.component.css'],
 })
 export class AsignacionTablaSaborEstadoComponent implements OnInit {
-  public saboresFormateados: SaborFormateado[] = [];
+  public saboresFormateados: any[] = [];
 
-  constructor(public saborFormateadoService: SaborFormateadoService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.saborFormateadoService
-      .getAllSaborFormateados()
-      .subscribe(
-        (respuesta) =>
-          (this.saboresFormateados = respuesta.saboresFormateadosTrabajados)
-      );
-  }
+  ngOnInit(): void {}
 }

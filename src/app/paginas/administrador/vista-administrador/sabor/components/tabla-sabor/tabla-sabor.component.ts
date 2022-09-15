@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SaborService } from 'src/app/services/sabor.service';
-import { Sabor } from '../../../../../../interfaces/sabor.interface';
 
 @Component({
   selector: 'app-tabla-sabor',
@@ -9,14 +7,8 @@ import { Sabor } from '../../../../../../interfaces/sabor.interface';
 })
 export class TablaSaborComponent implements OnInit {
   @Input() tipoDeTabla: string = 'determinado';
-  public saboresCreados: Sabor[] = [];
-  constructor(private saborService: SaborService) {}
+  public saboresCreados: any[] = [];
+  constructor() {}
 
-  ngOnInit(): void {
-    this.saborService
-      .getAllSabores()
-      .subscribe(
-        (respuesta) => (this.saboresCreados = respuesta.saboresTrabajados)
-      );
-  }
+  ngOnInit(): void {}
 }
