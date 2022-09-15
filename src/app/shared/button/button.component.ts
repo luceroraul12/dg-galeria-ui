@@ -13,6 +13,8 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {}
 
   wasClicked() {
+    console.log('boton clickeado');
+
     this.emitter.emit(true);
   }
 }
