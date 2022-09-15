@@ -1,1 +1,25 @@
-<p>asignacion-marca-sabor works!</p>
+<div class="vistas card p-3">
+    <p>Marcas asociadas a sabores</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Marcas</th>
+                <th scope="col">Sabores</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let brandedTaste of brandedTasteData; let i = index"
+                [ngClass]="brandedTaste.isStocked ? 'table-success' : 'table-warning'">
+                <th scope="row">{{i+1}}</th>
+                <td>{{brandedTaste.brand.brandName}}</td>
+                <td>{{brandedTaste.taste.tasteName}}</td>
+                <td>
+                    add botones
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
