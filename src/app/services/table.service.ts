@@ -6,7 +6,6 @@ import { StockData } from '../interfaces/stock-data.interface';
 })
 export class TableService {
   public stockDataTable: StockData[] = [];
-  @Input() rowDataSelected!: StockData;
 
   constructor() {}
 
