@@ -12,10 +12,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let marca of marcasCreadas; let i = index"
-            [ngClass]="marca.estadoStock ? 'table-success' : 'table-warning'">
+        <tr *ngFor="let marca of marcasCreadas; let i = index" [ngClass]="marca ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
-            <td>{{marca.nombre}}</td>
+            <td>{{marca.brandName}}</td>
             <ng-container *ngIf="tipoDeTabla == 'determinado'; else elseTemplate">
                 <td>
                     <div class="row">
