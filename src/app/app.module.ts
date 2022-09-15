@@ -4,9 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdministradorModule } from './paginas/administrador/administrador.module';
-import { ClienteModule } from './paginas/cliente/cliente.module';
-import { MenuModule } from './menu/menu.module';
+import { ClienteModule } from './pages/customer/cliente.module';
+import { AdministradorModule } from './pages/admin/administrador.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,9 +14,9 @@ import { MenuModule } from './menu/menu.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    MenuModule,
     AdministradorModule,
     ClienteModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
