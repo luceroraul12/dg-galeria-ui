@@ -4,9 +4,7 @@ import { StockDataResponse } from 'src/app/interfaces/response.interface';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 
 export abstract class CrudService<Entity extends StockData> {
-  private urlApi!: string;
-
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private urlApi: string) {}
 
   create(element: Entity): Observable<StockDataResponse<Entity>> {
     return this.http.post<StockDataResponse<Entity>>(this.urlApi, element);
