@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col">
-        <app-button label="eliminar"></app-button>
+        <app-button label="eliminar" (emitter)="onDelete()"></app-button>
     </div>
     <div class="col">
-        <app-button label="modificar"></app-button>
+        <app-button label="modificar" (emitter)="onUpdate()"></app-button>
     </div>
     <div class="col">
-        <app-button label="cambiar estado"></app-button>
+        <app-button label="cambiar estado" (emitter)="onChangeStockState()"></app-button>
     </div>
 </div>
