@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   apiCliente: 'http://localhost:8080/cliente',
-  apiFormato: 'http://localhost:8080/formatos',
-  apiMarca: 'http://localhost:8080/marcas',
-  apiSabor: 'http://localhost:8080/sabores',
-  apiSaborAsociado: 'http://localhost:8080/sabores-asociados',
-  apiSaborFormateado: 'http://localhost:8080/sabores-formateados',
+  apiFormato: 'http://localhost:8080/drink-containers',
+  apiMarca: 'http://localhost:8080/brands',
+  apiSabor: 'http://localhost:8080/tastees',
+  apiSaborAsociado: 'http://localhost:8080/branded-taste',
+  apiSaborFormateado: 'http://localhost:8080/drink-containered-taste',
   urlImgFormato:
     'https://static.vecteezy.com/system/resources/previews/005/673/823/non_2x/hand-drawn-simple-different-glass-bottles-wallpaper-vector.jpg',
   urlImgMarca:
