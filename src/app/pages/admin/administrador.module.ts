@@ -19,6 +19,7 @@ import { TablaSaborComponent } from './views/taste/components/tabla-sabor/tabla-
 import { BuscadorSaborComponent } from './views/taste/sabor-estado/components/buscador-sabor/buscador-sabor.component';
 import { SaborEstadoComponent } from './views/taste/sabor-estado/sabor-estado.component';
 import { SaborComponent } from './views/taste/sabor.component';
+import { DrinkContainerTasteTableComponent } from './views/asignation/asignacion-sabor-formato/components/drink-container-taste-table/drink-container-taste-table.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SaborComponent } from './views/taste/sabor.component';
     AsignacionSaborFormatoComponent,
     TablaFormatoComponent,
     AsignacionTablaSaborEstadoComponent,
+    DrinkContainerTasteTableComponent,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
