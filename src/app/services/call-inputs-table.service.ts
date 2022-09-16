@@ -1,23 +1,33 @@
+import { first } from 'rxjs';
 import { StockData } from '../interfaces/stock-data.interface';
+import { CrudService } from './crud/crud-abstract.service';
 import { TableService } from './table.service';
 
 export abstract class CallInputsTable<Entity extends StockData> {
-  constructor(public tableService: TableService) {}
+  constructor(
+    public tableService: TableService,
+    public crudService: CrudService<Entity>
+  ) {}
 
-  delete(drinkContainer: Entity): void {
+  delete(item: Entity): void {
     console.log('delete tabla formato');
 
-    this.tableService.deleteRowData(drinkContainer);
+    this.crudService
+      .delete(item)
+      .pipe(first())
+      .subscribe((response) => {
+        this.tableService.deleteRowData(item);
+      });
   }
 
-  update(drinkContainer: Entity): void {
+  update(item: Entity): void {
     console.log('update tabla formato');
 
-    this.tableService.updateRowData(drinkContainer);
+    this.tableService.updateRowData(item);
   }
 
-  changeStockState(drinkContainer: Entity): void {
+  changeStockState(item: Entity): void {
     console.log('changeState tabla formato');
-    this.tableService.changeStockState(drinkContainer);
+    this.tableService.changeStockState(item);
   }
 }
