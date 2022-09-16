@@ -7,8 +7,7 @@ import { AsignacionTablaSaborEstadoComponent } from './views/taste/sabor-estado/
 import { AsignacionMarcaSaborComponent } from './views/asignation/asignacion-marca-sabor/asignacion-marca-sabor.component';
 import { AsignacionSaborFormatoComponent } from './views/asignation/asignacion-sabor-formato/asignacion-sabor-formato.component';
 import { MarcaFormularioComponent } from './views/brand/components/marca-formulario/marca-formulario.component';
-import { BuscadorMarcaComponent } from './views/brand/marca-estado/components/buscador-marca/buscador-marca.component';
-import { TablaMarcaComponent } from './views/brand/marca-estado/components/tabla-marca/tabla-marca.component';
+import { TablaMarcaComponent } from './views/brand/components/tabla-marca/tabla-marca.component';
 import { MarcaEstadoComponent } from './views/brand/marca-estado/marca-estado.component';
 import { MarcaComponent } from './views/brand/marca.component';
 import { FormatoFormularioComponent } from './views/drink-container/components/formato-formulario/formato-formulario.component';
@@ -32,7 +31,6 @@ import { DrinkContainerTasteTableComponent } from './views/asignation/asignacion
     SaborComponent,
     MarcaEstadoComponent,
     SaborEstadoComponent,
-    BuscadorMarcaComponent,
     TablaMarcaComponent,
     BuscadorSaborComponent,
     TablaSaborComponent,
