@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BotoneraRetornoComponent implements OnInit {
   @Input() ruta: string = '';
+  @Input() message: string = 'marcas';
 
   constructor() {}
 
