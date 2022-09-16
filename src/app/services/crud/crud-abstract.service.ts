@@ -1,10 +1,13 @@
 import { HttpClient } from '@angular/common/http';
+import { EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StockDataResponse } from 'src/app/interfaces/response.interface';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 
 export abstract class CrudService<Entity extends StockData> {
   abstract urlApi: string;
+
+  public apiEmitter$: EventEmitter<Response> = new EventEmitter();
 
   constructor(private http: HttpClient) {}
 
