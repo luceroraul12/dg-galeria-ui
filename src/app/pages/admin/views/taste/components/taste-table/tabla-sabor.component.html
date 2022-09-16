@@ -3,7 +3,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Marcas</th>
-            <ng-container *ngIf="tipoDeTabla == 'determinado'; else elseTemplate">
+            <ng-container *ngIf="!isStockState(); else elseTemplate">
                 <th scope="col">Opciones</th>
             </ng-container>
             <ng-template #elseTemplate>
@@ -13,11 +13,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let sabor of saboresCreados; let i = index">
+        <tr *ngFor="let item of saboresCreados; let i = index">
             <th scope="row">{{i+1}}</th>
-            <td>{{sabor.tasteName}}</td>
+            <td>{{item.tasteName}}</td>
             <td>
-                <app-table-buttons></app-table-buttons>
+                <app-table-buttons (changeStockState)="changeStockState(item)" (update)="update(item)"
+                    (delete)="delete(item)"></app-table-buttons>
             </td>
         </tr>
     </tbody>
