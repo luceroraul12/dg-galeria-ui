@@ -30,9 +30,12 @@ export class TableService {
   changeStockState(rowDataSelected: StockData): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
+        console.log(item);
+
         //TODO: fix this for true row data selected
         this.stockDataTable[index].isStocked =
           !this.stockDataTable[index].isStocked;
+        console.log(item);
       }
     });
   }
