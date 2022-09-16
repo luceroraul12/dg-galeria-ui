@@ -19,7 +19,7 @@ export class TablaFormatoComponent
     private drinkContainerService: DrinkContainerService,
     tableService: TableService
   ) {
-    super(tableService);
+    super(tableService, drinkContainerService);
   }
 
   ngOnInit(): void {

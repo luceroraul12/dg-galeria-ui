@@ -17,7 +17,7 @@ export class TablaSaborComponent
   @Input() tableType: TableType = TableType.ASIGNATION;
   public saboresCreados: Taste[] = [];
   constructor(private tasteService: TasteService, tableService: TableService) {
-    super(tableService);
+    super(tableService, tasteService);
   }
 
   ngOnInit(): void {

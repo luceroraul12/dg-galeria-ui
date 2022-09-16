@@ -22,7 +22,7 @@ export class DrinkContainerTasteTableComponent
     private drinkContainerTasteService: DrinkContaineredTasteService,
     tableService: TableService
   ) {
-    super(tableService);
+    super(tableService, drinkContainerTasteService);
   }
 
   ngOnInit(): void {

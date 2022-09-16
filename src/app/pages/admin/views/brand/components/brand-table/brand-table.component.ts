@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { first } from 'rxjs';
 import { TableType } from 'src/app/constants/table-type';
 import { Brand } from 'src/app/interfaces/brand.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
@@ -18,14 +19,17 @@ export class TablaMarcaComponent
   @Input() tableType: TableType = TableType.ASIGNATION;
 
   constructor(private brandService: BrandService, tableService: TableService) {
-    super(tableService);
+    super(tableService, brandService);
   }
 
   ngOnInit(): void {
-    this.brandService.read().subscribe((response) => {
-      this.marcasCreadas = response.stockDataResult;
-      this.tableService.stockDataTable = response.stockDataResult;
-    });
+    this.brandService
+      .read()
+      .pipe(first())
+      .subscribe((response) => {
+        this.marcasCreadas = response.stockDataResult;
+        this.tableService.stockDataTable = response.stockDataResult;
+      });
   }
 
   isStockStateTable() {
