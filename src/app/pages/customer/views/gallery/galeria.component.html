@@ -1,8 +1,8 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col" *ngFor="let marca of marcasCreadas">
-    <a routerLink="/cliente/{{ marca.id }}">
+  <div class="col" *ngFor="let brand of marcasCreadas">
+    <a routerLink="/cliente/{{ brand.id }}">
       <div class="card h-100">
-        <img [src]="marca.url" class="card-img-top" alt="marca.nombre" />
+        <img [src]="brand.url" class="card-img-top" alt="brand.nombre" />
       </div>
     </a>
   </div>

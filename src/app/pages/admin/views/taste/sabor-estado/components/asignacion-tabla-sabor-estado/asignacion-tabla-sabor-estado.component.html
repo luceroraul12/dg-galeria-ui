@@ -12,7 +12,7 @@
         <tr *ngFor="let sabor of saboresFormateados; let i = index"
             [ngClass]="sabor.estadoStock ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
-            <td>{{sabor.saborAsociado.marca.nombre}}</td>
+            <td>{{sabor.saborAsociado.brand.nombre}}</td>
             <td>{{sabor.saborAsociado.sabor.nombre}}</td>
             <td>{{sabor.formato.tipo}}</td>
             <td>
