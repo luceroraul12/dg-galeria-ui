@@ -28,6 +28,12 @@ export abstract class CallInputsTable<Entity extends StockData> {
 
   changeStockState(item: Entity): void {
     console.log('changeState tabla formato');
-    this.tableService.changeStockState(item);
+    item.isStocked = !item.isStocked;
+    this.crudService
+      .update(item)
+      .pipe(first())
+      .subscribe((response) => {
+        this.tableService.changeStockState(item);
+      });
   }
 }
