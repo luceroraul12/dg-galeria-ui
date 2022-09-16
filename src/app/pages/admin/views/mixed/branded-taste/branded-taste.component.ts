@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { first } from 'rxjs';
 import { BrandedTaste } from 'src/app/interfaces/branded-taste.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { BrandedTasteService } from 'src/app/services/crud/branded-taste.service';
@@ -23,9 +24,13 @@ export class AsignacionMarcaSaborComponent
   }
 
   ngOnInit(): void {
-    this.brandedTasteService.read().subscribe(({ stockDataResult }) => {
-      stockDataResult.sort();
-      this.brandedTasteData = stockDataResult;
-    });
+    this.brandedTasteService
+      .read()
+      .pipe(first())
+      .subscribe(({ stockDataResult }) => {
+        stockDataResult.sort();
+        this.brandedTasteData = stockDataResult;
+        this.tableService.stockDataTable = stockDataResult;
+      });
   }
 }
