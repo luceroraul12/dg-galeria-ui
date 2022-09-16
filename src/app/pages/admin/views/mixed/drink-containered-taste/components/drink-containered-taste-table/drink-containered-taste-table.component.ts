@@ -16,7 +16,7 @@ export class DrinkContainerTasteTableComponent
 {
   public drinkContainerTasteData: DrinkContaineredTaste[] = [];
 
-  @Input() tableType: TableType = TableType.STOCK_STATE;
+  @Input() tableType: TableType = TableType.ASIGNATION;
 
   constructor(
     private drinkContainerTasteService: DrinkContaineredTasteService,
