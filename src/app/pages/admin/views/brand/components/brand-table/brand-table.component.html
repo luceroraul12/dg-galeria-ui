@@ -16,7 +16,7 @@
             [ngClass]="item.isStocked ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
             <td>{{item.brandName}}</td>
-            <ng-container *ngIf="isStockStateTable(); else elseTemplate">
+            <ng-container *ngIf="!isStockStateTable(); else elseTemplate">
                 <td>
                     <div class="row">
                         <app-table-buttons (delete)="delete(item)" (update)="update(item)"

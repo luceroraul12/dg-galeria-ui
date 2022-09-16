@@ -6,9 +6,9 @@ import { BrandService } from 'src/app/services/crud/brand.service';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'app-tabla-marca',
-  templateUrl: './tabla-marca.component.html',
-  styleUrls: ['./tabla-marca.component.css'],
+  selector: 'app-brand-table',
+  templateUrl: './brand-table.component.html',
+  styleUrls: ['./brand-table.component.css'],
 })
 export class TablaMarcaComponent
   extends CallInputsTable<Brand>
