@@ -5,6 +5,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { BarraComponent } from './menu/barra.component';
 import { ButtonComponent } from './button/button.component';
 import { TableButtonsComponent } from './table-buttons/table-buttons.component';
+import { ButtonReturnAdminComponent } from './button-return-admin/button-return-admin.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,14 @@ import { TableButtonsComponent } from './table-buttons/table-buttons.component';
     BarraComponent,
     ButtonComponent,
     TableButtonsComponent,
+    ButtonReturnAdminComponent,
   ],
   imports: [CommonModule, AppRoutingModule],
-  exports: [BotoneraRetornoComponent, BarraComponent, TableButtonsComponent],
+  exports: [
+    BotoneraRetornoComponent,
+    BarraComponent,
+    TableButtonsComponent,
+    ButtonReturnAdminComponent,
+  ],
 })
 export class SharedModule {}
