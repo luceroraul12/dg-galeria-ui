@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TableType } from 'src/app/constants/table-type';
 import { Brand } from 'src/app/interfaces/brand.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { BrandService } from 'src/app/services/crud/brand.service';
@@ -14,7 +15,7 @@ export class TablaMarcaComponent
   implements OnInit
 {
   public marcasCreadas: Brand[] = [];
-  @Input() tipoDeTabla: string = 'determinado';
+  @Input() tableType: TableType = TableType.ASIGNATION;
 
   constructor(private brandService: BrandService, tableService: TableService) {
     super(tableService);
@@ -25,5 +26,9 @@ export class TablaMarcaComponent
       this.marcasCreadas = response.stockDataResult;
       this.tableService.stockDataTable = response.stockDataResult;
     });
+  }
+
+  isStockStateTable() {
+    return this.tableType == TableType.STOCK_STATE;
   }
 }
