@@ -9,8 +9,8 @@ import { AsignacionSaborFormatoComponent } from './views/asignation/asignacion-s
 import { FormatoFormularioComponent } from './views/drink-container/components/formato-formulario/formato-formulario.component';
 import { TablaFormatoComponent } from './views/drink-container/components/tabla-formato/tabla-formato.component';
 import { FormatoComponent } from './views/drink-container/formato.component';
-import { BebidaFormularioComponent } from './views/taste/components/bebida-formulario/bebida-formulario.component';
-import { TablaSaborComponent } from './views/taste/components/tabla-sabor/tabla-sabor.component';
+import { TasteFormComponent } from './views/taste/components/taste-form/taste-form.component';
+import { TablaSaborComponent } from './views/taste/components/taste-table/tabla-sabor.component';
 import { BuscadorSaborComponent } from './views/taste/sabor-estado/components/buscador-sabor/buscador-sabor.component';
 import { SaborEstadoComponent } from './views/taste/sabor-estado/sabor-estado.component';
 import { SaborComponent } from './views/taste/sabor.component';
@@ -23,7 +23,7 @@ import { MarcaFormularioComponent } from './views/brand/components/brand-form/br
 @NgModule({
   declarations: [
     VistaAdministradorComponent,
-    BebidaFormularioComponent,
+    TasteFormComponent,
     MarcaFormularioComponent,
     FormatoFormularioComponent,
     FormatoComponent,
