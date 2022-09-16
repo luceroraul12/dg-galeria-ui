@@ -24,6 +24,8 @@ export abstract class CrudService<Entity extends StockData> {
   }
 
   delete(element: Entity): Observable<StockDataResponse<Entity>> {
-    return this.http.delete<StockDataResponse<Entity>>(this.urlApi);
+    return this.http.delete<StockDataResponse<Entity>>(this.urlApi, {
+      body: element,
+    });
   }
 }
