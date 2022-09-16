@@ -33,8 +33,9 @@ export class TableService {
         console.log(item);
 
         //TODO: fix this for true row data selected
-        this.stockDataTable[index].isStocked =
-          !this.stockDataTable[index].isStocked;
+        // this.stockDataTable[index].isStocked =
+        //   !this.stockDataTable[index].isStocked;
+        item == rowDataSelected;
         console.log(item);
       }
     });
