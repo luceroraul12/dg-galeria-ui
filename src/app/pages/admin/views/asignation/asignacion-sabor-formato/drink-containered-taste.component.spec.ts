@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AsignacionSaborFormatoComponent } from './asignacion-sabor-formato.component';
+import { AsignacionSaborFormatoComponent } from './drink-containered-taste.component';
 
 describe('AsignacionSaborFormatoComponent', () => {
   let component: AsignacionSaborFormatoComponent;

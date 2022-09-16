@@ -3,9 +3,9 @@ import { BrandedTaste } from 'src/app/interfaces/branded-taste.interface';
 import { BrandedTasteService } from 'src/app/services/crud/branded-taste.service';
 
 @Component({
-  selector: 'app-asignacion-marca-sabor',
-  templateUrl: './asignacion-marca-sabor.component.html',
-  styleUrls: ['./asignacion-marca-sabor.component.css'],
+  selector: 'app-branded-taste',
+  templateUrl: './branded-taste.component.html',
+  styleUrls: ['./branded-taste.component.css'],
 })
 export class AsignacionMarcaSaborComponent implements OnInit {
   public brandedTasteData: BrandedTaste[] = [];

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AsignacionMarcaSaborComponent } from './pages/admin/views/asignation/asignacion-marca-sabor/asignacion-marca-sabor.component';
-import { AsignacionSaborFormatoComponent } from './pages/admin/views/asignation/asignacion-sabor-formato/asignacion-sabor-formato.component';
+import { AsignacionMarcaSaborComponent } from './pages/admin/views/asignation/branded-taste/branded-taste.component';
+import { AsignacionSaborFormatoComponent } from './pages/admin/views/asignation/asignacion-sabor-formato/drink-containered-taste.component';
 import { MarcaEstadoComponent } from './pages/admin/views/brand/brand-state/brand-state.component';
 import { MarcaComponent } from './pages/admin/views/brand/brand.component';
 import { FormatoComponent } from './pages/admin/views/drink-container/formato.component';

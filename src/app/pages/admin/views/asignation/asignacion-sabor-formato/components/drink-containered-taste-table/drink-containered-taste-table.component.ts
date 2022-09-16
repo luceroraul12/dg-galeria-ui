@@ -6,9 +6,9 @@ import { DrinkContaineredTasteService } from 'src/app/services/crud/drink-contai
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'app-drink-container-taste-table',
-  templateUrl: './drink-container-taste-table.component.html',
-  styleUrls: ['./drink-container-taste-table.component.css'],
+  selector: 'app-drink-containered-taste-table',
+  templateUrl: './drink-containered-taste-table.component.html',
+  styleUrls: ['./drink-containered-taste-table.component.css'],
 })
 export class DrinkContainerTasteTableComponent
   extends CallInputsTable<DrinkContaineredTaste>
