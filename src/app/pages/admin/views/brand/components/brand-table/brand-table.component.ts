@@ -26,9 +26,10 @@ export class TablaMarcaComponent
     this.brandService
       .read()
       .pipe(first())
-      .subscribe((response) => {
-        this.marcasCreadas = response.stockDataResult;
-        this.tableService.stockDataTable = response.stockDataResult;
+      .subscribe(({ stockDataResult }) => {
+        stockDataResult.sort((a, b) => a.id - b.id);
+        this.marcasCreadas = stockDataResult;
+        this.tableService.stockDataTable = stockDataResult;
       });
   }
 
