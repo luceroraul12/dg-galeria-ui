@@ -1,11 +1,16 @@
 <div class="row">
-    <div class="col">
-        <app-button label="eliminar" (emitter)="onDelete()"></app-button>
+    <div *ngIf="!isStockState();else stockState">
+        <div class="col">
+            <app-button label="eliminar" (emitter)="onDelete()"></app-button>
+        </div>
+        <div class="col">
+            <app-button label="modificar" (emitter)="onUpdate()"></app-button>
+        </div>
     </div>
-    <div class="col">
-        <app-button label="modificar" (emitter)="onUpdate()"></app-button>
-    </div>
-    <div class="col">
-        <app-button label="cambiar estado" (emitter)="onChangeStockState()"></app-button>
-    </div>
+    <ng-template #stockState>
+        <div class="col">
+            <app-button label="cambiar estado" (emitter)="onChangeStockState()"></app-button>
+        </div>
+    </ng-template>
+
 </div>

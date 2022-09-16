@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TableType } from 'src/app/constants/table-type';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 
 @Component({
@@ -8,12 +9,17 @@ import { StockData } from 'src/app/interfaces/stock-data.interface';
 })
 export class TableButtonsComponent implements OnInit {
   @Input() rowDataSelected!: StockData;
+  @Input() tableType: TableType = TableType.ASIGNATION;
 
   @Output() delete: EventEmitter<true> = new EventEmitter();
   @Output() update: EventEmitter<true> = new EventEmitter();
   @Output() changeStockState: EventEmitter<true> = new EventEmitter();
 
   constructor() {}
+
+  isStockState() {
+    return this.tableType == TableType.STOCK_STATE;
+  }
 
   ngOnInit(): void {}
 

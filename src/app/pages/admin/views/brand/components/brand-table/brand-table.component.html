@@ -16,22 +16,9 @@
             [ngClass]="item.isStocked ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
             <td>{{item.brandName}}</td>
-            <ng-container *ngIf="!isStockStateTable(); else elseTemplate">
-                <td>
-                    <div class="row">
-                        <app-table-buttons (delete)="delete(item)" (update)="update(item)"
-                            (changeStockState)="changeStockState(item)"></app-table-buttons>
-                    </div>
-                </td>
-            </ng-container>
-            <ng-template #elseTemplate>
-                <td>
-                    <div class="form-check form-switch form-check-reverse">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-                    </div>
-                </td>
-            </ng-template>
-
+            <td>
+                <app-table-buttons [tableType]="tableType"></app-table-buttons>
+            </td>
         </tr>
     </tbody>
 </table>
