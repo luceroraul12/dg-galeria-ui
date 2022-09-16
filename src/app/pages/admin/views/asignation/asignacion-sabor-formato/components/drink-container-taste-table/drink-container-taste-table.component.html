@@ -9,14 +9,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let drinkContainerTaste of drinkContainerTasteData let i = index"
-            [ngClass]="drinkContainerTaste.isStocked ? 'table-success' : 'table-warning'">
+        <tr *ngFor="let item of drinkContainerTasteData let i = index"
+            [ngClass]="item.isStocked ? 'table-success' : 'table-warning'">
             <th scope="row">{{i+1}}</th>
-            <td>{{drinkContainerTaste.brandedTaste.brand.brandName}}</td>
-            <td>{{drinkContainerTaste.brandedTaste.taste.tasteName}}</td>
-            <td>{{drinkContainerTaste.drinkContainer.containerName}}</td>
+            <td>{{item.brandedTaste.brand.brandName}}</td>
+            <td>{{item.brandedTaste.taste.tasteName}}</td>
+            <td>{{item.drinkContainer.containerName}}</td>
             <td>
-                add botones
+                <app-table-buttons [rowDataSelected]="item" [tableType]="tableType"
+                    (changeStockState)="changeStockState(item)" (delete)="delete(item)" (update)="update(item)">
+                </app-table-buttons>
             </td>
 
         </tr>
