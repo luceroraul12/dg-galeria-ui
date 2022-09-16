@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MarcaComponent } from './marca.component';
+import { MarcaComponent } from './brand.component';
 
 describe('MarcaComponent', () => {
   let component: MarcaComponent;
@@ -8,9 +8,8 @@ describe('MarcaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarcaComponent ]
-    })
-    .compileComponents();
+      declarations: [MarcaComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MarcaComponent);
     component = fixture.componentInstance;

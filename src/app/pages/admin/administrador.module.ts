@@ -7,7 +7,6 @@ import { AsignacionTablaSaborEstadoComponent } from './views/taste/sabor-estado/
 import { AsignacionMarcaSaborComponent } from './views/asignation/asignacion-marca-sabor/asignacion-marca-sabor.component';
 import { AsignacionSaborFormatoComponent } from './views/asignation/asignacion-sabor-formato/asignacion-sabor-formato.component';
 import { MarcaFormularioComponent } from './views/brand/components/marca-formulario/marca-formulario.component';
-import { MarcaComponent } from './views/brand/marca.component';
 import { FormatoFormularioComponent } from './views/drink-container/components/formato-formulario/formato-formulario.component';
 import { TablaFormatoComponent } from './views/drink-container/components/tabla-formato/tabla-formato.component';
 import { FormatoComponent } from './views/drink-container/formato.component';
@@ -19,6 +18,7 @@ import { SaborComponent } from './views/taste/sabor.component';
 import { DrinkContainerTasteTableComponent } from './views/asignation/asignacion-sabor-formato/components/drink-container-taste-table/drink-container-taste-table.component';
 import { TablaMarcaComponent } from './views/brand/components/brand-table/brand-table.component';
 import { MarcaEstadoComponent } from './views/brand/brand-state/brand-state.component';
+import { MarcaComponent } from './views/brand/brand.component';
 
 @NgModule({
   declarations: [
