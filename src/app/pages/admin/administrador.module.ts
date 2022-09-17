@@ -3,14 +3,11 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../../app-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { VistaAdministradorComponent } from './views/vista-administrador.component';
-import { AsignacionTablaSaborEstadoComponent } from './views/taste/sabor-estado/components/asignacion-tabla-sabor-estado/asignacion-tabla-sabor-estado.component';
 import { FormatoFormularioComponent } from './views/drink-container/components/formato-formulario/formato-formulario.component';
 import { TablaFormatoComponent } from './views/drink-container/components/tabla-formato/tabla-formato.component';
 import { FormatoComponent } from './views/drink-container/formato.component';
 import { TasteFormComponent } from './views/taste/components/taste-form/taste-form.component';
 import { TablaSaborComponent } from './views/taste/components/taste-table/tabla-sabor.component';
-import { BuscadorSaborComponent } from './views/taste/sabor-estado/components/buscador-sabor/buscador-sabor.component';
-import { SaborEstadoComponent } from './views/taste/sabor-estado/sabor-estado.component';
 import { SaborComponent } from './views/taste/sabor.component';
 import { TablaMarcaComponent } from './views/brand/components/brand-table/brand-table.component';
 import { MarcaEstadoComponent } from './views/brand/brand-state/brand-state.component';
@@ -30,14 +27,11 @@ import { DrinkContainerTasteTableComponent } from './views/mixed/drink-container
     MarcaComponent,
     SaborComponent,
     MarcaEstadoComponent,
-    SaborEstadoComponent,
     TablaMarcaComponent,
-    BuscadorSaborComponent,
     TablaSaborComponent,
     AsignacionMarcaSaborComponent,
     AsignacionSaborFormatoComponent,
     TablaFormatoComponent,
-    AsignacionTablaSaborEstadoComponent,
     DrinkContainerTasteTableComponent,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
