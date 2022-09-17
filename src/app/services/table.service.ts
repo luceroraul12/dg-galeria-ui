@@ -9,6 +9,10 @@ export class TableService {
 
   constructor() {}
 
+  addRowData(rowDataSelected: StockData) {
+    this.stockDataTable.push(rowDataSelected);
+  }
+
   updateRowData(rowDataSelected: StockData): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
