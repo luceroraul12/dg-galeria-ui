@@ -6,6 +6,7 @@ import { BarraComponent } from './menu/barra.component';
 import { ButtonComponent } from './button/button.component';
 import { TableButtonsComponent } from './table-buttons/table-buttons.component';
 import { ButtonReturnAdminComponent } from './button-return-admin/button-return-admin.component';
+import { ButtonFormsComponent } from './button-forms/button-forms.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ButtonReturnAdminComponent } from './button-return-admin/button-return-
     ButtonComponent,
     TableButtonsComponent,
     ButtonReturnAdminComponent,
+    ButtonFormsComponent,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -21,6 +23,7 @@ import { ButtonReturnAdminComponent } from './button-return-admin/button-return-
     BarraComponent,
     TableButtonsComponent,
     ButtonReturnAdminComponent,
+    ButtonFormsComponent,
   ],
 })
 export class SharedModule {}
