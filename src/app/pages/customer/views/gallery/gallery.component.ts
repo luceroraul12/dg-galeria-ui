@@ -3,11 +3,11 @@ import { Brand } from 'src/app/interfaces/brand.interface';
 import { BrandService } from 'src/app/services/crud/brand.service';
 
 @Component({
-  selector: 'app-galeria',
-  templateUrl: './galeria.component.html',
-  styleUrls: ['./galeria.component.css'],
+  selector: 'app-gallery',
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.css'],
 })
-export class GaleriaComponent implements OnInit {
+export class GalleryComponent implements OnInit {
   public informacionDisponible: any[] = [];
 
   public marcasCreadas: Brand[] = [];
