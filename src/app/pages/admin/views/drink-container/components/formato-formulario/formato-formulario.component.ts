@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DrinkContainer } from 'src/app/interfaces/drink-container.interface';
+import { CallInputsForm } from 'src/app/services/call-inputs-form.service';
 import { DrinkContainerService } from 'src/app/services/crud/drink-container.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -9,7 +10,10 @@ import { TableService } from 'src/app/services/table.service';
   templateUrl: './formato-formulario.component.html',
   styleUrls: ['./formato-formulario.component.css'],
 })
-export class FormatoFormularioComponent implements OnInit {
+export class FormatoFormularioComponent
+  extends CallInputsForm<DrinkContainer>
+  implements OnInit
+{
   public drinkContianer: DrinkContainer = {
     containerName: '',
     id: 0,
@@ -17,20 +21,19 @@ export class FormatoFormularioComponent implements OnInit {
   };
 
   constructor(
-    private drinkContainerService: DrinkContainerService,
-    private tableService: TableService
-  ) {}
+    drinkContainerService: DrinkContainerService,
+    tableService: TableService
+  ) {
+    super(tableService, drinkContainerService);
+  }
 
   ngOnInit(): void {}
 
-  onSubmit(form: NgForm) {
-    console.log(this.drinkContianer.containerName);
-    this.drinkContainerService
-      .create(this.drinkContianer)
-      .subscribe(({ stockDataResult }) => {
-        console.log(stockDataResult[0]);
-        this.tableService.addRowData(stockDataResult[0]);
-      });
+  onSubmit() {
+    if (this.drinkContianer.containerName == '') {
+      return;
+    }
+    this.create(this.drinkContianer);
   }
 
   onCancel(form: NgForm) {
