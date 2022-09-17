@@ -9,11 +9,11 @@ import {
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
-  selector: 'app-vista-detallada',
-  templateUrl: './vista-detallada.component.html',
-  styleUrls: ['./vista-detallada.component.css'],
+  selector: 'app-detailed-gallery',
+  templateUrl: './detailed-gallery.component.html',
+  styleUrls: ['./detailed-gallery.component.css'],
 })
-export class VistaDetalladaComponent implements OnInit {
+export class DetailedGallery implements OnInit {
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
 
   private idMarca: string = '';

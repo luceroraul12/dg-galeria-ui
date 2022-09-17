@@ -8,7 +8,7 @@ import { AsignacionSaborFormatoComponent } from './pages/admin/views/mixed/drink
 import { SaborComponent } from './pages/admin/views/taste/sabor.component';
 import { VistaAdministradorComponent } from './pages/admin/views/vista-administrador.component';
 import { CustomerComponent } from './pages/customer/views/customer.component';
-import { VistaDetalladaComponent } from './pages/customer/views/gallery/detailed-gallery/vista-detallada.component';
+import { DetailedGallery } from './pages/customer/views/gallery/detailed-gallery/detailed-galllery.component';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'cliente/:idMarca',
-    component: VistaDetalladaComponent,
+    component: DetailedGallery,
   },
   {
     path: 'administrador',

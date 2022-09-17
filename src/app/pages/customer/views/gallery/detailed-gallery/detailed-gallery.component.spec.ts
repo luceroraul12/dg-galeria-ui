@@ -1,18 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { VistaDetalladaComponent } from './vista-detallada.component';
+import { DetailedGallery } from './detailed-galllery.component';
 
 describe('VistaDetalladaComponent', () => {
-  let component: VistaDetalladaComponent;
-  let fixture: ComponentFixture<VistaDetalladaComponent>;
+  let component: DetailedGallery;
+  let fixture: ComponentFixture<DetailedGallery>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VistaDetalladaComponent ]
-    })
-    .compileComponents();
+      declarations: [DetailedGallery],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(VistaDetalladaComponent);
+    fixture = TestBed.createComponent(DetailedGallery);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
