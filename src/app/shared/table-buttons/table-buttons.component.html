@@ -1,14 +1,14 @@
 <div class="d-flex flex-row-reverse">
   <div *ngIf="!isStockState(); else stockState" class="d-flex flex-row-reverse">
-    <div class="p-2">
+    <div class="p-1">
       <app-button label="eliminar" (emitter)="onDelete()"></app-button>
     </div>
-    <div class="p-2">
+    <div class="p-1">
       <app-button label="modificar" (emitter)="onUpdate()"></app-button>
     </div>
   </div>
   <ng-template #stockState>
-    <div class="p-2">
+    <div class="p-1">
       <app-button
         label="cambiar estado"
         (emitter)="onChangeStockState()"
