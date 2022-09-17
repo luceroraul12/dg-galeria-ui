@@ -1,4 +1,5 @@
 import { first } from 'rxjs';
+import { OperationToMakeReturned } from '../constants/operation-to-make-returned';
 import { StockData } from '../interfaces/stock-data.interface';
 import { CrudService } from './crud/crud-abstract.service';
 import { TableService } from './table.service';
@@ -22,8 +23,12 @@ export abstract class CallInputsTable<Entity extends StockData> {
 
   update(item: Entity): void {
     console.log('update tabla formato');
+    this.crudService.callFromTableToForm$.next([
+      item,
+      OperationToMakeReturned.UPDATE,
+    ]);
 
-    this.tableService.updateRowData(item);
+    // this.tableService.updateRowData(item);
   }
 
   changeStockState(item: Entity): void {
