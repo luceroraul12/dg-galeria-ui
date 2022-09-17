@@ -1,11 +1,9 @@
-<form
-  #drinkContainerForm="ngForm"
-  autocomplete="off"
-  (ngSubmit)="onSubmit(drinkContainerForm)"
->
+<form #drinkContainerForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit()">
   <div class="mb-3">
     <label class="form-label">Nombre de Envase</label>
+
     <input
+      required
       type="text"
       class="form-control"
       name="drinkContianerName"
