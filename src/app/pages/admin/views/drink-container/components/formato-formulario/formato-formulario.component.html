@@ -1,7 +1,12 @@
-<form>
+<form #drinkContainerForm="ngForm">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre de Envase</label>
-    <input type="email" class="form-control" />
+    <label class="form-label">Nombre de Envase</label>
+    <input
+      type="text"
+      class="form-control"
+      name="drinkContianerName"
+      [(ngModel)]="drinkContianer.containerName"
+    />
   </div>
   <app-button-forms></app-button-forms>
 </form>

@@ -16,6 +16,7 @@ import { MarcaFormularioComponent } from './views/brand/components/brand-form/br
 import { AsignacionMarcaSaborComponent } from './views/mixed/branded-taste/branded-taste.component';
 import { AsignacionSaborFormatoComponent } from './views/mixed/drink-containered-taste/drink-containered-taste.component';
 import { DrinkContainerTasteTableComponent } from './views/mixed/drink-containered-taste/components/drink-containered-taste-table/drink-containered-taste-table.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { DrinkContainerTasteTableComponent } from './views/mixed/drink-container
     TablaFormatoComponent,
     DrinkContainerTasteTableComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, SharedModule],
+  imports: [CommonModule, FormsModule, AppRoutingModule, SharedModule],
   exports: [VistaAdministradorComponent],
 })
 export class AdministradorModule {}
