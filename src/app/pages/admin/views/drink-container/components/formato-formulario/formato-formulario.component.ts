@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DrinkContainer } from 'src/app/interfaces/drink-container.interface';
 import { DrinkContainerService } from 'src/app/services/crud/drink-container.service';
+import { TableService } from 'src/app/services/table.service';
 
 @Component({
   selector: 'app-formato-formulario',
@@ -15,7 +16,10 @@ export class FormatoFormularioComponent implements OnInit {
     isStocked: true,
   };
 
-  constructor(private drinkContainerService: DrinkContainerService) {}
+  constructor(
+    private drinkContainerService: DrinkContainerService,
+    private tableService: TableService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -25,6 +29,7 @@ export class FormatoFormularioComponent implements OnInit {
       .create(this.drinkContianer)
       .subscribe(({ stockDataResult }) => {
         console.log(stockDataResult[0]);
+        this.tableService.addRowData(stockDataResult[0]);
       });
   }
 
