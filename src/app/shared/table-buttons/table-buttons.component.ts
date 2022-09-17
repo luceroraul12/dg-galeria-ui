@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { OperationToMakeReturned } from 'src/app/constants/operation-to-make-returned';
 import { TableType } from 'src/app/constants/table-type';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 
@@ -12,7 +13,8 @@ export class TableButtonsComponent implements OnInit {
   @Input() tableType: TableType = TableType.ASIGNATION;
 
   @Output() delete: EventEmitter<true> = new EventEmitter();
-  @Output() update: EventEmitter<true> = new EventEmitter();
+  @Output() update: EventEmitter<[StockData, OperationToMakeReturned]> =
+    new EventEmitter();
   @Output() changeStockState: EventEmitter<true> = new EventEmitter();
 
   constructor() {}
@@ -32,7 +34,7 @@ export class TableButtonsComponent implements OnInit {
   onUpdate(): void {
     console.log('update botonera de tabla');
 
-    this.update.emit(true);
+    this.update.emit([this.rowDataSelected, OperationToMakeReturned.UPDATE]);
   }
 
   onChangeStockState(): void {
