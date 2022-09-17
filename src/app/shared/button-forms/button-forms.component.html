@@ -1,1 +1,15 @@
-<p>button-forms works!</p>
+<div class="d-flex mb-3">
+  <div class="me-auto row">
+    <div class="p-2 col">
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+        Cargar
+      </button>
+    </div>
+    <div class="p-2 col">
+      <app-button label="Cancelar" (emitter)="onCancel()"></app-button>
+    </div>
+  </div>
+  <div class="p-2">
+    <app-button label="Carga Multiple" (emitter)="onAddMany()"></app-button>
+  </div>
+</div>
