@@ -7,13 +7,13 @@ import { AsignacionMarcaSaborComponent } from './pages/admin/views/mixed/branded
 import { AsignacionSaborFormatoComponent } from './pages/admin/views/mixed/drink-containered-taste/drink-containered-taste.component';
 import { SaborComponent } from './pages/admin/views/taste/sabor.component';
 import { VistaAdministradorComponent } from './pages/admin/views/vista-administrador.component';
+import { CustomerComponent } from './pages/customer/views/customer.component';
 import { VistaDetalladaComponent } from './pages/customer/views/gallery/detailed-gallery/vista-detallada.component';
-import { VistaClienteComponent } from './pages/customer/views/vista-cliente.component';
 
 const routes: Routes = [
   {
     path: 'cliente',
-    component: VistaClienteComponent,
+    component: CustomerComponent,
   },
   {
     path: 'cliente/:idMarca',
