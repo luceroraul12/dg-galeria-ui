@@ -1,25 +1,27 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Marcas</th>
-            <ng-container *ngIf="!isStockState(); else elseTemplate">
-                <th scope="col">Opciones</th>
-            </ng-container>
-            <ng-template #elseTemplate>
-                <th scope="col">Estados</th>
-            </ng-template>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of saboresCreados; let i = index">
-            <th scope="row">{{i+1}}</th>
-            <td>{{item.tasteName}}</td>
-            <td>
-                <app-table-buttons (changeStockState)="changeStockState(item)" (update)="update(item)"
-                    (delete)="delete(item)"></app-table-buttons>
-            </td>
-        </tr>
-    </tbody>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marcas</th>
+      <ng-container *ngIf="!isStockState(); else elseTemplate">
+        <th scope="col">Opciones</th>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <th scope="col">Estados</th>
+      </ng-template>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of saboresCreados; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.tasteName }}</td>
+      <td>
+        <app-table-buttons
+          (changeStockState)="changeStockState(item)"
+          (update)="update(item)"
+          (delete)="delete(item)"
+        ></app-table-buttons>
+      </td>
+    </tr>
+  </tbody>
 </table>
