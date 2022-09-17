@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../../app-routing.module';
 import { SharedModule } from '../../shared/shared.module';
-import { VistaAdministradorComponent } from './views/vista-administrador.component';
+import { VistaAdministradorComponent } from './views/admin.component';
 import { FormatoFormularioComponent } from './views/drink-container/components/formato-formulario/formato-formulario.component';
 import { TablaFormatoComponent } from './views/drink-container/components/tabla-formato/tabla-formato.component';
 import { FormatoComponent } from './views/drink-container/formato.component';

@@ -6,7 +6,7 @@ import { FormatoComponent } from './pages/admin/views/drink-container/formato.co
 import { AsignacionMarcaSaborComponent } from './pages/admin/views/mixed/branded-taste/branded-taste.component';
 import { AsignacionSaborFormatoComponent } from './pages/admin/views/mixed/drink-containered-taste/drink-containered-taste.component';
 import { SaborComponent } from './pages/admin/views/taste/sabor.component';
-import { VistaAdministradorComponent } from './pages/admin/views/vista-administrador.component';
+import { VistaAdministradorComponent } from './pages/admin/views/admin.component';
 import { CustomerComponent } from './pages/customer/views/customer.component';
 import { DetailedGallery } from './pages/customer/views/gallery/detailed-gallery/detailed-galllery.component';
 

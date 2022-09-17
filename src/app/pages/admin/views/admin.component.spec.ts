@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VistaAdministradorComponent } from './vista-administrador.component';
+import { VistaAdministradorComponent } from './admin.component';
 
 describe('VistaAdministradorComponent', () => {
   let component: VistaAdministradorComponent;
@@ -8,9 +8,8 @@ describe('VistaAdministradorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VistaAdministradorComponent ]
-    })
-    .compileComponents();
+      declarations: [VistaAdministradorComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(VistaAdministradorComponent);
     component = fixture.componentInstance;
