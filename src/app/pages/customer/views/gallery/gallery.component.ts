@@ -15,8 +15,11 @@ export class GalleryComponent implements OnInit {
   constructor(private brandService: BrandService) {}
 
   ngOnInit(): void {
-    this.brandService
-      .read()
-      .subscribe((response) => (this.marcasCreadas = response.stockDataResult));
+    this.brandService.read().subscribe((response) => {
+      response.stockDataResult.sort((a, b) => {
+        return a.id - b.id;
+      });
+      this.marcasCreadas = response.stockDataResult;
+    });
   }
 }
