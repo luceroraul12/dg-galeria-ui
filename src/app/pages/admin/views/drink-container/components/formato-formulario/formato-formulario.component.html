@@ -8,5 +8,5 @@
       [(ngModel)]="drinkContianer.containerName"
     />
   </div>
-  <app-button-forms></app-button-forms>
+  <app-button-forms (cancel)="onCancel(drinkContainerForm)"></app-button-forms>
 </form>

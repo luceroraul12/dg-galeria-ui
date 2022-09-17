@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { DrinkContainer } from 'src/app/interfaces/drink-container.interface';
 
 @Component({
@@ -16,4 +17,12 @@ export class FormatoFormularioComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSubmit(form: NgForm) {
+    console.log(form.value);
+  }
+
+  onCancel(form: NgForm) {
+    form.reset();
+  }
 }
