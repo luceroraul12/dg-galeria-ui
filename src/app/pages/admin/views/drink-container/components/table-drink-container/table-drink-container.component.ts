@@ -5,9 +5,9 @@ import { DrinkContainerService } from 'src/app/pages/admin/views/drink-container
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'app-tabla-formato',
-  templateUrl: './tabla-formato.component.html',
-  styleUrls: ['./tabla-formato.component.css'],
+  selector: 'app-table-drink-container',
+  templateUrl: './table-drink-container.component.html',
+  styleUrls: ['./table-drink-container.component.css'],
 })
 export class TablaFormatoComponent
   extends TableAbstractComponent<DrinkContainer>

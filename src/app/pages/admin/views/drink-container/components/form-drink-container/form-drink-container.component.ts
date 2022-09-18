@@ -6,9 +6,9 @@ import { DrinkContainerService } from 'src/app/pages/admin/views/drink-container
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'app-formato-formulario',
-  templateUrl: './formato-formulario.component.html',
-  styleUrls: ['./formato-formulario.component.css'],
+  selector: 'app-form-drink-container',
+  templateUrl: './form-drink-container.component.html',
+  styleUrls: ['./form-drink-container.component.css'],
 })
 export class FormatoFormularioComponent
   extends FormAbstractComponent<DrinkContainer>
