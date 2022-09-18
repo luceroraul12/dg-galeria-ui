@@ -27,6 +27,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
     } else {
       this.create();
     }
+    this.reset();
   }
 
   create() {

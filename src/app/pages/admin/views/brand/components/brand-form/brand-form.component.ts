@@ -14,15 +14,19 @@ export class BrandFormComponent
   implements OnInit
 {
   validate(): boolean {
-    throw new Error('Method not implemented.');
+    return this.element.brandName != '' && this.element.url != '';
   }
   reset(): void {
-    throw new Error('Method not implemented.');
-    this.element = {};
+    this.element = {
+      brandName: '',
+      url: '',
+    };
   }
   constructor(tableService: TableService<Brand>, brandService: BrandService) {
     super(tableService, brandService);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.reset();
+  }
 }
