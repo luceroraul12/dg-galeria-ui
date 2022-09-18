@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { first } from 'rxjs';
+import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
 import { TableType } from 'src/app/constants/table-type';
 import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
-import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -12,7 +12,7 @@ import { TableService } from 'src/app/services/table.service';
   styleUrls: ['./brand-table.component.css'],
 })
 export class TablaMarcaComponent
-  extends CallInputsTable<Brand>
+  extends TableAbstractComponent<Brand>
   implements OnInit
 {
   public marcasCreadas: Brand[] = [];

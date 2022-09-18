@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
 import { TableType } from 'src/app/constants/table-type';
 import { Taste } from 'src/app/pages/admin/views/taste/interface/taste.interface';
-import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { TasteService } from 'src/app/pages/admin/views/taste/service/taste.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -11,7 +11,7 @@ import { TableService } from 'src/app/services/table.service';
   styleUrls: ['./tabla-sabor.component.css'],
 })
 export class TablaSaborComponent
-  extends CallInputsTable<Taste>
+  extends TableAbstractComponent<Taste>
   implements OnInit
 {
   @Input() tableType: TableType = TableType.ASIGNATION;

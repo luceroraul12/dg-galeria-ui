@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
+import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
 import { BrandedTaste } from 'src/app/pages/admin/views/branded-taste/interface/branded-taste.interface';
-import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { BrandedTasteService } from 'src/app/pages/admin/views/branded-taste/service/branded-taste.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -11,7 +11,7 @@ import { TableService } from 'src/app/services/table.service';
   styleUrls: ['./branded-taste.component.css'],
 })
 export class AsignacionMarcaSaborComponent
-  extends CallInputsTable<BrandedTaste>
+  extends TableAbstractComponent<BrandedTaste>
   implements OnInit
 {
   public brandedTasteData: BrandedTaste[] = [];

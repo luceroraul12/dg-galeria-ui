@@ -1,10 +1,10 @@
 import { first } from 'rxjs';
-import { OperationToMakeReturned } from '../constants/operation-to-make-returned';
-import { StockData } from '../interfaces/stock-data.interface';
-import { CrudService } from '../abstract/crud-abstract.service';
-import { TableService } from './table.service';
+import { OperationToMakeReturned } from 'src/app/constants/operation-to-make-returned';
+import { StockData } from 'src/app/interfaces/stock-data.interface';
+import { TableService } from 'src/app/services/table.service';
+import { CrudService } from '../service/crud-abstract.service';
 
-export abstract class CallInputsTable<Entity extends StockData> {
+export abstract class TableAbstractComponent<Entity extends StockData> {
   constructor(
     public tableService: TableService,
     public crudService: CrudService<Entity>

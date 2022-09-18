@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
 import { DrinkContainer } from 'src/app/pages/admin/views/drink-container/interface/drink-container.interface';
-import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { DrinkContainerService } from 'src/app/pages/admin/views/drink-container/service/drink-container.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -10,7 +10,7 @@ import { TableService } from 'src/app/services/table.service';
   styleUrls: ['./tabla-formato.component.css'],
 })
 export class TablaFormatoComponent
-  extends CallInputsTable<DrinkContainer>
+  extends TableAbstractComponent<DrinkContainer>
   implements OnInit
 {
   public drinkContainerCreated: DrinkContainer[] = [];

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
 import { TableType } from 'src/app/constants/table-type';
 import { DrinkContaineredTaste } from 'src/app/pages/admin/views/drink-containered-taste/interface/drink-containered-taste.interface';
-import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
 import { DrinkContaineredTasteService } from 'src/app/pages/admin/views/drink-containered-taste/service/drink-containered-taste.service';
 import { TableService } from 'src/app/services/table.service';
 
@@ -11,7 +11,7 @@ import { TableService } from 'src/app/services/table.service';
   styleUrls: ['./drink-containered-taste-table.component.css'],
 })
 export class DrinkContainerTasteTableComponent
-  extends CallInputsTable<DrinkContaineredTaste>
+  extends TableAbstractComponent<DrinkContaineredTaste>
   implements OnInit
 {
   public drinkContainerTasteData: DrinkContaineredTaste[] = [];

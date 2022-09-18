@@ -1,8 +1,8 @@
-import { StockData } from '../interfaces/stock-data.interface';
-import { CrudService } from '../abstract/crud-abstract.service';
-import { TableService } from './table.service';
+import { StockData } from '../../interfaces/stock-data.interface';
+import { CrudService } from '../service/crud-abstract.service';
+import { TableService } from '../../services/table.service';
 
-export abstract class CallInputsForm<Entity extends StockData> {
+export abstract class FormAbstractComponent<Entity extends StockData> {
   constructor(
     private tableService: TableService,
     private crudService: CrudService<Entity>
