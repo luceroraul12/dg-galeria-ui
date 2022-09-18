@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TableType } from 'src/app/constants/table-type';
-import { Taste } from 'src/app/interfaces/taste.interface';
+import { Taste } from 'src/app/pages/admin/views/taste/interface/taste.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
-import { TasteService } from 'src/app/services/crud/taste.service';
+import { TasteService } from 'src/app/pages/admin/views/taste/service/taste.service';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({

@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MarcaEstadoComponent } from './pages/admin/views/brand/brand-state/brand-state.component';
 import { MarcaComponent } from './pages/admin/views/brand/brand.component';
 import { FormatoComponent } from './pages/admin/views/drink-container/formato.component';
-import { AsignacionMarcaSaborComponent } from './pages/admin/views/mixed/branded-taste/branded-taste.component';
-import { AsignacionSaborFormatoComponent } from './pages/admin/views/mixed/drink-containered-taste/drink-containered-taste.component';
 import { SaborComponent } from './pages/admin/views/taste/sabor.component';
 import { VistaAdministradorComponent } from './pages/admin/views/admin.component';
 import { CustomerComponent } from './pages/customer/views/customer.component';
-import { DetailedGallery } from './pages/customer/views/gallery/detailed-gallery/detailed-galllery.component';
+import { DetailedGallery } from './pages/customer/views/detailed-gallery/detailed-galllery.component';
+import { AsignacionSaborFormatoComponent } from './pages/admin/views/drink-containered-taste/drink-containered-taste.component';
+import { AsignacionMarcaSaborComponent } from './pages/admin/views/branded-taste/branded-taste.component';
 
 const routes: Routes = [
   {

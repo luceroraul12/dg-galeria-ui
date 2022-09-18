@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Brand } from 'src/app/interfaces/brand.interface';
+import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
 import { environment } from 'src/environments/environment';
-import { CrudService } from './crud-abstract.service';
+import { CrudService } from '../../../../../services/crud-abstract.service';
 
 @Injectable({
   providedIn: 'root',

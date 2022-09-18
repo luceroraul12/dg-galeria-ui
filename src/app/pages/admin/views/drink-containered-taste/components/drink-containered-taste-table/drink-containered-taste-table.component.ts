@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TableType } from 'src/app/constants/table-type';
-import { DrinkContaineredTaste } from 'src/app/interfaces/drink-containered-taste.interface';
+import { DrinkContaineredTaste } from 'src/app/pages/admin/views/drink-containered-taste/interface/drink-containered-taste.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
-import { DrinkContaineredTasteService } from 'src/app/services/crud/drink-containered-taste.service';
+import { DrinkContaineredTasteService } from 'src/app/pages/admin/views/drink-containered-taste/service/drink-containered-taste.service';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({

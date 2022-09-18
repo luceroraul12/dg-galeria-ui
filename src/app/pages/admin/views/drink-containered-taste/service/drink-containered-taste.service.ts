@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DrinkContaineredTaste } from 'src/app/interfaces/drink-containered-taste.interface';
+import { DrinkContaineredTaste } from 'src/app/pages/admin/views/drink-containered-taste/interface/drink-containered-taste.interface';
 import { environment } from 'src/environments/environment';
-import { CrudService } from './crud-abstract.service';
+import { CrudService } from '../../../../../services/crud-abstract.service';
 
 @Injectable({
   providedIn: 'root',

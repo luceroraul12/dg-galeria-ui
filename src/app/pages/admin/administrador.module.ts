@@ -13,10 +13,10 @@ import { TablaMarcaComponent } from './views/brand/components/brand-table/brand-
 import { MarcaEstadoComponent } from './views/brand/brand-state/brand-state.component';
 import { MarcaComponent } from './views/brand/brand.component';
 import { MarcaFormularioComponent } from './views/brand/components/brand-form/brand-form.component';
-import { AsignacionMarcaSaborComponent } from './views/mixed/branded-taste/branded-taste.component';
-import { AsignacionSaborFormatoComponent } from './views/mixed/drink-containered-taste/drink-containered-taste.component';
-import { DrinkContainerTasteTableComponent } from './views/mixed/drink-containered-taste/components/drink-containered-taste-table/drink-containered-taste-table.component';
 import { FormsModule } from '@angular/forms';
+import { AsignacionMarcaSaborComponent } from './views/branded-taste/branded-taste.component';
+import { AsignacionSaborFormatoComponent } from './views/drink-containered-taste/drink-containered-taste.component';
+import { DrinkContainerTasteTableComponent } from './views/drink-containered-taste/components/drink-containered-taste-table/drink-containered-taste-table.component';
 
 @NgModule({
   declarations: [

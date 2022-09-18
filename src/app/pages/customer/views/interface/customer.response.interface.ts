@@ -1,5 +1,5 @@
-import { Brand } from './brand.interface';
-import { DrinkContainer } from './drink-container.interface';
+import { Brand } from '../../../admin/views/brand/interface/brand.interface';
+import { DrinkContainer } from '../../../admin/views/drink-container/interface/drink-container.interface';
 
 export interface CustomerResponse {
   customerResult: CustomerResult;

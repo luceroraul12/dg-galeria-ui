@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Brand } from 'src/app/interfaces/brand.interface';
-import { BrandService } from 'src/app/services/crud/brand.service';
+import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
+import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 
 @Component({
   selector: 'app-gallery',

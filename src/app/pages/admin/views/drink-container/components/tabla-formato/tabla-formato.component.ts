@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DrinkContainer } from 'src/app/interfaces/drink-container.interface';
+import { DrinkContainer } from 'src/app/pages/admin/views/drink-container/interface/drink-container.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
-import { DrinkContainerService } from 'src/app/services/crud/drink-container.service';
+import { DrinkContainerService } from 'src/app/pages/admin/views/drink-container/service/drink-container.service';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({

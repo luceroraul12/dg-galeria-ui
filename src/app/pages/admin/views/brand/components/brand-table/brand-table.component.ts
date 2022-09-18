@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { first } from 'rxjs';
 import { TableType } from 'src/app/constants/table-type';
-import { Brand } from 'src/app/interfaces/brand.interface';
+import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
 import { CallInputsTable } from 'src/app/services/call-inputs-table.service';
-import { BrandService } from 'src/app/services/crud/brand.service';
+import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({

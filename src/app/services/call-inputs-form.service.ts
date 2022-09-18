@@ -1,5 +1,5 @@
 import { StockData } from '../interfaces/stock-data.interface';
-import { CrudService } from './crud/crud-abstract.service';
+import { CrudService } from './crud-abstract.service';
 import { TableService } from './table.service';
 
 export abstract class CallInputsForm<Entity extends StockData> {

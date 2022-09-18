@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { tap } from 'rxjs';
-import { Brand } from 'src/app/interfaces/brand.interface';
 import {
   CustomerResponse,
   TasteResult,
-} from 'src/app/interfaces/customer.response.interface';
-import { CustomerService } from 'src/app/services/customer.service';
+} from 'src/app/pages/customer/views/interface/customer.response.interface';
+import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
+import { CustomerService } from 'src/app/pages/customer/views/service/customer.service';
 
 @Component({
   selector: 'app-detailed-gallery',
