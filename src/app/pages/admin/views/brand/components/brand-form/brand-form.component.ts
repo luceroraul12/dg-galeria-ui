@@ -18,6 +18,7 @@ export class BrandFormComponent
   }
   reset(): void {
     throw new Error('Method not implemented.');
+    this.element = {};
   }
   constructor(tableService: TableService<Brand>, brandService: BrandService) {
     super(tableService, brandService);

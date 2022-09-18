@@ -28,7 +28,7 @@ export class BrandTableComponent
       .read()
       .pipe(first())
       .subscribe(({ stockDataResult }) => {
-        stockDataResult.sort((a, b) => a.id - b.id);
+        stockDataResult.sort((a, b) => a.id! - b.id!);
         this.marcasCreadas = stockDataResult;
         this.tableService.stockDataTable = stockDataResult;
       });

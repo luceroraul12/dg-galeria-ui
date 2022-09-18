@@ -1,4 +1,4 @@
 export interface StockData {
-  id: number;
-  isStocked: boolean;
+  id?: number;
+  isStocked?: boolean;
 }

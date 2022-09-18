@@ -17,7 +17,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
     this.brandService.read().subscribe((response) => {
       response.stockDataResult.sort((a, b) => {
-        return a.id - b.id;
+        return a.id! - b.id!;
       });
       this.marcasCreadas = response.stockDataResult;
     });
