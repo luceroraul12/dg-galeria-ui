@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MarcaFormularioComponent } from './brand-form.component';
+import { BrandFormComponent } from './brand-form.component';
 
 describe('MarcaFormularioComponent', () => {
-  let component: MarcaFormularioComponent;
-  let fixture: ComponentFixture<MarcaFormularioComponent>;
+  let component: BrandFormComponent;
+  let fixture: ComponentFixture<BrandFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MarcaFormularioComponent],
+      declarations: [BrandFormComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MarcaFormularioComponent);
+    fixture = TestBed.createComponent(BrandFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

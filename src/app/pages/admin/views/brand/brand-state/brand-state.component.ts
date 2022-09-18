@@ -6,7 +6,7 @@ import { TableType } from 'src/app/constants/table-type';
   templateUrl: './brand-state.component.html',
   styleUrls: ['./brand-state.component.css'],
 })
-export class MarcaEstadoComponent implements OnInit {
+export class BrandStateComponent implements OnInit {
   public tableTypeSelected: TableType = TableType.STOCK_STATE;
 
   constructor() {}

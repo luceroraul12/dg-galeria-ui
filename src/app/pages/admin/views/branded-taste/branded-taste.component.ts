@@ -10,7 +10,7 @@ import { TableService } from 'src/app/services/table.service';
   templateUrl: './branded-taste.component.html',
   styleUrls: ['./branded-taste.component.css'],
 })
-export class AsignacionMarcaSaborComponent
+export class BrandedTasteComponent
   extends TableAbstractComponent<BrandedTaste>
   implements OnInit
 {

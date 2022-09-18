@@ -10,7 +10,7 @@ import { TableService } from 'src/app/services/table.service';
   templateUrl: './form-drink-container.component.html',
   styleUrls: ['./form-drink-container.component.css'],
 })
-export class FormatoFormularioComponent
+export class FormDrinkContainerComponent
   extends FormAbstractComponent<DrinkContainer>
   implements OnInit
 {

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sabor.component.html',
   styleUrls: ['./sabor.component.css'],
 })
-export class SaborComponent implements OnInit {
+export class TasteComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

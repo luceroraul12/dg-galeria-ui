@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TablaMarcaComponent } from './brand-table.component';
+import { BrandTableComponent } from './brand-table.component';
 
 describe('TablaMarcaComponent', () => {
-  let component: TablaMarcaComponent;
-  let fixture: ComponentFixture<TablaMarcaComponent>;
+  let component: BrandTableComponent;
+  let fixture: ComponentFixture<BrandTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TablaMarcaComponent],
+      declarations: [BrandTableComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TablaMarcaComponent);
+    fixture = TestBed.createComponent(BrandTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

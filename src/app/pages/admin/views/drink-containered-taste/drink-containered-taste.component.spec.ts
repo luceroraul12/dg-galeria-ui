@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AsignacionSaborFormatoComponent } from './drink-containered-taste.component';
+import { DrinkContaineredTasteComponent } from './drink-containered-taste.component';
 
 describe('AsignacionSaborFormatoComponent', () => {
-  let component: AsignacionSaborFormatoComponent;
-  let fixture: ComponentFixture<AsignacionSaborFormatoComponent>;
+  let component: DrinkContaineredTasteComponent;
+  let fixture: ComponentFixture<DrinkContaineredTasteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AsignacionSaborFormatoComponent ]
-    })
-    .compileComponents();
+      declarations: [DrinkContaineredTasteComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(AsignacionSaborFormatoComponent);
+    fixture = TestBed.createComponent(DrinkContaineredTasteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

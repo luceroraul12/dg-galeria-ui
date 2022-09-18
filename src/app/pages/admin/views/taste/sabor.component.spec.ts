@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SaborComponent } from './sabor.component';
+import { TasteComponent } from './sabor.component';
 
 describe('SaborComponent', () => {
-  let component: SaborComponent;
-  let fixture: ComponentFixture<SaborComponent>;
+  let component: TasteComponent;
+  let fixture: ComponentFixture<TasteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SaborComponent ]
-    })
-    .compileComponents();
+      declarations: [TasteComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(SaborComponent);
+    fixture = TestBed.createComponent(TasteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

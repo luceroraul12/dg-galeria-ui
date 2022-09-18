@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MarcaEstadoComponent } from './pages/admin/views/brand/brand-state/brand-state.component';
-import { MarcaComponent } from './pages/admin/views/brand/brand.component';
-import { FormatoComponent } from './pages/admin/views/drink-container/drink-container.component';
-import { SaborComponent } from './pages/admin/views/taste/sabor.component';
-import { VistaAdministradorComponent } from './pages/admin/views/admin.component';
+import { BrandStateComponent } from './pages/admin/views/brand/brand-state/brand-state.component';
+import { BrandComponent } from './pages/admin/views/brand/brand.component';
+import { DrinkContainerComponent } from './pages/admin/views/drink-container/drink-container.component';
+import { TasteComponent } from './pages/admin/views/taste/sabor.component';
+import { AdminComponent } from './pages/admin/views/admin.component';
 import { CustomerComponent } from './pages/customer/views/customer.component';
 import { DetailedGallery } from './pages/customer/views/detailed-gallery/detailed-galllery.component';
-import { AsignacionSaborFormatoComponent } from './pages/admin/views/drink-containered-taste/drink-containered-taste.component';
-import { AsignacionMarcaSaborComponent } from './pages/admin/views/branded-taste/branded-taste.component';
+import { DrinkContaineredTasteComponent } from './pages/admin/views/drink-containered-taste/drink-containered-taste.component';
+import { BrandedTasteComponent } from './pages/admin/views/branded-taste/branded-taste.component';
 
 const routes: Routes = [
   {
@@ -21,35 +21,35 @@ const routes: Routes = [
   },
   {
     path: 'administrador',
-    component: VistaAdministradorComponent,
+    component: AdminComponent,
   },
   {
     path: 'administrador/formatos',
-    component: FormatoComponent,
+    component: DrinkContainerComponent,
   },
   {
     path: 'administrador/marcas',
-    component: MarcaComponent,
+    component: BrandComponent,
   },
   {
     path: 'administrador/sabores',
-    component: SaborComponent,
+    component: TasteComponent,
   },
   {
     path: 'administrador/marcas/estado',
-    component: MarcaEstadoComponent,
+    component: BrandStateComponent,
   },
   {
     path: 'administrador/sabores/estado',
-    component: AsignacionSaborFormatoComponent,
+    component: DrinkContaineredTasteComponent,
   },
   {
     path: 'administrador/asignacion/marcasabor',
-    component: AsignacionMarcaSaborComponent,
+    component: BrandedTasteComponent,
   },
   {
     path: 'administrador/asignacion/saborformato',
-    component: AsignacionSaborFormatoComponent,
+    component: DrinkContaineredTasteComponent,
   },
   {
     path: '**',

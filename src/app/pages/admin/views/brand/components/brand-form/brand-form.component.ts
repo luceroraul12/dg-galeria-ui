@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './brand-form.component.html',
   styleUrls: ['./brand-form.component.css'],
 })
-export class MarcaFormularioComponent implements OnInit {
+export class BrandFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

@@ -7,10 +7,10 @@ import { TableService } from 'src/app/services/table.service';
 
 @Component({
   selector: 'app-tabla-sabor',
-  templateUrl: './tabla-sabor.component.html',
-  styleUrls: ['./tabla-sabor.component.css'],
+  templateUrl: './taste-table.component.html',
+  styleUrls: ['./taste-table.component.css'],
 })
-export class TablaSaborComponent
+export class TasteTableComponent
   extends TableAbstractComponent<Taste>
   implements OnInit
 {

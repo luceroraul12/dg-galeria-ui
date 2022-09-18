@@ -9,7 +9,7 @@ import { TableService } from 'src/app/services/table.service';
   templateUrl: './table-drink-container.component.html',
   styleUrls: ['./table-drink-container.component.css'],
 })
-export class TablaFormatoComponent
+export class TableDrinkContainerComponent
   extends TableAbstractComponent<DrinkContainer>
   implements OnInit
 {

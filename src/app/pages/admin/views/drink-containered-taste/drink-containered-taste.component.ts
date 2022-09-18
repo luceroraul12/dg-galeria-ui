@@ -6,7 +6,7 @@ import { TableType } from 'src/app/constants/table-type';
   templateUrl: './drink-containered-taste.component.html',
   styleUrls: ['./drink-containered-taste.component.css'],
 })
-export class AsignacionSaborFormatoComponent implements OnInit {
+export class DrinkContaineredTasteComponent implements OnInit {
   public tableType: TableType = TableType.STOCK_STATE;
 
   constructor() {}

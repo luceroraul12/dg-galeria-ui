@@ -11,7 +11,7 @@ import { TableService } from 'src/app/services/table.service';
   templateUrl: './brand-table.component.html',
   styleUrls: ['./brand-table.component.css'],
 })
-export class TablaMarcaComponent
+export class BrandTableComponent
   extends TableAbstractComponent<Brand>
   implements OnInit
 {

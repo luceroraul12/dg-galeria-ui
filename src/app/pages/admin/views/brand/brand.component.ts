@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './brand.component.html',
   styleUrls: ['./brand.component.css'],
 })
-export class MarcaComponent implements OnInit {
+export class BrandComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
