@@ -1,7 +1,7 @@
 import { first } from 'rxjs';
 import { OperationToMakeReturned } from '../constants/operation-to-make-returned';
 import { StockData } from '../interfaces/stock-data.interface';
-import { CrudService } from './crud-abstract.service';
+import { CrudService } from '../abstract/crud-abstract.service';
 import { TableService } from './table.service';
 
 export abstract class CallInputsTable<Entity extends StockData> {
