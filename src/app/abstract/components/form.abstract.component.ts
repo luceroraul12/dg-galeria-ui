@@ -18,7 +18,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   listenTable() {
     this.crudService.sendFromtTableToFrom$.subscribe((response) => {
-      this.element = response;
+      this.element = { ...response };
       this.isByUpdate = true;
     });
   }

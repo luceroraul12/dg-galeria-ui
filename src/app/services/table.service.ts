@@ -16,8 +16,7 @@ export class TableService<Entity extends StockData> {
   updateRowData(rowDataSelected: Entity): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
-        //TODO: fix this for true row data selected
-        this.stockDataTable[index] = { id: 0, isStocked: false };
+        this.stockDataTable[index] = rowDataSelected;
       }
     });
   }
