@@ -16,7 +16,7 @@ export class FormDrinkContainerComponent
 {
   constructor(
     drinkContainerService: DrinkContainerService,
-    tableService: TableService
+    tableService: TableService<DrinkContainer>
   ) {
     super(tableService, drinkContainerService);
   }

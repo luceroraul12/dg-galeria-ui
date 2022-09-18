@@ -18,7 +18,7 @@ export class BrandedTasteComponent
 
   constructor(
     private brandedTasteService: BrandedTasteService,
-    tableService: TableService
+    tableService: TableService<BrandedTaste>
   ) {
     super(tableService, brandedTasteService);
   }

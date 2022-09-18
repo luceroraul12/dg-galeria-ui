@@ -16,7 +16,10 @@ export class BrandTableComponent
 {
   public marcasCreadas: Brand[] = [];
 
-  constructor(private brandService: BrandService, tableService: TableService) {
+  constructor(
+    private brandService: BrandService,
+    tableService: TableService<Brand>
+  ) {
     super(tableService, brandService);
   }
 

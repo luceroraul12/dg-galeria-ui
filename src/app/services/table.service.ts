@@ -4,16 +4,16 @@ import { StockData } from '../interfaces/stock-data.interface';
 @Injectable({
   providedIn: 'root',
 })
-export class TableService {
+export class TableService<Entity extends StockData> {
   public stockDataTable: StockData[] = [];
 
   constructor() {}
 
-  addRowData(rowDataSelected: StockData) {
+  addRowData(rowDataSelected: Entity) {
     this.stockDataTable.push(rowDataSelected);
   }
 
-  updateRowData(rowDataSelected: StockData): void {
+  updateRowData(rowDataSelected: Entity): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
         //TODO: fix this for true row data selected
@@ -22,7 +22,7 @@ export class TableService {
     });
   }
 
-  deleteRowData(rowDataSelected: StockData): void {
+  deleteRowData(rowDataSelected: Entity): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
         //TODO: fix this for true row data selected
@@ -31,7 +31,7 @@ export class TableService {
     });
   }
 
-  changeStockState(rowDataSelected: StockData): void {
+  changeStockState(rowDataSelected: Entity): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
         console.log(item);

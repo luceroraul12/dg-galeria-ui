@@ -17,7 +17,7 @@ export class DrinkContainerTasteTableComponent
 
   constructor(
     private drinkContainerTasteService: DrinkContaineredTasteService,
-    tableService: TableService
+    tableService: TableService<DrinkContaineredTaste>
   ) {
     super(tableService, drinkContainerTasteService);
   }

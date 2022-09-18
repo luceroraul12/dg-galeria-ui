@@ -14,7 +14,10 @@ export class TasteTableComponent
   implements OnInit
 {
   public saboresCreados: Taste[] = [];
-  constructor(private tasteService: TasteService, tableService: TableService) {
+  constructor(
+    private tasteService: TasteService,
+    tableService: TableService<Taste>
+  ) {
     super(tableService, tasteService);
   }
 

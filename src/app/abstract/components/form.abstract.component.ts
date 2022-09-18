@@ -8,7 +8,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
   public element!: Entity;
 
   constructor(
-    private tableService: TableService,
+    private tableService: TableService<Entity>,
     private crudService: CrudService<Entity>
   ) {}
 
@@ -16,7 +16,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract reset(): void;
 
-  identifyOperationAndRun() {
+  identifyOperationAndValidateAndRun() {
     if (!this.validate()) {
       console.log('No cumple con la validación');
       return;

@@ -7,7 +7,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
   public listElements!: Entity[];
 
   constructor(
-    public tableService: TableService,
+    public tableService: TableService<Entity>,
     public crudService: CrudService<Entity>
   ) {}
 
