@@ -11,4 +11,4 @@ import { CustomerComponent } from './views/customer.component';
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [CustomerComponent],
 })
-export class ClienteModule {}
+export class CustomerModule {}

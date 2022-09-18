@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClienteModule } from './pages/customer/cliente.module';
-import { AdministradorModule } from './pages/admin/administrador.module';
+import { CustomerModule } from './pages/customer/customer.module';
+import { AdminModule } from './pages/admin/admin.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    AdministradorModule,
-    ClienteModule,
+    AdminModule,
+    CustomerModule,
     SharedModule,
   ],
   providers: [],

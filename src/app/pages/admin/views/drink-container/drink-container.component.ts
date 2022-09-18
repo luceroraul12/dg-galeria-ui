@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-formato',
-  templateUrl: './formato.component.html',
-  styleUrls: ['./formato.component.css']
+  templateUrl: './drink-container.component.html',
+  styleUrls: ['./drink-container.component.css'],
 })
 export class FormatoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

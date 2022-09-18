@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MarcaEstadoComponent } from './pages/admin/views/brand/brand-state/brand-state.component';
 import { MarcaComponent } from './pages/admin/views/brand/brand.component';
-import { FormatoComponent } from './pages/admin/views/drink-container/formato.component';
+import { FormatoComponent } from './pages/admin/views/drink-container/drink-container.component';
 import { SaborComponent } from './pages/admin/views/taste/sabor.component';
 import { VistaAdministradorComponent } from './pages/admin/views/admin.component';
 import { CustomerComponent } from './pages/customer/views/customer.component';

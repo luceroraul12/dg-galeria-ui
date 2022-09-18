@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../../app-routing.module';
-import { SharedModule } from '../../shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { VistaAdministradorComponent } from './views/admin.component';
-import { FormatoFormularioComponent } from './views/drink-container/components/form-drink-container/form-drink-container.component';
-import { TablaFormatoComponent } from './views/drink-container/components/table-drink-container/table-drink-container.component';
-import { FormatoComponent } from './views/drink-container/formato.component';
-import { TasteFormComponent } from './views/taste/components/taste-form/taste-form.component';
-import { TablaSaborComponent } from './views/taste/components/taste-table/tabla-sabor.component';
-import { SaborComponent } from './views/taste/sabor.component';
-import { TablaMarcaComponent } from './views/brand/components/brand-table/brand-table.component';
 import { MarcaEstadoComponent } from './views/brand/brand-state/brand-state.component';
 import { MarcaComponent } from './views/brand/brand.component';
 import { MarcaFormularioComponent } from './views/brand/components/brand-form/brand-form.component';
-import { FormsModule } from '@angular/forms';
+import { TablaMarcaComponent } from './views/brand/components/brand-table/brand-table.component';
 import { AsignacionMarcaSaborComponent } from './views/branded-taste/branded-taste.component';
-import { AsignacionSaborFormatoComponent } from './views/drink-containered-taste/drink-containered-taste.component';
+import { FormatoFormularioComponent } from './views/drink-container/components/form-drink-container/form-drink-container.component';
+import { TablaFormatoComponent } from './views/drink-container/components/table-drink-container/table-drink-container.component';
+import { FormatoComponent } from './views/drink-container/drink-container.component';
 import { DrinkContainerTasteTableComponent } from './views/drink-containered-taste/components/drink-containered-taste-table/drink-containered-taste-table.component';
+import { AsignacionSaborFormatoComponent } from './views/drink-containered-taste/drink-containered-taste.component';
+import { TasteFormComponent } from './views/taste/components/taste-form/taste-form.component';
+import { TablaSaborComponent } from './views/taste/components/taste-table/tabla-sabor.component';
+import { SaborComponent } from './views/taste/sabor.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,6 @@ import { DrinkContainerTasteTableComponent } from './views/drink-containered-tas
     DrinkContainerTasteTableComponent,
   ],
   imports: [CommonModule, FormsModule, AppRoutingModule, SharedModule],
-  exports: [VistaAdministradorComponent],
+  exports: [VistaAdministradorComponent, FormatoComponent],
 })
-export class AdministradorModule {}
+export class AdminModule {}
