@@ -14,29 +14,18 @@ export class FormDrinkContainerComponent
   extends FormAbstractComponent<DrinkContainer>
   implements OnInit
 {
-  public drinkContianer: DrinkContainer = {
-    containerName: '',
-    id: 0,
-    isStocked: true,
-  };
-
   constructor(
     drinkContainerService: DrinkContainerService,
     tableService: TableService
   ) {
     super(tableService, drinkContainerService);
   }
-
   ngOnInit(): void {}
 
-  onSubmit() {
-    if (this.drinkContianer.containerName == '') {
-      return;
-    }
-    this.create(this.drinkContianer);
+  reset(): void {
+    throw new Error('Method not implemented.');
   }
-
-  onCancel(form: NgForm) {
-    form.reset();
+  validate(): boolean {
+    throw new Error('Method not implemented.');
   }
 }

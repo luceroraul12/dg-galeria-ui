@@ -1,18 +1,14 @@
 <div class="d-flex flex-row-reverse">
-  <div *ngIf="!stockState; else stockState" class="d-flex flex-row-reverse">
-    <div class="p-1">
-      <app-button label="eliminar" (emitter)="onDelete()"></app-button>
-    </div>
-    <div class="p-1">
-      <app-button label="modificar" (emitter)="onUpdate()"></app-button>
-    </div>
+  <div class="p-1">
+    <app-button label="eliminar" (emitter)="onDelete()"></app-button>
   </div>
-  <ng-template #stockState>
-    <div class="p-1">
-      <app-button
-        label="cambiar estado"
-        (emitter)="onChangeStockState()"
-      ></app-button>
-    </div>
-  </ng-template>
+  <div class="p-1">
+    <app-button label="modificar" (emitter)="onUpdate()"></app-button>
+  </div>
+  <div class="p-1">
+    <app-button
+      label="cambiar estado"
+      (emitter)="onChangeStockState()"
+    ></app-button>
+  </div>
 </div>
