@@ -34,7 +34,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
 
   update(item: Entity): void {
     console.log('update tabla formato');
-    this.crudService.sendFromtTableToFrom$.next([item]);
+    this.crudService.sendFromtTableToFrom$.next(item);
   }
 
   changeStockState(item: Entity): void {

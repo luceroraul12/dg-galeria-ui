@@ -7,7 +7,7 @@ import { StockData } from 'src/app/interfaces/stock-data.interface';
 export abstract class CrudService<Entity extends StockData> {
   abstract urlApi: string;
 
-  public sendFromtTableToFrom$: EventEmitter<[Entity]> = new EventEmitter();
+  public sendFromtTableToFrom$: EventEmitter<Entity> = new EventEmitter();
 
   constructor(private http: HttpClient) {}
 

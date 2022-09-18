@@ -16,6 +16,13 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract reset(): void;
 
+  listenTable() {
+    this.crudService.sendFromtTableToFrom$.subscribe((response) => {
+      this.element = response;
+      this.isByUpdate = true;
+    });
+  }
+
   identifyOperationAndValidateAndRun() {
     if (!this.validate()) {
       console.log('No cumple con la validación');
