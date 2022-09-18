@@ -23,11 +23,6 @@ export class TableDrinkContainerComponent
   }
 
   ngOnInit(): void {
-    this.drinkContainerService.read().subscribe(({ stockDataResult }) => {
-      stockDataResult.sort((a, b) => a.id - b.id);
-      this.drinkContainerCreated = stockDataResult;
-      this.tableService.stockDataTable = stockDataResult;
-    });
-    this.tableService.stockDataTable = this.drinkContainerCreated;
+    this.getDataSource();
   }
 }

@@ -4,10 +4,22 @@ import { TableService } from 'src/app/services/table.service';
 import { CrudService } from '../service/crud-abstract.service';
 
 export abstract class TableAbstractComponent<Entity extends StockData> {
+  public listElements!: Entity[];
+
   constructor(
     public tableService: TableService,
     public crudService: CrudService<Entity>
   ) {}
+
+  getDataSource() {
+    this.crudService
+      .read()
+      .pipe(first())
+      .subscribe(({ stockDataResult }) => {
+        stockDataResult.sort((a, b) => a.id);
+        this.listElements = stockDataResult;
+      });
+  }
 
   delete(item: Entity): void {
     console.log('delete tabla formato');
@@ -23,8 +35,6 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
   update(item: Entity): void {
     console.log('update tabla formato');
     this.crudService.sendFromtTableToFrom$.next([item]);
-
-    // this.tableService.updateRowData(item);
   }
 
   changeStockState(item: Entity): void {
