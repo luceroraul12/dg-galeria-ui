@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TableType } from 'src/app/constants/table-type';
 
 @Component({
   selector: 'app-drink-containered-taste',
@@ -7,8 +6,6 @@ import { TableType } from 'src/app/constants/table-type';
   styleUrls: ['./drink-containered-taste.component.css'],
 })
 export class DrinkContaineredTasteComponent implements OnInit {
-  public tableType: TableType = TableType.STOCK_STATE;
-
   constructor() {}
 
   ngOnInit(): void {}

@@ -3,7 +3,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Marcas</th>
-      <ng-container *ngIf="!isStockState(); else elseTemplate">
+      <ng-container *ngIf="true; else elseTemplate">
         <th scope="col">Opciones</th>
       </ng-container>
       <ng-template #elseTemplate>

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { first } from 'rxjs';
 import { TableAbstractComponent } from 'src/app/abstract/components/table.abstract.component';
-import { TableType } from 'src/app/constants/table-type';
 import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
 import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 import { TableService } from 'src/app/services/table.service';
@@ -16,7 +15,6 @@ export class BrandTableComponent
   implements OnInit
 {
   public marcasCreadas: Brand[] = [];
-  @Input() tableType: TableType = TableType.ASIGNATION;
 
   constructor(private brandService: BrandService, tableService: TableService) {
     super(tableService, brandService);
@@ -31,9 +29,5 @@ export class BrandTableComponent
         this.marcasCreadas = stockDataResult;
         this.tableService.stockDataTable = stockDataResult;
       });
-  }
-
-  isStockStateTable() {
-    return this.tableType == TableType.STOCK_STATE;
   }
 }

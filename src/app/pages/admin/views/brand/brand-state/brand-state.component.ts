@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TableType } from 'src/app/constants/table-type';
 
 @Component({
   selector: 'app-brand-state',
@@ -7,8 +6,6 @@ import { TableType } from 'src/app/constants/table-type';
   styleUrls: ['./brand-state.component.css'],
 })
 export class BrandStateComponent implements OnInit {
-  public tableTypeSelected: TableType = TableType.STOCK_STATE;
-
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { OperationToMakeReturned } from 'src/app/constants/operation-to-make-returned';
-import { TableType } from 'src/app/constants/table-type';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 
 @Component({
@@ -9,19 +7,14 @@ import { StockData } from 'src/app/interfaces/stock-data.interface';
   styleUrls: ['./table-buttons.component.css'],
 })
 export class TableButtonsComponent implements OnInit {
+  @Input() stockState: boolean = false;
   @Input() rowDataSelected!: StockData;
-  @Input() tableType: TableType = TableType.ASIGNATION;
 
   @Output() delete: EventEmitter<true> = new EventEmitter();
-  @Output() update: EventEmitter<[StockData, OperationToMakeReturned]> =
-    new EventEmitter();
+  @Output() update: EventEmitter<[StockData]> = new EventEmitter();
   @Output() changeStockState: EventEmitter<true> = new EventEmitter();
 
   constructor() {}
-
-  isStockState() {
-    return this.tableType == TableType.STOCK_STATE;
-  }
 
   ngOnInit(): void {}
 
@@ -34,7 +27,7 @@ export class TableButtonsComponent implements OnInit {
   onUpdate(): void {
     console.log('update botonera de tabla');
 
-    this.update.emit([this.rowDataSelected, OperationToMakeReturned.UPDATE]);
+    this.update.emit([this.rowDataSelected]);
   }
 
   onChangeStockState(): void {
