@@ -13,7 +13,6 @@ export class TasteTableComponent
   extends TableAbstractComponent<Taste>
   implements OnInit
 {
-  public saboresCreados: Taste[] = [];
   constructor(
     private tasteService: TasteService,
     tableService: TableService<Taste>
@@ -22,9 +21,6 @@ export class TasteTableComponent
   }
 
   ngOnInit(): void {
-    this.tasteService.read().subscribe((response) => {
-      this.saboresCreados = response.stockDataResult;
-      this.tableService.stockDataTable = response.stockDataResult;
-    });
+    this.initView();
   }
 }

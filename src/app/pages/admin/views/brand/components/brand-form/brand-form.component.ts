@@ -27,7 +27,6 @@ export class BrandFormComponent
   }
 
   ngOnInit(): void {
-    this.reset();
-    this.listenTable();
+    this.initView();
   }
 }

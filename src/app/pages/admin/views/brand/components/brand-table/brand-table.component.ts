@@ -22,6 +22,6 @@ export class BrandTableComponent
   }
 
   ngOnInit(): void {
-    this.getDataSource();
+    this.initView();
   }
 }

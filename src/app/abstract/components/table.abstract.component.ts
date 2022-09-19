@@ -11,7 +11,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
     public crudService: CrudService<Entity>
   ) {}
 
-  getDataSource() {
+  initView() {
     this.crudService
       .read()
       .pipe(first())

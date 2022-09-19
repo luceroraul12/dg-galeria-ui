@@ -21,6 +21,6 @@ export class TableDrinkContainerComponent
   }
 
   ngOnInit(): void {
-    this.getDataSource();
+    this.initView();
   }
 }
