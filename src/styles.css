@@ -8,6 +8,9 @@
 }
 
 body{
-    background-image: url("https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("assets/img/wallpaper.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }

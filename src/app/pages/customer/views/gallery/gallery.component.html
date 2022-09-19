@@ -1,7 +1,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col" *ngFor="let brand of marcasCreadas">
     <a routerLink="/cliente/{{ brand.id }}">
-      <div class="card h-100">
+      <div class="card h-100 text-bg-dark">
         <img [src]="brand.url" class="card-img-top" alt="brand.nombre" />
       </div>
     </a>
