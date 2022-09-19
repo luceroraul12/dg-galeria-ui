@@ -16,8 +16,11 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract reset(): void;
 
+  abstract extraInit(): void;
+
   initForm() {
     this.reset();
+    this.extraInit();
     this.listenTable();
   }
 
