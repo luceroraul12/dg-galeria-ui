@@ -14,8 +14,6 @@ export class BrandTableComponent
   extends TableAbstractComponent<Brand>
   implements OnInit
 {
-  public marcasCreadas: Brand[] = [];
-
   constructor(
     private brandService: BrandService,
     tableService: TableService<Brand>
@@ -24,13 +22,6 @@ export class BrandTableComponent
   }
 
   ngOnInit(): void {
-    this.brandService
-      .read()
-      .pipe(first())
-      .subscribe(({ stockDataResult }) => {
-        stockDataResult.sort((a, b) => a.id! - b.id!);
-        this.marcasCreadas = stockDataResult;
-        this.tableService.stockDataTable = stockDataResult;
-      });
+    this.getDataSource();
   }
 }

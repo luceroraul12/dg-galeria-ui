@@ -13,8 +13,6 @@ export class TableDrinkContainerComponent
   extends TableAbstractComponent<DrinkContainer>
   implements OnInit
 {
-  public drinkContainerCreated: DrinkContainer[] = [];
-
   constructor(
     private drinkContainerService: DrinkContainerService,
     tableService: TableService<DrinkContainer>
