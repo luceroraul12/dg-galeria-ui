@@ -1,3 +1,6 @@
-<button (click)="wasClicked()" class="btn btn-primary" type="button">
-  {{ label }}
+<button (click)="wasClicked()" class="btn btn-primary" [type]="type">
+  <div *ngIf="label; else byIcon">{{ label }}</div>
+  <ng-template #byIcon>
+    <i [class]="iconClass"></i>
+  </ng-template>
 </button>
