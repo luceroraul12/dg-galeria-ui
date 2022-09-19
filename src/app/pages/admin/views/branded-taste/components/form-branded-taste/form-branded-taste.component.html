@@ -6,7 +6,7 @@
   <select
     class="form-select"
     name="brandSelector"
-    [(ngModel)]="element.brand.id"
+    [(ngModel)]="element.brand!.id"
   >
     <option *ngFor="let brand of registeredBrands" [value]="brand.id">
       {{ brand.brandName }}
@@ -16,7 +16,7 @@
   <select
     class="form-select"
     name="tasteSelector"
-    [(ngModel)]="element.taste.id"
+    [(ngModel)]="element.taste!.id"
   >
     <option *ngFor="let taste of registeredTastes" [value]="taste.id">
       {{ taste.tasteName }}
