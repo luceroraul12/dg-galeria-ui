@@ -14,8 +14,8 @@
         [ngClass]="item.isStocked ? 'table-success' : 'table-warning'"
       >
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ item.brand.brandName }}</td>
-        <td>{{ item.taste.tasteName }}</td>
+        <td>{{ item.brand?.brandName }}</td>
+        <td>{{ item.taste?.tasteName }}</td>
         <td>
           <app-table-buttons
             [stockState]="stockState"

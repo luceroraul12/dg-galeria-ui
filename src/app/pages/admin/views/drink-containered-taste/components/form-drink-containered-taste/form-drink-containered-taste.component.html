@@ -1,14 +1,24 @@
-<p>form-drink-containered-taste works!</p>
-<form class="">
+<form
+  #drinkContaineredTasteForm="ngForm"
+  (ngSubmit)="identifyOperationAndValidateAndRun()"
+>
   <label class="form-label">Asignaciones registrados</label>
-  <select class="form-select">
+  <select
+    class="form-select"
+    name="brandedTasteSelector"
+    [(ngModel)]="element.brandedTaste.id"
+  >
     <option *ngFor="let item of registeredBrandedTastes" [value]="item.id">
-      {{ item.brand.brandName | titlecase }} -
-      {{ item.taste.tasteName | titlecase }}
+      {{ item.brand?.brandName | titlecase }} -
+      {{ item.taste?.tasteName | titlecase }}
     </option>
   </select>
   <label class="form-label">Formatos registrados</label>
-  <select class="form-select">
+  <select
+    class="form-select"
+    name="drinkContainerSelector"
+    [(ngModel)]="element.drinkContainer.id"
+  >
     <option *ngFor="let item of registeredDrinkContainers" [value]="item.id">
       {{ item.containerName }}
     </option>

@@ -35,15 +35,29 @@ export class FormDrinkContaineredTasteComponent
   }
 
   validate(): boolean {
-    return false;
+    let isBrandedTasteValid: boolean = this.element.brandedTaste.id! > 0;
+    let isDrinkContainerTasteValid: boolean =
+      this.element.drinkContainer.id! > 0;
+    return isBrandedTasteValid && isDrinkContainerTasteValid;
   }
-  reset(): void {}
+  reset(): void {
+    this.element = {
+      id: 0,
+      isStocked: true,
+      brandedTaste: {
+        id: 0,
+      },
+      drinkContainer: {
+        id: 0,
+      },
+    };
+  }
   extraInit(): void {
     this.brandedTasteService
       .read()
       .pipe(first())
       .subscribe(({ stockDataResult }) => {
-        stockDataResult.sort((a, b) => a.brand.id! - b.brand.id!);
+        stockDataResult.sort((a, b) => a.brand!.id! - b.brand!.id!);
         this.registeredBrandedTastes = stockDataResult;
       });
     this.drinkContainerService
