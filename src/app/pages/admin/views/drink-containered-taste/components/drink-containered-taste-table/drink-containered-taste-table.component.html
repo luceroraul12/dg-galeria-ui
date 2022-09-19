@@ -1,32 +1,34 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Marcas</th>
-      <th scope="col">Sabores</th>
-      <th scope="col">Formatos</th>
-      <th scope="col">Opciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-      *ngFor="let item of listElements; let i = index"
-      [ngClass]="item.isStocked ? 'table-success' : 'table-warning'"
-    >
-      <th scope="row">{{ i + 1 }}</th>
-      <td>{{ item.brandedTaste.brand.brandName }}</td>
-      <td>{{ item.brandedTaste.taste.tasteName }}</td>
-      <td>{{ item.drinkContainer.containerName }}</td>
-      <td>
-        <app-table-buttons
-          [stockState]="stockState"
-          [rowDataSelected]="item"
-          (changeStockState)="changeStockState(item)"
-          (delete)="delete(item)"
-          (update)="update(item)"
-        >
-        </app-table-buttons>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marcas</th>
+        <th scope="col">Sabores</th>
+        <th scope="col">Formatos</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of listElements; let i = index"
+        [ngClass]="item.isStocked ? 'table-success' : 'table-warning'"
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.brandedTaste.brand.brandName }}</td>
+        <td>{{ item.brandedTaste.taste.tasteName }}</td>
+        <td>{{ item.drinkContainer.containerName }}</td>
+        <td>
+          <app-table-buttons
+            [stockState]="stockState"
+            [rowDataSelected]="item"
+            (changeStockState)="changeStockState(item)"
+            (delete)="delete(item)"
+            (update)="update(item)"
+          >
+          </app-table-buttons>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
