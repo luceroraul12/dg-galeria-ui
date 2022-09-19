@@ -1,7 +1,9 @@
 <div class="vistas card p-3">
   <app-button-return-admin></app-button-return-admin>
   <h1>Marcas</h1>
-  <app-brand-form></app-brand-form>
+  <div class="sticky-top card">
+    <app-brand-form></app-brand-form>
+  </div>
   <app-brand-table [stockState]="false"></app-brand-table>
   <app-button-return-admin></app-button-return-admin>
   <app-brand-dialog></app-brand-dialog>
