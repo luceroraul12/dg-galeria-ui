@@ -28,6 +28,6 @@ export class TasteFormComponent
   }
 
   ngOnInit(): void {
-    this.initView();
+    this.initForm();
   }
 }

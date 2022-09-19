@@ -27,6 +27,6 @@ export class BrandFormComponent
   }
 
   ngOnInit(): void {
-    this.initView();
+    this.initForm();
   }
 }

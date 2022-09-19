@@ -1,1 +1,28 @@
-<p>table-branded-taste works!</p>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marcas</th>
+      <th scope="col">Sabores</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let item of listElements; let i = index"
+      [ngClass]="item.isStocked ? 'table-success' : 'table-warning'"
+    >
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.brand.brandName }}</td>
+      <td>{{ item.taste.tasteName }}</td>
+      <td>
+        <app-table-buttons
+          [rowDataSelected]="item"
+          (changeStockState)="changeStockState(item)"
+          (delete)="delete(item)"
+          (update)="update(item)"
+        ></app-table-buttons>
+      </td>
+    </tr>
+  </tbody>
+</table>

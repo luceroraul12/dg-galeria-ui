@@ -21,7 +21,7 @@ export class FormDrinkContainerComponent
     super(tableService, drinkContainerService);
   }
   ngOnInit(): void {
-    this.initView();
+    this.initForm();
   }
 
   reset(): void {

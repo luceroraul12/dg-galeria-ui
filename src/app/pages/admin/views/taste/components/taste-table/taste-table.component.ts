@@ -21,6 +21,6 @@ export class TasteTableComponent
   }
 
   ngOnInit(): void {
-    this.initView();
+    this.initTable();
   }
 }
