@@ -1,12 +1,23 @@
-<form class="">
+<form
+  #brandedTasteForm="ngForm"
+  (ngSubmit)="identifyOperationAndValidateAndRun()"
+>
   <label class="form-label">Marcas registradas</label>
-  <select class="form-select">
+  <select
+    class="form-select"
+    name="brandSelector"
+    [(ngModel)]="element.brand.id"
+  >
     <option *ngFor="let brand of registeredBrands" [value]="brand.id">
       {{ brand.brandName }}
     </option>
   </select>
   <label class="form-label">Sabores registrados</label>
-  <select class="form-select">
+  <select
+    class="form-select"
+    name="tasteSelector"
+    [(ngModel)]="element.taste.id"
+  >
     <option *ngFor="let taste of registeredTastes" [value]="taste.id">
       {{ taste.tasteName }}
     </option>

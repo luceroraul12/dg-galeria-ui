@@ -22,9 +22,22 @@ export class FormBrandedTasteComponent
   public registeredTastes: Taste[] = [];
 
   validate(): boolean {
-    return false;
+    let isbrandValid: boolean = this.element.brand.id! > 0;
+    let isBrandedTasteValid: boolean = this.element.taste.id! > 0;
+    return isbrandValid && isBrandedTasteValid;
   }
-  reset(): void {}
+  reset(): void {
+    this.element = {
+      id: 0,
+      isStocked: true,
+      brand: {
+        id: 0,
+      },
+      taste: {
+        id: 0,
+      },
+    };
+  }
   constructor(
     tableService: TableService<BrandedTaste>,
     brandedTasteService: BrandedTasteService,
