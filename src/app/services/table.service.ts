@@ -24,7 +24,6 @@ export class TableService<Entity extends StockData> {
   deleteRowData(rowDataSelected: Entity): void {
     this.stockDataTable.forEach((item, index) => {
       if (item.id == rowDataSelected.id) {
-        //TODO: fix this for true row data selected
         this.stockDataTable.splice(index, 1);
       }
     });

@@ -1,7 +1,7 @@
 import { StockData } from '../../interfaces/stock-data.interface';
 import { CrudService } from '../service/crud-abstract.service';
 import { TableService } from '../../services/table.service';
-import { first } from 'rxjs';
+import { first, tap } from 'rxjs';
 
 export abstract class FormAbstractComponent<Entity extends StockData> {
   protected isByUpdate: boolean = false;

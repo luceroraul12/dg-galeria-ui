@@ -18,6 +18,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
       .subscribe(({ stockDataResult }) => {
         stockDataResult.sort((a, b) => a.id! - b.id!);
         this.listElements = stockDataResult;
+        this.tableService.stockDataTable = stockDataResult;
       });
   }
 
@@ -29,7 +30,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
       .pipe(first())
       .subscribe(
         (response) => {
-          this.tableService.deleteRowData(item);
+          this.tableService.deleteRowData(response.stockDataResult[0]);
         },
         (err) => alert('No es posible eliminar, tiene elementos asociados')
       );
