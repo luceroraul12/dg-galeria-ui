@@ -27,9 +27,12 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
     this.crudService
       .delete(item)
       .pipe(first())
-      .subscribe((response) => {
-        this.tableService.deleteRowData(item);
-      });
+      .subscribe(
+        (response) => {
+          this.tableService.deleteRowData(item);
+        },
+        (err) => alert('No es posible eliminar, tiene elementos asociados')
+      );
   }
 
   update(item: Entity): void {
