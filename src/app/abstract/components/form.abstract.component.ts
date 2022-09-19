@@ -16,6 +16,11 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract reset(): void;
 
+  initView() {
+    this.reset();
+    this.listenTable();
+  }
+
   listenTable() {
     this.crudService.sendFromtTableToFrom$.subscribe((response) => {
       this.element = { ...response };
