@@ -13,8 +13,6 @@ export class DrinkContainerTasteTableComponent
   extends TableAbstractComponent<DrinkContaineredTaste>
   implements OnInit
 {
-  public drinkContainerTasteData: DrinkContaineredTaste[] = [];
-
   constructor(
     private drinkContainerTasteService: DrinkContaineredTasteService,
     tableService: TableService<DrinkContaineredTaste>
@@ -23,9 +21,6 @@ export class DrinkContainerTasteTableComponent
   }
 
   ngOnInit(): void {
-    this.drinkContainerTasteService.read().subscribe((response) => {
-      this.drinkContainerTasteData = response.stockDataResult;
-      this.tableService.stockDataTable = response.stockDataResult;
-    });
+    this.initTable();
   }
 }
