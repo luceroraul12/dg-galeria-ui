@@ -23,6 +23,7 @@ import { FormBrandedTasteComponent } from './views/branded-taste/components/form
 import { StateDrinkContaineredTasteComponent } from './views/drink-containered-taste/state-drink-containered-taste/state-drink-containered-taste.component';
 import { StateBrandedTasteComponent } from './views/branded-taste/state-branded-taste/state-branded-taste.component';
 import { FormDrinkContaineredTasteComponent } from './views/drink-containered-taste/components/form-drink-containered-taste/form-drink-containered-taste.component';
+import { FormManyBrandedTasteComponent } from './views/branded-taste/components/form-many-branded-taste/form-many-branded-taste.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FormDrinkContaineredTasteComponent } from './views/drink-containered-ta
     StateDrinkContaineredTasteComponent,
     StateBrandedTasteComponent,
     FormDrinkContaineredTasteComponent,
+    FormManyBrandedTasteComponent,
   ],
   imports: [CommonModule, FormsModule, AppRoutingModule, SharedModule],
   exports: [AdminComponent, DrinkContainerComponent],

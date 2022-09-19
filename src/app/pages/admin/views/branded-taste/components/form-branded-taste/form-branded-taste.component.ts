@@ -37,6 +37,8 @@ export class FormBrandedTasteComponent
         id: 0,
       },
     };
+    this.isByManyCharge = false;
+    this.isByUpdate = false;
   }
   constructor(
     tableService: TableService<BrandedTaste>,

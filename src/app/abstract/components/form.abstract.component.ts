@@ -5,6 +5,7 @@ import { first, tap } from 'rxjs';
 
 export abstract class FormAbstractComponent<Entity extends StockData> {
   protected isByUpdate: boolean = false;
+  protected isByManyCharge: boolean = false;
   public element!: Entity;
 
   constructor(
@@ -39,6 +40,8 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
     if (this.isByUpdate) {
       this.update();
+    } else if (this.isByManyCharge) {
+      this.createMany();
     } else {
       this.create();
     }
@@ -71,6 +74,8 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
         (error) => alert('Error al modificar')
       );
   }
+
+  createMany() {}
 
   cancel() {
     this.reset();

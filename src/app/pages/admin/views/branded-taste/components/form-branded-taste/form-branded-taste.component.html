@@ -13,14 +13,23 @@
     </option>
   </select>
   <label class="form-label">Sabores registrados</label>
-  <select
-    class="form-select"
-    name="tasteSelector"
-    [(ngModel)]="element.taste!.id"
-  >
-    <option *ngFor="let taste of registeredTastes" [value]="taste.id">
-      {{ taste.tasteName }}
-    </option>
-  </select>
-  <app-button-forms></app-button-forms>
+  <div *ngIf="!isByManyCharge; else manyItems">
+    <select
+      class="form-select"
+      name="tasteSelector"
+      [(ngModel)]="element.taste!.id"
+    >
+      <option *ngFor="let taste of registeredTastes" [value]="taste.id">
+        {{ taste.tasteName }}
+      </option>
+    </select>
+  </div>
+  <ng-template #manyItems>
+    <app-form-many-branded-taste></app-form-many-branded-taste>
+  </ng-template>
+
+  <app-button-forms
+    (cancel)="reset()"
+    (addMany)="isByManyCharge = true"
+  ></app-button-forms>
 </form>
