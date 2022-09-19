@@ -20,12 +20,17 @@ export class FormDrinkContainerComponent
   ) {
     super(tableService, drinkContainerService);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.reset();
+    this.listenTable();
+  }
 
   reset(): void {
-    throw new Error('Method not implemented.');
+    this.element = {
+      containerName: '',
+    };
   }
   validate(): boolean {
-    throw new Error('Method not implemented.');
+    return this.element.containerName != '';
   }
 }
