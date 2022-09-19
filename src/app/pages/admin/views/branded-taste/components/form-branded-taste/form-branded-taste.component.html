@@ -1,1 +1,15 @@
-<p>form-branded-taste works!</p>
+<form class="">
+  <label class="form-label">Marcas registradas</label>
+  <select class="form-select">
+    <option *ngFor="let brand of registeredBrands" [value]="brand.id">
+      {{ brand.brandName }}
+    </option>
+  </select>
+  <label class="form-label">Sabores registrados</label>
+  <select class="form-select">
+    <option *ngFor="let taste of registeredTastes" [value]="taste.id">
+      {{ taste.tasteName }}
+    </option>
+  </select>
+  <app-button-forms></app-button-forms>
+</form>
