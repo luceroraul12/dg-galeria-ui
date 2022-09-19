@@ -20,6 +20,7 @@
       <td>{{ item.brandName }}</td>
       <td>
         <app-table-buttons
+          [stockState]="stockState"
           (changeStockState)="changeStockState(item)"
           (delete)="delete(item)"
           (update)="update(item)"
