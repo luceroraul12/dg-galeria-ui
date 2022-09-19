@@ -12,6 +12,7 @@ export class TasteFormComponent
   extends FormAbstractComponent<Taste>
   implements OnInit
 {
+  extraInit(): void {}
   validate(): boolean {
     return this.element.tasteName != '';
   }

@@ -13,6 +13,7 @@ export class BrandFormComponent
   extends FormAbstractComponent<Brand>
   implements OnInit
 {
+  extraInit(): void {}
   validate(): boolean {
     return this.element.brandName != '' && this.element.url != '';
   }
