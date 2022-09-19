@@ -8,9 +8,9 @@
 }
 
 body{
-    background-image: url("assets/img/wallpaper.jpg") ;
+    background-image: url("assets/img/wpPrueba.png") ;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size: auto;
 
 }
