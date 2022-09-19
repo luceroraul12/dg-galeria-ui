@@ -9,6 +9,8 @@ import { CustomerComponent } from './pages/customer/views/customer.component';
 import { DetailedGallery } from './pages/customer/views/detailed-gallery/detailed-galllery.component';
 import { DrinkContaineredTasteComponent } from './pages/admin/views/drink-containered-taste/drink-containered-taste.component';
 import { BrandedTasteComponent } from './pages/admin/views/branded-taste/branded-taste.component';
+import { StateDrinkContaineredTasteComponent } from './pages/admin/views/drink-containered-taste/state-drink-containered-taste/state-drink-containered-taste.component';
+import { StateBrandedTasteComponent } from './pages/admin/views/branded-taste/state-branded-taste/state-branded-taste.component';
 
 const routes: Routes = [
   {
@@ -48,8 +50,16 @@ const routes: Routes = [
     component: BrandedTasteComponent,
   },
   {
+    path: 'administrador/asignacion/marcasabor/estado',
+    component: StateBrandedTasteComponent,
+  },
+  {
     path: 'administrador/asignacion/saborformato',
     component: DrinkContaineredTasteComponent,
+  },
+  {
+    path: 'administrador/asignacion/saborformato/estado',
+    component: StateDrinkContaineredTasteComponent,
   },
   {
     path: '**',

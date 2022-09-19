@@ -17,6 +17,7 @@
       <td>{{ item.taste.tasteName }}</td>
       <td>
         <app-table-buttons
+          [stockState]="stockState"
           [rowDataSelected]="item"
           (changeStockState)="changeStockState(item)"
           (delete)="delete(item)"

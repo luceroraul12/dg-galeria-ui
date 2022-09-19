@@ -19,6 +19,7 @@
       <td>{{ item.drinkContainer.containerName }}</td>
       <td>
         <app-table-buttons
+          [stockState]="stockState"
           [rowDataSelected]="item"
           (changeStockState)="changeStockState(item)"
           (delete)="delete(item)"
