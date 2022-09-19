@@ -18,6 +18,8 @@ import { TasteFormComponent } from './views/taste/components/taste-form/taste-fo
 import { TasteTableComponent } from './views/taste/components/taste-table/taste-table.component';
 import { TasteComponent } from './views/taste/sabor.component';
 import { BrandDialogComponent } from './views/brand/components/brand-dialog/brand-dialog.component';
+import { TableBrandedTasteComponent } from './views/branded-taste/components/table-branded-taste/table-branded-taste.component';
+import { FormBrandedTasteComponent } from './views/branded-taste/components/form-branded-taste/form-branded-taste.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { BrandDialogComponent } from './views/brand/components/brand-dialog/bran
     TableDrinkContainerComponent,
     DrinkContainerTasteTableComponent,
     BrandDialogComponent,
+    TableBrandedTasteComponent,
+    FormBrandedTasteComponent,
   ],
   imports: [CommonModule, FormsModule, AppRoutingModule, SharedModule],
   exports: [AdminComponent, DrinkContainerComponent],
