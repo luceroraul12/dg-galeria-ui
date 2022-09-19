@@ -16,7 +16,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract reset(): void;
 
-  initView() {
+  initForm() {
     this.reset();
     this.listenTable();
   }
