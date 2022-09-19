@@ -1,10 +1,16 @@
+import { Component, Injectable, Input } from '@angular/core';
 import { first } from 'rxjs';
 import { StockData } from 'src/app/interfaces/stock-data.interface';
 import { TableService } from 'src/app/services/table.service';
 import { CrudService } from '../service/crud-abstract.service';
 
+@Component({
+  template: '',
+})
 export abstract class TableAbstractComponent<Entity extends StockData> {
   public listElements!: Entity[];
+  @Input()
+  public stockState: boolean = false;
 
   constructor(
     public tableService: TableService<Entity>,
