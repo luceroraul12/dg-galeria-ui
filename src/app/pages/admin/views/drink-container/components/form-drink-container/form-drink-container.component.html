@@ -1,4 +1,8 @@
-<form #drinkContainerForm="ngForm" autocomplete="off">
+<form
+  #drinkContainerForm="ngForm"
+  autocomplete="off"
+  (ngSubmit)="identifyOperationAndValidateAndRun()"
+>
   <div class="mb-3">
     <label class="form-label">Nombre de Envase</label>
 
@@ -11,5 +15,5 @@
       [(ngModel)]="element.containerName"
     />
   </div>
-  <app-button-forms></app-button-forms>
+  <app-button-forms (cancel)="cancel()"></app-button-forms>
 </form>
