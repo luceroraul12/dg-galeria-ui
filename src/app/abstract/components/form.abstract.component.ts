@@ -49,21 +49,27 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
     this.crudService
       .create(this.element)
       .pipe(first())
-      .subscribe(({ stockDataResult }) => {
-        console.log(stockDataResult[0]);
-        this.tableService.addRowData(stockDataResult[0]);
-      });
+      .subscribe(
+        ({ stockDataResult }) => {
+          console.log(stockDataResult[0]);
+          this.tableService.addRowData(stockDataResult[0]);
+        },
+        (error) => alert('Error al crear')
+      );
   }
 
   update() {
     this.crudService
       .update(this.element)
       .pipe(first())
-      .subscribe(({ stockDataResult }) => {
-        console.log(stockDataResult[0]);
-        this.tableService.updateRowData(stockDataResult[0]);
-        this.isByUpdate = false;
-      });
+      .subscribe(
+        ({ stockDataResult }) => {
+          console.log(stockDataResult[0]);
+          this.tableService.updateRowData(stockDataResult[0]);
+          this.isByUpdate = false;
+        },
+        (error) => alert('Error al modificar')
+      );
   }
 
   cancel() {
