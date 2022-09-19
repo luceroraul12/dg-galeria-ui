@@ -1,0 +1,17 @@
+<p>form-drink-containered-taste works!</p>
+<form class="">
+  <label class="form-label">Asignaciones registrados</label>
+  <select class="form-select">
+    <option *ngFor="let item of registeredBrandedTastes" [value]="item.id">
+      {{ item.brand.brandName | titlecase }} -
+      {{ item.taste.tasteName | titlecase }}
+    </option>
+  </select>
+  <label class="form-label">Formatos registrados</label>
+  <select class="form-select">
+    <option *ngFor="let item of registeredDrinkContainers" [value]="item.id">
+      {{ item.containerName }}
+    </option>
+  </select>
+  <app-button-forms></app-button-forms>
+</form>
