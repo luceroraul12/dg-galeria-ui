@@ -6,11 +6,11 @@ import { TasteService } from '../../../taste/service/taste.service';
 import { FormManyTasteService } from '../../service/form-many-taste.service';
 
 @Component({
-  selector: 'app-form-many-branded-taste',
-  templateUrl: './form-many-branded-taste.component.html',
+  selector: 'app-form-many-taste',
+  templateUrl: './form-many-taste.component.html',
   styles: [],
 })
-export class FormManyBrandedTasteComponent
+export class FormManyTasteComponent
   extends FormManyItemAbstractComponent<Taste>
   implements OnInit
 {
