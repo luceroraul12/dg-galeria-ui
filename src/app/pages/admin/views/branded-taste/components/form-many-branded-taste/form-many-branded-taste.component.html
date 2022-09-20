@@ -1,1 +1,15 @@
-<p>form-many-branded-taste works!</p>
+<div
+  class="btn-group m-1"
+  role="group"
+  *ngFor="let item of registeredTastes; let i = index"
+>
+  <input
+    type="checkbox"
+    class="btn-check"
+    id="item{{ item.id }}"
+    (change)="changeCheckbox(item)"
+  />
+  <label class="btn btn-outline-primary" for="item{{ item.id }}">
+    {{ item.tasteName }}
+  </label>
+</div>
