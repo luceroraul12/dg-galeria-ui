@@ -17,7 +17,7 @@ export class FormManyBrandedTasteComponent implements OnInit {
 
   constructor(
     private tasteService: TasteService,
-    private formManyItemService: FormManyTasteService
+    private formManyTasteService: FormManyTasteService
   ) {}
 
   ngOnInit(): void {
@@ -29,12 +29,12 @@ export class FormManyBrandedTasteComponent implements OnInit {
           a.tasteName!.localeCompare(b.tasteName!)
         );
         this.registeredTastes = stockDataResult;
-        this.formManyItemService.registeredElements = stockDataResult;
-        this.formManyItemService.selectedElements = [];
+        this.formManyTasteService.registeredElements = stockDataResult;
+        this.formManyTasteService.selectedElements = [];
       });
   }
 
   verifyAndAddElement(item: Taste) {
-    this.formManyItemService.verifyAndAddElement(item);
+    this.formManyTasteService.verifyAndAddElement(item);
   }
 }
