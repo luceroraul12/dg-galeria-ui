@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormManyItemAbstractComponent } from 'src/app/abstract/components/form.many.item.abstract.component';
-import { Brand } from '../../../brand/interface/brand.interface';
-import { BrandService } from '../../../brand/service/brand.service';
-import { FormManyBrandService } from '../../service/form-many-brand.service';
+import { Brand } from '../../../interface/brand.interface';
+import { BrandService } from '../../../service/brand.service';
+import { FormManyBrandService } from '../../../../branded-taste/service/form-many-brand.service';
 
 @Component({
   selector: 'app-form-many-brand',

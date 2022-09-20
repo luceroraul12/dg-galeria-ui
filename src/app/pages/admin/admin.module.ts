@@ -11,7 +11,7 @@ import { BrandFormComponent } from './views/brand/components/brand-form/brand-fo
 import { BrandTableComponent } from './views/brand/components/brand-table/brand-table.component';
 import { BrandedTasteComponent } from './views/branded-taste/branded-taste.component';
 import { FormBrandedTasteComponent } from './views/branded-taste/components/form-branded-taste/form-branded-taste.component';
-import { FormManyTasteComponent } from './views/branded-taste/components/form-many-taste/form-many-taste.component';
+import { FormManyTasteComponent } from './views/taste/components/taste-form/form-many-taste/form-many-taste.component';
 import { TableBrandedTasteComponent } from './views/branded-taste/components/table-branded-taste/table-branded-taste.component';
 import { StateBrandedTasteComponent } from './views/branded-taste/state-branded-taste/state-branded-taste.component';
 import { FormDrinkContainerComponent } from './views/drink-container/components/form-drink-container/form-drink-container.component';
@@ -24,7 +24,7 @@ import { StateDrinkContaineredTasteComponent } from './views/drink-containered-t
 import { TasteFormComponent } from './views/taste/components/taste-form/taste-form.component';
 import { TasteTableComponent } from './views/taste/components/taste-table/taste-table.component';
 import { TasteComponent } from './views/taste/sabor.component';
-import { FormManyBrandComponent } from './views/branded-taste/components/form-many-brand/form-many-brand.component';
+import { FormManyBrandComponent } from './views/brand/components/brand-form/form-many-brand/form-many-brand.component';
 
 @NgModule({
   declarations: [
