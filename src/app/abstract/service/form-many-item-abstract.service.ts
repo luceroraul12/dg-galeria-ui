@@ -8,6 +8,7 @@ export abstract class FormManyItemAbstractService<Entity extends StockData> {
 
   reset() {
     this.selectedElements = [];
+    this.registeredElements = [];
   }
 
   verifyAndAddElement(element: Entity): void {
