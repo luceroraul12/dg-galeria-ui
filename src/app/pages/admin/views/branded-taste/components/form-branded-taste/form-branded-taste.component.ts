@@ -27,9 +27,9 @@ export class FormBrandedTasteComponent
   public registeredTastes: Taste[] = [];
 
   validate(): boolean {
-    let isbrandValid: boolean = this.element.brand.brandName != '';
+    let isbrandValid: boolean = this.element.brand.id != 0;
     let isBrandedTasteValid: boolean =
-      this.element.taste?.id! > 0 || this.isByManyCharge;
+      this.element.taste.id > 0 || this.isByManyCharge;
     return isbrandValid && isBrandedTasteValid;
   }
   reset(): void {
@@ -38,10 +38,12 @@ export class FormBrandedTasteComponent
       isStocked: true,
       brand: {
         id: 0,
-        brandName: '',
+        //TODO: find out why brandName doesnt change when charge by Many Items
+        brandName: 'sdfg',
       },
       taste: {
         id: 0,
+        tasteName: '',
       },
     };
     this.isByManyCharge = false;
@@ -96,7 +98,7 @@ export class FormBrandedTasteComponent
   }
 
   private asignation() {
-    if (!this.isByManyCharge) {
+    if (this.isManyBrandVoid()) {
       this.generatorBrandedTaste.primarySelected = [this.element.brand];
     } else {
       this.generatorBrandedTaste.primarySelected =
@@ -105,6 +107,10 @@ export class FormBrandedTasteComponent
 
     this.generatorBrandedTaste.secondSelected =
       this.formManyTasteService.selectedElements;
+  }
+
+  private isManyBrandVoid(): boolean {
+    return this.formManyBrandService.selectedElements.length == 0;
   }
 
   private generateAndConvertResult(): BrandedTaste[] {
