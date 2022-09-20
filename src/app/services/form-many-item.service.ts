@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { StockData } from '../interfaces/stock-data.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class FormManyItemService {
+export class FormManyItemService<Entity extends StockData> {
+  public registeredElements: Entity[] = [];
+  public selectedElements: Entity[] = [];
 
-  constructor() { }
+  constructor() {}
+
+  verifyAndAddElement(element: Entity) {
+    if (!this.selectedElements.includes(element)) {
+      this.selectedElements.push(element);
+    } else {
+      this.selectedElements = this.selectedElements.filter((x) => x != element);
+    }
+    console.log(this.selectedElements);
+  }
 }
