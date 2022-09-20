@@ -2,12 +2,28 @@
   #brandedTasteForm="ngForm"
   (ngSubmit)="identifyOperationAndValidateAndRun()"
 >
+  <div *ngIf="isByUpdate">
+    <h2 class="text-center display-5">
+      Modificando: {{ element.brand.brandName | titlecase }} -
+      {{ element.taste.tasteName | titlecase }}
+    </h2>
+  </div>
   <label class="form-label">Marcas registradas</label>
-  <select class="form-select" name="brandSelector" [(ngModel)]="element.brand">
-    <option *ngFor="let brand of registeredBrands" [ngValue]="brand">
-      {{ brand.brandName }}
-    </option>
-  </select>
+  <div *ngIf="!isByManyCharge; else manyBrands">
+    <select
+      class="form-select"
+      name="brandSelector"
+      [(ngModel)]="element.brand.id"
+    >
+      <option *ngFor="let brand of registeredBrands" [ngValue]="brand.id">
+        {{ brand.brandName }}
+      </option>
+    </select>
+  </div>
+
+  <ng-template #manyBrands>
+    <h1>Prueba marca carga multiple</h1>
+  </ng-template>
   <label class="form-label">Sabores registrados</label>
   <hr />
 
@@ -15,14 +31,15 @@
     <select
       class="form-select"
       name="tasteSelector"
-      [(ngModel)]="element.taste!.id"
+      [(ngModel)]="element.taste.id"
     >
-      <option *ngFor="let taste of registeredTastes" [value]="taste.id">
+      <option *ngFor="let taste of registeredTastes" [ngValue]="taste.id">
         {{ taste.tasteName }}
       </option>
     </select>
   </div>
   <ng-template #manyItems>
+    <h1>prueba de many items</h1>
     <app-form-many-branded-taste></app-form-many-branded-taste>
   </ng-template>
 
