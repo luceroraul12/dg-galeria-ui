@@ -4,6 +4,7 @@ import { FormManyItemAbstractService } from 'src/app/abstract/service/form-many-
 import { Taste } from '../../../taste/interface/taste.interface';
 import { TasteService } from '../../../taste/service/taste.service';
 import { BrandedTaste } from '../../interface/branded-taste.interface';
+import { FormManyTasteService } from '../../service/form-many-taste.service';
 
 @Component({
   selector: 'app-form-many-branded-taste',
@@ -16,7 +17,7 @@ export class FormManyBrandedTasteComponent implements OnInit {
 
   constructor(
     private tasteService: TasteService,
-    private formManyItemService: FormManyItemAbstractService<Taste>
+    private formManyItemService: FormManyTasteService
   ) {}
 
   ngOnInit(): void {
