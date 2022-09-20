@@ -27,7 +27,9 @@ export class FormBrandedTasteComponent
   public registeredTastes: Taste[] = [];
 
   validate(): boolean {
-    let isbrandValid: boolean = this.element.brand.id != 0;
+    let isbrandValid: boolean =
+      this.element.brand.id != 0 ||
+      this.formManyBrandService.selectedElements.length != 0;
     let isBrandedTasteValid: boolean =
       this.element.taste.id > 0 || this.isByManyCharge;
     return isbrandValid && isBrandedTasteValid;
