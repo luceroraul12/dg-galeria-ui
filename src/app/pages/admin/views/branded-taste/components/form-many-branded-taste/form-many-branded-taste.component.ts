@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
+import { FormManyItemService } from 'src/app/services/form-many-item.service';
 import { Taste } from '../../../taste/interface/taste.interface';
 import { TasteService } from '../../../taste/service/taste.service';
 import { BrandedTaste } from '../../interface/branded-taste.interface';
@@ -13,7 +14,10 @@ export class FormManyBrandedTasteComponent implements OnInit {
   public registeredTastes: Taste[] = [];
   public addedTastes: Taste[] = [];
 
-  constructor(private tasteService: TasteService) {}
+  constructor(
+    private tasteService: TasteService,
+    private formManyItemService: FormManyItemService<Taste>
+  ) {}
 
   ngOnInit(): void {
     this.tasteService
@@ -24,15 +28,12 @@ export class FormManyBrandedTasteComponent implements OnInit {
           a.tasteName!.localeCompare(b.tasteName!)
         );
         this.registeredTastes = stockDataResult;
+        this.formManyItemService.registeredElements = stockDataResult;
+        this.formManyItemService.selectedElements = [];
       });
   }
 
-  changeCheckbox(item: Taste) {
-    if (!this.addedTastes.includes(item)) {
-      this.addedTastes.push(item);
-    } else {
-      this.addedTastes = this.addedTastes.filter((x) => x != item);
-    }
-    console.log(this.addedTastes);
+  verifyAndAddElement(item: Taste) {
+    this.formManyItemService.verifyAndAddElement(item);
   }
 }

@@ -7,9 +7,9 @@
     type="checkbox"
     class="btn-check"
     id="item{{ item.id }}"
-    (change)="changeCheckbox(item)"
+    (change)="verifyAndAddElement(item)"
   />
-  <label class="btn btn-outline-primary" for="item{{ item.id }}">
+  <label class="btn btn-outline-success" for="item{{ item.id }}">
     {{ item.tasteName }}
   </label>
 </div>
