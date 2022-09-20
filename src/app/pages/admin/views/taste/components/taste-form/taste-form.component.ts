@@ -20,6 +20,7 @@ export class TasteFormComponent
   reset(): void {
     this.element = {
       tasteName: '',
+      id: 0,
     };
   }
   constructor(
