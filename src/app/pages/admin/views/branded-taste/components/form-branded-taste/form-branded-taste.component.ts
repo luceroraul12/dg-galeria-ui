@@ -3,7 +3,7 @@ import { first, tap } from 'rxjs';
 import { FormAbstractComponent } from 'src/app/abstract/components/form.abstract.component';
 import { StockDataResponse } from 'src/app/interfaces/response.interface';
 import { FormManyItemService } from 'src/app/services/form-many-item.service';
-import { GeneratorResultClassService } from 'src/app/services/generator-branded-taste.service';
+import { GeneratorResultClassService } from 'src/app/services/generator-result-class.service';
 import { TableService } from 'src/app/services/table.service';
 import { ResultClassUtil } from 'src/app/util/map-result-class.util';
 import { Brand } from '../../../brand/interface/brand.interface';
@@ -51,8 +51,8 @@ export class FormBrandedTasteComponent
     private brandedTasteService: BrandedTasteService,
     private brandService: BrandService,
     private tasteService: TasteService,
-    private formManyTasteService: FormManyItemService<Taste>,
     private formManyBrandService: FormManyItemService<Brand>,
+    private formManyTasteService: FormManyItemService<Taste>,
     private generatorBrandedTaste: GeneratorResultClassService<Brand, Taste>
   ) {
     super(tableService, brandedTasteService);
@@ -95,7 +95,13 @@ export class FormBrandedTasteComponent
   }
 
   private asignation() {
-    this.generatorBrandedTaste.primarySelected = [this.element.brand];
+    if (!this.isByManyCharge) {
+      this.generatorBrandedTaste.primarySelected = [this.element.brand];
+    } else {
+      this.generatorBrandedTaste.primarySelected =
+        this.formManyBrandService.selectedElements;
+    }
+
     this.generatorBrandedTaste.secondSelected =
       this.formManyTasteService.selectedElements;
   }
@@ -105,7 +111,7 @@ export class FormBrandedTasteComponent
     this.generatorBrandedTaste.generate().forEach((result) => {
       resultConverted.push(ResultClassUtil.convertToBrandedTaste(result));
     });
-
+    this.generatorBrandedTaste.reset();
     return resultConverted;
   }
 }
