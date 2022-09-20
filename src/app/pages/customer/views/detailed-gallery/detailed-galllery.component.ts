@@ -28,9 +28,17 @@ export class DetailedGallery implements OnInit {
     this.activateRoute.params.subscribe(({ idMarca }) =>
       this.customerService
         .resultByIdBrand(idMarca)
-        .subscribe((response: CustomerResponse) => {
-          this.saboresCreados = response.customerResult.tasteResults;
-          this.marcaElegida = response.customerResult.brandSelected;
+        .subscribe(({ customerResult }: CustomerResponse) => {
+          let { tasteResults, brandSelected } = customerResult;
+          tasteResults.map((taste) => {
+            if (!brandSelected.isStocked) {
+              taste.drinkContainersAvailable.map(
+                (drinkContainer) => (drinkContainer.isStocked = false)
+              );
+            }
+          });
+          this.saboresCreados = tasteResults;
+          this.marcaElegida = brandSelected;
         })
     );
   }
