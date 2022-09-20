@@ -3,6 +3,11 @@ import { Brand } from '../pages/admin/views/brand/interface/brand.interface';
 import { BrandedTaste } from '../pages/admin/views/branded-taste/interface/branded-taste.interface';
 import { Taste } from '../pages/admin/views/taste/interface/taste.interface';
 
+export class EntityGeneral<EntityPrimary, EntitySecundary> {
+  public primaryElements!: EntityPrimary[];
+  public secundaryElements!: EntitySecundary[];
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -22,6 +27,7 @@ export class GeneratorBrandedTasteService {
         this._createdBrandTastes.push({
           brand,
           taste,
+          isStocked: true,
         });
       });
     });
