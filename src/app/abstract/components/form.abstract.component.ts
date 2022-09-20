@@ -6,7 +6,7 @@ import { first, tap } from 'rxjs';
 export abstract class FormAbstractComponent<Entity extends StockData> {
   protected isByUpdate: boolean = false;
   protected isByManyCharge: boolean = false;
-  abstract element: Entity;
+  public element!: Entity;
 
   constructor(
     public tableService: TableService<Entity>,
