@@ -65,9 +65,6 @@ export class FormBrandedTasteComponent
 
   ngOnInit(): void {
     this.initForm();
-    this.generatorBrandedTaste.reset();
-    this.formManyBrandService.reset();
-    this.formManyTasteService.reset();
   }
 
   extraInit() {
@@ -84,6 +81,10 @@ export class FormBrandedTasteComponent
       .subscribe(
         ({ stockDataResult }) => (this.registeredTastes = stockDataResult)
       );
+
+    this.generatorBrandedTaste.reset();
+    this.formManyBrandService.reset();
+    this.formManyTasteService.reset();
   }
   createMany(): void {
     this.asignation();
