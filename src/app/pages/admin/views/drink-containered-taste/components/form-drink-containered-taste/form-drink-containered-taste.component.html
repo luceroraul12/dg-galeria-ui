@@ -3,25 +3,39 @@
   (ngSubmit)="identifyOperationAndValidateAndRun()"
 >
   <label class="form-label">Asignaciones registrados</label>
-  <select
-    class="form-select"
-    name="brandedTasteSelector"
-    [(ngModel)]="element.brandedTaste.id"
-  >
-    <option *ngFor="let item of registeredBrandedTastes" [value]="item.id">
-      {{ item.brand.brandName | titlecase }} -
-      {{ item.taste.tasteName | titlecase }}
-    </option>
-  </select>
+  <div *ngIf="!isByManyCharge; else manyBrandedTaste">
+    <select
+      class="form-select"
+      name="brandedTasteSelector"
+      [(ngModel)]="element.brandedTaste.id"
+    >
+      <option *ngFor="let item of registeredBrandedTastes" [value]="item.id">
+        {{ item.brand.brandName | titlecase }} -
+        {{ item.taste.tasteName | titlecase }}
+      </option>
+    </select>
+  </div>
+
+  <ng-template #manyBrandedTaste>
+    <app-form-many-branded-taste></app-form-many-branded-taste>
+  </ng-template>
   <label class="form-label">Formatos registrados</label>
-  <select
-    class="form-select"
-    name="drinkContainerSelector"
-    [(ngModel)]="element.drinkContainer.id"
-  >
-    <option *ngFor="let item of registeredDrinkContainers" [value]="item.id">
-      {{ item.containerName }}
-    </option>
-  </select>
-  <app-button-forms (cancel)="reset()"></app-button-forms>
+  <div *ngIf="!isByManyCharge; else manyDrinkContainer">
+    <select
+      class="form-select"
+      name="drinkContainerSelector"
+      [(ngModel)]="element.drinkContainer.id"
+    >
+      <option *ngFor="let item of registeredDrinkContainers" [value]="item.id">
+        {{ item.containerName }}
+      </option>
+    </select>
+  </div>
+  <ng-template #manyDrinkContainer>
+    <app-form-many-drink-container></app-form-many-drink-container>
+  </ng-template>
+  <app-button-forms
+    (cancel)="reset()"
+    (addMany)="isByManyCharge = true"
+  ></app-button-forms>
 </form>
