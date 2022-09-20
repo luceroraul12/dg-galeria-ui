@@ -6,11 +6,11 @@ import { first, tap } from 'rxjs';
 export abstract class FormAbstractComponent<Entity extends StockData> {
   protected isByUpdate: boolean = false;
   protected isByManyCharge: boolean = false;
-  public element!: Entity;
+  abstract element: Entity;
 
   constructor(
-    private tableService: TableService<Entity>,
-    private crudService: CrudService<Entity>
+    public tableService: TableService<Entity>,
+    public crudService: CrudService<Entity>
   ) {}
 
   abstract validate(): boolean;

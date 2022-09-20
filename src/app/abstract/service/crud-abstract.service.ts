@@ -9,7 +9,7 @@ export abstract class CrudService<Entity extends StockData> {
 
   public sendFromtTableToFrom$: EventEmitter<Entity> = new EventEmitter();
 
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   create(element: Entity): Observable<StockDataResponse<Entity>> {
     return this.http.post<StockDataResponse<Entity>>(this.urlApi, element);
