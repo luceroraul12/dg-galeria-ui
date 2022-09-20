@@ -3,8 +3,9 @@ import { first, tap } from 'rxjs';
 import { FormAbstractComponent } from 'src/app/abstract/components/form.abstract.component';
 import { StockDataResponse } from 'src/app/interfaces/response.interface';
 import { FormManyItemService } from 'src/app/services/form-many-item.service';
-import { GeneratorBrandedTasteService } from 'src/app/services/generator-branded-taste.service';
+import { GeneratorResultClassService } from 'src/app/services/generator-branded-taste.service';
 import { TableService } from 'src/app/services/table.service';
+import { ResultClassUtil } from 'src/app/util/map-result-class.util';
 import { Brand } from '../../../brand/interface/brand.interface';
 import { BrandService } from '../../../brand/service/brand.service';
 import { Taste } from '../../../taste/interface/taste.interface';
@@ -52,7 +53,7 @@ export class FormBrandedTasteComponent
     private tasteService: TasteService,
     private formManyTasteService: FormManyItemService<Taste>,
     private formManyBrandService: FormManyItemService<Brand>,
-    private generatorBrandedTaste: GeneratorBrandedTasteService
+    private generatorBrandedTaste: GeneratorResultClassService<Brand, Taste>
   ) {
     super(tableService, brandedTasteService);
   }
@@ -80,11 +81,9 @@ export class FormBrandedTasteComponent
       );
   }
   createMany(): void {
-    this.generatorBrandedTaste.selectedBrands = [this.element.brand];
-    this.generatorBrandedTaste.selectedTastes =
-      this.formManyTasteService.selectedElements;
+    this.asignation();
     this.brandedTasteService
-      .createMany(this.generatorBrandedTaste.generate())
+      .createMany(this.generateAndConvertResult())
       .pipe(tap(console.log))
       .subscribe(({ stockDataResult }: StockDataResponse<BrandedTaste>) => {
         console.log('resultado', stockDataResult);
@@ -93,5 +92,20 @@ export class FormBrandedTasteComponent
           this.tableService.addRowData(brandTaste)
         );
       });
+  }
+
+  private asignation() {
+    this.generatorBrandedTaste.primarySelected = [this.element.brand];
+    this.generatorBrandedTaste.secondSelected =
+      this.formManyTasteService.selectedElements;
+  }
+
+  private generateAndConvertResult(): BrandedTaste[] {
+    let resultConverted: BrandedTaste[] = [];
+    this.generatorBrandedTaste.generate().forEach((result) => {
+      resultConverted.push(ResultClassUtil.convertToBrandedTaste(result));
+    });
+
+    return resultConverted;
   }
 }
