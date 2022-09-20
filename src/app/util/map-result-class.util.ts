@@ -8,6 +8,6 @@ export class ResultClassUtil {
     result: ResultClass<Brand, Taste>
   ): BrandedTaste {
     let { primary, secundary } = result;
-    return { brand: primary, taste: secundary };
+    return { brand: primary, taste: secundary, isStocked: true };
   }
 }
