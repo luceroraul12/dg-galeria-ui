@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StockData } from '../interfaces/stock-data.interface';
+import { StockData } from '../../interfaces/stock-data.interface';
 
 @Injectable({
   providedIn: 'root',

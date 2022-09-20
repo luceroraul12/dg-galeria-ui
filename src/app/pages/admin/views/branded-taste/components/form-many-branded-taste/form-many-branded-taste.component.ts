@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
-import { FormManyItemService } from 'src/app/services/form-many-item.service';
+import { FormManyItemService } from 'src/app/abstract/service/form-many-item.service';
 import { Taste } from '../../../taste/interface/taste.interface';
 import { TasteService } from '../../../taste/service/taste.service';
 import { BrandedTaste } from '../../interface/branded-taste.interface';
