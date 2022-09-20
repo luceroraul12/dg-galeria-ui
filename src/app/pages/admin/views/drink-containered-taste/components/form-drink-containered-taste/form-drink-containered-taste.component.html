@@ -9,8 +9,8 @@
     [(ngModel)]="element.brandedTaste.id"
   >
     <option *ngFor="let item of registeredBrandedTastes" [value]="item.id">
-      {{ item.brand?.brandName | titlecase }} -
-      {{ item.taste?.tasteName | titlecase }}
+      {{ item.brand.brandName | titlecase }} -
+      {{ item.taste.tasteName | titlecase }}
     </option>
   </select>
   <label class="form-label">Formatos registrados</label>

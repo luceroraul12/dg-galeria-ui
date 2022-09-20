@@ -25,7 +25,7 @@ export class FormBrandedTasteComponent
   public registeredTastes: Taste[] = [];
 
   validate(): boolean {
-    let isbrandValid: boolean = this.element.brand?.id! > 0;
+    let isbrandValid: boolean = this.element.brand.brandName != '';
     let isBrandedTasteValid: boolean =
       this.element.taste?.id! > 0 || this.isByManyCharge;
     return isbrandValid && isBrandedTasteValid;
@@ -36,6 +36,7 @@ export class FormBrandedTasteComponent
       isStocked: true,
       brand: {
         id: 0,
+        brandName: '',
       },
       taste: {
         id: 0,
@@ -76,14 +77,14 @@ export class FormBrandedTasteComponent
       );
   }
   createMany(): void {
-    this.generatorBrandedTaste.selectedBrands = [this.element.brand!];
+    this.generatorBrandedTaste.selectedBrands = [this.element.brand];
     this.generatorBrandedTaste.selectedTastes =
       this.formManyTasteService.selectedElements;
     this.brandedTasteService
       .createMany(this.generatorBrandedTaste.generate())
       .pipe(tap(console.log))
       .subscribe(({ stockDataResult }: StockDataResponse<BrandedTaste>) => {
-        console.log(stockDataResult);
+        console.log('resultado', stockDataResult);
         this.generatorBrandedTaste.reset();
       });
   }

@@ -3,12 +3,8 @@
   (ngSubmit)="identifyOperationAndValidateAndRun()"
 >
   <label class="form-label">Marcas registradas</label>
-  <select
-    class="form-select"
-    name="brandSelector"
-    [(ngModel)]="element.brand!.id"
-  >
-    <option *ngFor="let brand of registeredBrands" [value]="brand.id">
+  <select class="form-select" name="brandSelector" [(ngModel)]="element.brand">
+    <option *ngFor="let brand of registeredBrands" [ngValue]="brand">
       {{ brand.brandName }}
     </option>
   </select>

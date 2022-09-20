@@ -15,8 +15,8 @@
         [ngClass]="item.isStocked ? 'table-success' : 'table-danger'"
       >
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ item.brandedTaste.brand?.brandName }}</td>
-        <td>{{ item.brandedTaste.taste?.tasteName }}</td>
+        <td>{{ item.brandedTaste.brand.brandName }}</td>
+        <td>{{ item.brandedTaste.taste.tasteName }}</td>
         <td>{{ item.drinkContainer.containerName }}</td>
         <td>
           <app-table-buttons

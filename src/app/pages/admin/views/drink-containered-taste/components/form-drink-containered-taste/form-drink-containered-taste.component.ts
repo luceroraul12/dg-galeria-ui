@@ -47,6 +47,16 @@ export class FormDrinkContaineredTasteComponent
       isStocked: true,
       brandedTaste: {
         id: 0,
+        brand: {
+          id: 0,
+          brandName: '',
+          isStocked: true,
+        },
+        taste: {
+          id: 0,
+          tasteName: '',
+          isStocked: true,
+        },
       },
       drinkContainer: {
         id: 0,
