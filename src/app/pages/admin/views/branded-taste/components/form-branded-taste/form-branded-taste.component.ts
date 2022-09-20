@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { first, tap } from 'rxjs';
 import { FormAbstractComponent } from 'src/app/abstract/components/form.abstract.component';
 import { StockDataResponse } from 'src/app/interfaces/response.interface';
-import { FormManyItemService } from 'src/app/abstract/service/form-many-item.service';
+import { FormManyItemAbstractService } from 'src/app/abstract/service/form-many-item-abstract.service';
 import { GeneratorResultClassService } from 'src/app/services/generator-result-class.service';
 import { TableService } from 'src/app/services/table.service';
 import { ResultClassUtil } from 'src/app/util/map-result-class.util';
@@ -51,8 +51,8 @@ export class FormBrandedTasteComponent
     private brandedTasteService: BrandedTasteService,
     private brandService: BrandService,
     private tasteService: TasteService,
-    private formManyBrandService: FormManyItemService<Brand>,
-    private formManyTasteService: FormManyItemService<Taste>,
+    private formManyBrandService: FormManyItemAbstractService<Brand>,
+    private formManyTasteService: FormManyItemAbstractService<Taste>,
     private generatorBrandedTaste: GeneratorResultClassService<Brand, Taste>
   ) {
     super(tableService, brandedTasteService);

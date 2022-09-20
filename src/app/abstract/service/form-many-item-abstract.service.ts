@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
 import { StockData } from '../../interfaces/stock-data.interface';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class FormManyItemService<Entity extends StockData> {
+export abstract class FormManyItemAbstractService<Entity extends StockData> {
   public registeredElements: Entity[] = [];
   public selectedElements: Entity[] = [];
 
