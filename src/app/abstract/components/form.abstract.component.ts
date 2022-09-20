@@ -28,10 +28,12 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
   }
 
   listenTable() {
-    this.crudService.sendFromtTableToFrom$.subscribe((response) => {
-      this.element = { ...response };
-      this.isByUpdate = true;
-    });
+    this.crudService.sendFromtTableToFrom$
+      .pipe(tap(console.log))
+      .subscribe((response) => {
+        this.element = { ...response };
+        this.isByUpdate = true;
+      });
   }
 
   identifyOperationAndValidateAndRun() {
