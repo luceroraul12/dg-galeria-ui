@@ -86,6 +86,9 @@ export class FormBrandedTasteComponent
       .subscribe(({ stockDataResult }: StockDataResponse<BrandedTaste>) => {
         console.log('resultado', stockDataResult);
         this.generatorBrandedTaste.reset();
+        stockDataResult.forEach((brandTaste) =>
+          this.tableService.addRowData(brandTaste)
+        );
       });
   }
 }
