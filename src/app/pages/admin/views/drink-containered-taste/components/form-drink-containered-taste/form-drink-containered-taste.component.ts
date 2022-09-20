@@ -18,6 +18,7 @@ export class FormDrinkContaineredTasteComponent
   extends FormAbstractComponent<DrinkContaineredTaste>
   implements OnInit
 {
+  createMany(): void {}
   public registeredBrandedTastes: BrandedTaste[] = [];
   public registeredDrinkContainers: DrinkContainer[] = [];
 

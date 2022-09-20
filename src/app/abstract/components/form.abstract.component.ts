@@ -19,6 +19,8 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
 
   abstract extraInit(): void;
 
+  abstract createMany(): void;
+
   initForm() {
     this.reset();
     this.extraInit();
@@ -74,8 +76,6 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
         (error) => alert('Error al modificar')
       );
   }
-
-  createMany() {}
 
   cancel() {
     this.reset();

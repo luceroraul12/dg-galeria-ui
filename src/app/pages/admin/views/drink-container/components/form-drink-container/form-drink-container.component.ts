@@ -14,6 +14,7 @@ export class FormDrinkContainerComponent
   extends FormAbstractComponent<DrinkContainer>
   implements OnInit
 {
+  createMany(): void {}
   extraInit(): void {}
   constructor(
     drinkContainerService: DrinkContainerService,
