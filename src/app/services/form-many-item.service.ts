@@ -10,6 +10,10 @@ export class FormManyItemService<Entity extends StockData> {
 
   constructor() {}
 
+  reset() {
+    this.selectedElements = [];
+  }
+
   verifyAndAddElement(element: Entity): void {
     if (!this.selectedElements.includes(element)) {
       this.selectedElements.push(element);
