@@ -8,8 +8,11 @@
       {{ element.taste.tasteName | titlecase }}
     </h2>
   </div>
+  <hr />
   <label class="form-label">Marcas registradas</label>
+  <br />
   <div *ngIf="!isByManyCharge; else manyBrands">
+    <!-- TODO: make component -->
     <select
       class="form-select"
       name="brandSelector"
@@ -22,12 +25,14 @@
   </div>
 
   <ng-template #manyBrands>
-    <h1>Prueba marca carga multiple</h1>
+    <app-form-many-brand></app-form-many-brand>
   </ng-template>
-  <label class="form-label">Sabores registrados</label>
   <hr />
+  <label class="form-label">Sabores registrados</label>
+  <br />
 
-  <div *ngIf="!isByManyCharge; else manyItems">
+  <div *ngIf="!isByManyCharge; else manyTastes">
+    <!-- TODO: make a component -->
     <select
       class="form-select"
       name="tasteSelector"
@@ -38,10 +43,10 @@
       </option>
     </select>
   </div>
-  <ng-template #manyItems>
-    <h1>prueba de many items</h1>
+  <ng-template #manyTastes>
     <app-form-many-taste></app-form-many-taste>
   </ng-template>
+  <hr />
 
   <app-button-forms
     (cancel)="reset()"
