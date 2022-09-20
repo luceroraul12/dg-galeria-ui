@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { first, tap } from 'rxjs';
 import { FormAbstractComponent } from 'src/app/abstract/components/form.abstract.component';
 import { StockDataResponse } from 'src/app/interfaces/response.interface';
-import { FormManyItemAbstractService } from 'src/app/abstract/service/form-many-item-abstract.service';
 import { GeneratorResultClassService } from 'src/app/services/generator-result-class.service';
 import { TableService } from 'src/app/services/table.service';
 import { ResultClassUtil } from 'src/app/util/map-result-class.util';
@@ -12,6 +11,8 @@ import { Taste } from '../../../taste/interface/taste.interface';
 import { TasteService } from '../../../taste/service/taste.service';
 import { BrandedTaste } from '../../interface/branded-taste.interface';
 import { BrandedTasteService } from '../../service/branded-taste.service';
+import { FormManyBrandService } from '../../service/form-many-brand.service';
+import { FormManyTasteService } from '../../service/form-many-taste.service';
 
 @Component({
   selector: 'app-form-branded-taste',
@@ -51,8 +52,8 @@ export class FormBrandedTasteComponent
     private brandedTasteService: BrandedTasteService,
     private brandService: BrandService,
     private tasteService: TasteService,
-    private formManyBrandService: FormManyItemAbstractService<Brand>,
-    private formManyTasteService: FormManyItemAbstractService<Taste>,
+    private formManyBrandService: FormManyBrandService,
+    private formManyTasteService: FormManyTasteService,
     private generatorBrandedTaste: GeneratorResultClassService<Brand, Taste>
   ) {
     super(tableService, brandedTasteService);
