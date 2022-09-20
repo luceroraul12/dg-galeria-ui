@@ -51,6 +51,7 @@ export class FormBrandedTasteComponent
     private brandService: BrandService,
     private tasteService: TasteService,
     private formManyTasteService: FormManyItemService<Taste>,
+    private formManyBrandService: FormManyItemService<Brand>,
     private generatorBrandedTaste: GeneratorBrandedTasteService
   ) {
     super(tableService, brandedTasteService);
@@ -59,6 +60,8 @@ export class FormBrandedTasteComponent
   ngOnInit(): void {
     this.initForm();
     this.generatorBrandedTaste.reset();
+    this.formManyBrandService.reset();
+    this.formManyTasteService.reset();
   }
 
   extraInit() {
