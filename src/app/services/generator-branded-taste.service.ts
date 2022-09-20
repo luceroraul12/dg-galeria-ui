@@ -1,36 +1,31 @@
 import { Injectable } from '@angular/core';
-import { Brand } from '../pages/admin/views/brand/interface/brand.interface';
-import { BrandedTaste } from '../pages/admin/views/branded-taste/interface/branded-taste.interface';
-import { Taste } from '../pages/admin/views/taste/interface/taste.interface';
 
-export class EntityGeneral<EntityPrimary, EntitySecundary> {
-  public primaryElements!: EntityPrimary[];
-  public secundaryElements!: EntitySecundary[];
+export interface ResultClass<Primary, Secundary> {
+  primary: Primary;
+  secundary: Secundary;
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class GeneratorBrandedTasteService {
-  public selectedBrands!: Brand[];
-  public selectedTastes!: Taste[];
+export class GeneratorResultClassService<PrimaryEntity, SecundaryEntity> {
+  public primarySelected!: PrimaryEntity[];
+  public secondSelected!: SecundaryEntity[];
 
-  private _createdBrandTastes!: BrandedTaste[];
+  private _resultCreated!: ResultClass<PrimaryEntity, SecundaryEntity>[];
 
   public reset() {
-    this._createdBrandTastes = [];
+    this.primarySelected = [];
+    this.secondSelected = [];
+    this._resultCreated = [];
   }
 
-  generate(): BrandedTaste[] {
-    this.selectedBrands.forEach((brand) => {
-      this.selectedTastes.forEach((taste) => {
-        this._createdBrandTastes.push({
-          brand,
-          taste,
-          isStocked: true,
-        });
+  generate(): ResultClass<PrimaryEntity, SecundaryEntity>[] {
+    this.primarySelected.forEach((primary) => {
+      this.secondSelected.forEach((secundary) => {
+        this._resultCreated.push({ primary, secundary });
       });
     });
-    return this._createdBrandTastes;
+    return this._resultCreated;
   }
 }
