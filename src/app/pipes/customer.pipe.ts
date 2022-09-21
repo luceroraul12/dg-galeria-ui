@@ -8,7 +8,7 @@ export class customerBrandPipe implements PipeTransform {
   transform(customerBrands: Brand[]): Brand[] {
     let resultAdapted: Brand[];
     resultAdapted = customerBrands
-      .sort((a, b) => a.brandName.localeCompare(b.brandName))
+      .sort((a, b) => a.id! - b.id!)
       .sort((a, b) => Number(b.isStocked) - Number(a.isStocked));
 
     return resultAdapted;
