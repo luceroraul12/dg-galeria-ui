@@ -40,6 +40,7 @@
   </ng-template>
   <hr />
   <app-button-forms
+    (submit)="identifyOperationAndValidateAndRun()"
     (cancel)="reset()"
     (addMany)="isByManyCharge = true"
   ></app-button-forms>
