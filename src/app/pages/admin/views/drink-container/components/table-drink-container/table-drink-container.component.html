@@ -10,14 +10,10 @@
     <tbody>
       <tr *ngFor="let item of listElements; let i = index">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ item.containerName }}</td>
+        <td>{{ item.containerName! | drinkContainerName }}</td>
         <td>
-          <app-table-buttons
-            [rowDataSelected]="item"
-            (delete)="delete(item)"
-            (update)="update(item)"
-            (changeStockState)="changeStockState(item)"
-          >
+          <app-table-buttons [rowDataSelected]="item" (delete)="delete(item)" (update)="update(item)"
+            (changeStockState)="changeStockState(item)">
           </app-table-buttons>
         </td>
       </tr>
