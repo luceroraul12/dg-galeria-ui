@@ -102,7 +102,11 @@ export class FormDrinkContaineredTasteComponent
     this.initGen();
     this.drinkContaineredTasteService
       .createMany(this.generateAndConvertResult())
-      .subscribe(console.log);
+      .subscribe(({ stockDataResult }) =>
+        stockDataResult.forEach((drinkContaineredTaste) =>
+          this.tableService.addRowData(drinkContaineredTaste)
+        )
+      );
   }
 
   private initGen(): void {
