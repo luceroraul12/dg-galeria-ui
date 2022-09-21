@@ -28,4 +28,8 @@ export abstract class CrudService<Entity extends StockData> {
       body: element,
     });
   }
+
+  changeStockState(element: Entity): Observable<StockDataResponse<Entity>> {
+    return this.http.patch<StockDataResponse<Entity>>(this.urlApi, element);
+  }
 }

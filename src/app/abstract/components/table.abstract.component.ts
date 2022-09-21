@@ -8,7 +8,7 @@ import { CrudService } from '../service/crud-abstract.service';
   template: '',
 })
 export abstract class TableAbstractComponent<Entity extends StockData> {
-  public listElements!: Entity[];
+  public listElements: Entity[] = [];
   @Input()
   public stockState: boolean = false;
 
