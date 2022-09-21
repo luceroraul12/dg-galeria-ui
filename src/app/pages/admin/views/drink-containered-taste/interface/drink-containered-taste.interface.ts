@@ -3,7 +3,7 @@ import { BrandedTaste } from '../../branded-taste/interface/branded-taste.interf
 import { DrinkContainer } from '../../drink-container/interface/drink-container.interface';
 
 export interface DrinkContaineredTaste extends StockData {
-  id: number;
+  id?: number;
   isStocked: boolean;
   drinkContainer: DrinkContainer;
   brandedTaste: BrandedTaste;
