@@ -8,8 +8,8 @@ import { CustomerComponent } from './views/customer.component';
 import {
   CustomerBrandPipe,
   CustomerDrinkContainerOrder,
-} from 'src/app/pipes/customer.pipe';
-import { DrinkContainerName } from 'src/app/pipes/drink-container.pipe';
+} from 'src/app/shared/pipes/customer.pipe';
+import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
 
 @NgModule({
   declarations: [

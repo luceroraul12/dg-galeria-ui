@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Brand } from '../pages/admin/views/brand/interface/brand.interface';
-import { DrinkContainer } from '../pages/admin/views/drink-container/interface/drink-container.interface';
+import { Brand } from '../../pages/admin/views/brand/interface/brand.interface';
+import { DrinkContainer } from '../../pages/admin/views/drink-container/interface/drink-container.interface';
 
 @Pipe({
   name: 'customerBrand',
