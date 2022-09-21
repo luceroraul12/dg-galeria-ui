@@ -5,14 +5,18 @@ import { SharedModule } from '../../shared/shared.module';
 import { DetailedGallery } from './views/detailed-gallery/detailed-galllery.component';
 import { GalleryComponent } from './views/gallery/gallery.component';
 import { CustomerComponent } from './views/customer.component';
-import { customerBrandPipe } from 'src/app/pipes/customer.pipe';
+import {
+  CustomerBrandPipe,
+  CustomerDrinkContainer,
+} from 'src/app/pipes/customer.pipe';
 
 @NgModule({
   declarations: [
     CustomerComponent,
     GalleryComponent,
     DetailedGallery,
-    customerBrandPipe,
+    CustomerBrandPipe,
+    CustomerDrinkContainer,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [CustomerComponent],
