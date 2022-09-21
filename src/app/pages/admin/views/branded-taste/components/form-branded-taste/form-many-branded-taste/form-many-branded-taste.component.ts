@@ -11,7 +11,7 @@ import { FormManyBrandedTasteService } from '../../../service/form-many-branded-
 })
 export class FormManyBrandedTasteComponent extends FormManyItemAbstractComponent<BrandedTaste> {
   wayToSort(a: BrandedTaste, b: BrandedTaste): number {
-    throw new Error('Method not implemented.');
+    return a.brand.brandName.localeCompare(b.brand.brandName);
   }
 
   constructor(
