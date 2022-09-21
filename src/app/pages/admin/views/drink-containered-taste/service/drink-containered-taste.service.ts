@@ -19,7 +19,7 @@ export class DrinkContaineredTasteService extends CrudService<DrinkContaineredTa
   public createMany(
     items: DrinkContaineredTaste[]
   ): Observable<StockDataResponse<DrinkContaineredTaste>> {
-    let url: string = `${this.urlApi}/por-monton`;
+    let url: string = `${this.urlApi}/monton`;
     return this.http.post<StockDataResponse<DrinkContaineredTaste>>(url, items);
   }
 }
