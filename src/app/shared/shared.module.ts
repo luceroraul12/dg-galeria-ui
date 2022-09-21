@@ -16,6 +16,7 @@ import {
   DrinkContainerOrderByValue,
 } from './pipes/drink-container.pipe';
 import { BrandOrderByName } from './pipes/brand.pipe';
+import { TasteOrderByName } from './pipes/taste.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BrandOrderByName } from './pipes/brand.pipe';
     DrinkContainerName,
     DrinkContainerOrderByValue,
     BrandOrderByName,
+    TasteOrderByName,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -43,6 +45,7 @@ import { BrandOrderByName } from './pipes/brand.pipe';
     DrinkContainerName,
     DrinkContainerOrderByValue,
     BrandOrderByName,
+    TasteOrderByName,
   ],
   providers: [
     CustomerBrandPipe,
@@ -50,6 +53,7 @@ import { BrandOrderByName } from './pipes/brand.pipe';
     DrinkContainerName,
     DrinkContainerOrderByValue,
     BrandOrderByName,
+    TasteOrderByName,
   ],
 })
 export class SharedModule {}
