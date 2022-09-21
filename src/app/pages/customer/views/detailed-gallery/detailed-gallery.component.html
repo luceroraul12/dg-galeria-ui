@@ -14,7 +14,7 @@
               </div>
               <ng-template #withoutStock>
                 <div class="p-3 alert alert-danger">
-                  {{ item.containerName }} - SIN STOCK
+                  {{ item.containerName! | drinkContainerName}} - SIN STOCK
                 </div>
               </ng-template>
             </div>
