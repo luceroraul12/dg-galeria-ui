@@ -7,6 +7,11 @@ import { ButtonComponent } from './button/button.component';
 import { TableButtonsComponent } from './table-buttons/table-buttons.component';
 import { ButtonReturnAdminComponent } from './button-return-admin/button-return-admin.component';
 import { ButtonFormsComponent } from './button-forms/button-forms.component';
+import {
+  CustomerBrandPipe,
+  CustomerDrinkContainerOrder,
+} from './pipes/customer.pipe';
+import { DrinkContainerName } from './pipes/drink-container.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,9 @@ import { ButtonFormsComponent } from './button-forms/button-forms.component';
     TableButtonsComponent,
     ButtonReturnAdminComponent,
     ButtonFormsComponent,
+    CustomerBrandPipe,
+    CustomerDrinkContainerOrder,
+    DrinkContainerName,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -24,6 +32,14 @@ import { ButtonFormsComponent } from './button-forms/button-forms.component';
     TableButtonsComponent,
     ButtonReturnAdminComponent,
     ButtonFormsComponent,
+    CustomerBrandPipe,
+    CustomerDrinkContainerOrder,
+    DrinkContainerName,
+  ],
+  providers: [
+    CustomerBrandPipe,
+    CustomerDrinkContainerOrder,
+    DrinkContainerName,
   ],
 })
 export class SharedModule {}

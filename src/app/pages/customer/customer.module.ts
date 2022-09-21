@@ -12,14 +12,7 @@ import {
 import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
 
 @NgModule({
-  declarations: [
-    CustomerComponent,
-    GalleryComponent,
-    DetailedGallery,
-    CustomerBrandPipe,
-    CustomerDrinkContainerOrder,
-    DrinkContainerName,
-  ],
+  declarations: [CustomerComponent, GalleryComponent, DetailedGallery],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [CustomerComponent],
 })
