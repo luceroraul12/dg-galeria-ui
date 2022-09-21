@@ -2,7 +2,9 @@
   #drinkContaineredTasteForm="ngForm"
   (ngSubmit)="identifyOperationAndValidateAndRun()"
 >
+  <hr />
   <label class="form-label">Asignaciones registrados</label>
+  <br />
   <div *ngIf="!isByManyCharge; else manyBrandedTaste">
     <select
       class="form-select"
@@ -19,7 +21,9 @@
   <ng-template #manyBrandedTaste>
     <app-form-many-branded-taste></app-form-many-branded-taste>
   </ng-template>
+  <hr />
   <label class="form-label">Formatos registrados</label>
+  <br />
   <div *ngIf="!isByManyCharge; else manyDrinkContainer">
     <select
       class="form-select"
@@ -34,6 +38,7 @@
   <ng-template #manyDrinkContainer>
     <app-form-many-drink-container></app-form-many-drink-container>
   </ng-template>
+  <hr />
   <app-button-forms
     (cancel)="reset()"
     (addMany)="isByManyCharge = true"
