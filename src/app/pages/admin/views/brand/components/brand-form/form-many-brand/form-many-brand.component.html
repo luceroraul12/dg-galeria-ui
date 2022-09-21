@@ -6,10 +6,10 @@
   <input
     type="checkbox"
     class="btn-check"
-    id="item{{ item.id }}"
+    id="brand{{ item.id }}"
     (change)="verifyAndAddElement(item)"
   />
-  <label class="btn btn-outline-success" for="item{{ item.id }}">
+  <label class="btn btn-outline-success" for="brand{{ item.id }}">
     {{ item.brandName }}
   </label>
 </div>
