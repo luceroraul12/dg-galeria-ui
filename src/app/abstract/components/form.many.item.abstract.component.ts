@@ -21,14 +21,11 @@ export abstract class FormManyItemAbstractComponent<Entity extends StockData> {
       .read()
       .pipe(first())
       .subscribe(({ stockDataResult }) => {
-        stockDataResult.sort((a, b) => this.wayToSort(a, b));
         this.registeredTastes = stockDataResult;
         this.formManyItemService.registeredElements = stockDataResult;
         this.formManyItemService.selectedElements = [];
       });
   }
-
-  abstract wayToSort(a: Entity, b: Entity): number;
 
   verifyAndAddElement(item: Entity) {
     this.formManyItemService.verifyAndAddElement(item);

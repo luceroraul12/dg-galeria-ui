@@ -1,15 +1,6 @@
-<div
-  class="btn-group m-1"
-  role="group"
-  *ngFor="let item of registeredTastes; let i = index"
->
-  <input
-    type="checkbox"
-    class="btn-check"
-    id="drinkContainer{{ item.id }}"
-    (change)="verifyAndAddElement(item)"
-  />
+<div class="btn-group m-1" role="group" *ngFor="let item of registeredTastes; let i = index">
+  <input type="checkbox" class="btn-check" id="drinkContainer{{ item.id }}" (change)="verifyAndAddElement(item)" />
   <label class="btn btn-outline-success" for="drinkContainer{{ item.id }}">
-    {{ item.containerName | titlecase }}
+    {{ item.containerName }}
   </label>
 </div>

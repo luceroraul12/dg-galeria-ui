@@ -11,10 +11,6 @@ import { FormManyDrinkContainerService } from '../../../service/form-many-drink-
   styles: [],
 })
 export class FormManyDrinkContainerComponent extends FormManyItemAbstractComponent<DrinkContainer> {
-  wayToSort(a: DrinkContainer, b: DrinkContainer): number {
-    return a.containerName!.localeCompare(b.containerName!);
-  }
-
   constructor(
     drinkContainerService: DrinkContainerService,
     formManyDrinkContainer: FormManyDrinkContainerService

@@ -7,8 +7,9 @@ import { GalleryComponent } from './views/gallery/gallery.component';
 import { CustomerComponent } from './views/customer.component';
 import {
   CustomerBrandPipe,
-  CustomerDrinkContainer,
+  CustomerDrinkContainerOrder,
 } from 'src/app/pipes/customer.pipe';
+import { DrinkContainerName } from 'src/app/pipes/drink-container.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {
     GalleryComponent,
     DetailedGallery,
     CustomerBrandPipe,
-    CustomerDrinkContainer,
+    CustomerDrinkContainerOrder,
+    DrinkContainerName,
   ],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [CustomerComponent],

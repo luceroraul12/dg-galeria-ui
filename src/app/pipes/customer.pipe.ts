@@ -19,10 +19,10 @@ export class CustomerBrandPipe implements PipeTransform {
 @Pipe({
   name: 'customerDrinkContainer',
 })
-export class CustomerDrinkContainer implements PipeTransform {
+export class CustomerDrinkContainerOrder implements PipeTransform {
   transform(customerDrinkContainer: DrinkContainer[]): DrinkContainer[] {
     return customerDrinkContainer
-      .sort((a, b) => a.containerName!.localeCompare(b.containerName!))
+      .sort((a, b) => a.containerName! - b.containerName!)
       .sort((a, b) => Number(b.isStocked) - Number(a.isStocked));
   }
 }

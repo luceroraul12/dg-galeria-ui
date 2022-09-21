@@ -28,10 +28,10 @@ export class FormDrinkContainerComponent
 
   reset(): void {
     this.element = {
-      containerName: '',
+      containerName: 0,
     };
   }
   validate(): boolean {
-    return this.element.containerName != '';
+    return this.element.containerName != 0;
   }
 }
