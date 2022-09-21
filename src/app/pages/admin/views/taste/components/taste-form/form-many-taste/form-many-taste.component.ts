@@ -20,8 +20,4 @@ export class FormManyTasteComponent
   ) {
     super(crudService, formManyItemService);
   }
-
-  wayToSort(a: Taste, b: Taste): number {
-    return a.tasteName.localeCompare(b.tasteName);
-  }
 }

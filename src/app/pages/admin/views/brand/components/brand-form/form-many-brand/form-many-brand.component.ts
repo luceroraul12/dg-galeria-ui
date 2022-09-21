@@ -10,10 +10,6 @@ import { FormManyBrandService } from '../../../../branded-taste/service/form-man
   styles: [],
 })
 export class FormManyBrandComponent extends FormManyItemAbstractComponent<Brand> {
-  wayToSort(a: Brand, b: Brand): number {
-    return a.brandName.localeCompare(b.brandName);
-  }
-
   constructor(
     brandService: BrandService,
     formManyBrandService: FormManyBrandService

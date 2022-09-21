@@ -85,9 +85,6 @@ export class FormDrinkContaineredTasteComponent
       .read()
       .pipe(first())
       .subscribe(({ stockDataResult }) => {
-        stockDataResult
-          .sort((a, b) => a.brand.brandName.localeCompare(b.brand.brandName))
-          .sort((a, b) => a.taste.tasteName.localeCompare(b.taste.tasteName));
         this.registeredBrandedTastes = stockDataResult;
       });
     this.drinkContainerService
