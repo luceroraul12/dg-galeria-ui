@@ -58,7 +58,6 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
       .pipe(first())
       .subscribe(
         ({ stockDataResult }) => {
-          console.log(stockDataResult[0]);
           this.tableService.addRowData(stockDataResult[0]);
         },
         (error) => alert('Error al crear')
@@ -71,7 +70,6 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
       .pipe(first())
       .subscribe(
         ({ stockDataResult }) => {
-          console.log(stockDataResult[0]);
           this.tableService.updateRowData(stockDataResult[0]);
           this.isByUpdate = false;
         },

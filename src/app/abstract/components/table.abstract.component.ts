@@ -22,7 +22,6 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
       .read()
       .pipe(first())
       .subscribe(({ stockDataResult }) => {
-        stockDataResult.sort((a, b) => a.id! - b.id!);
         this.listElements = stockDataResult;
         this.tableService.stockDataTable = stockDataResult;
       });
