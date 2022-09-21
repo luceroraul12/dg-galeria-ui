@@ -11,7 +11,10 @@ import {
   CustomerBrandPipe,
   CustomerDrinkContainerOrder,
 } from './pipes/customer.pipe';
-import { DrinkContainerName } from './pipes/drink-container.pipe';
+import {
+  DrinkContainerName,
+  DrinkContainerOrderByValue,
+} from './pipes/drink-container.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { DrinkContainerName } from './pipes/drink-container.pipe';
     CustomerBrandPipe,
     CustomerDrinkContainerOrder,
     DrinkContainerName,
+    DrinkContainerOrderByValue,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -35,11 +39,13 @@ import { DrinkContainerName } from './pipes/drink-container.pipe';
     CustomerBrandPipe,
     CustomerDrinkContainerOrder,
     DrinkContainerName,
+    DrinkContainerOrderByValue,
   ],
   providers: [
     CustomerBrandPipe,
     CustomerDrinkContainerOrder,
     DrinkContainerName,
+    DrinkContainerOrderByValue,
   ],
 })
 export class SharedModule {}
