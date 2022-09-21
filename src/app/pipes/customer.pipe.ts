@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Brand } from '../pages/admin/views/brand/interface/brand.interface';
-import { CustomerResult } from '../pages/customer/views/interface/customer.response.interface';
 
 @Pipe({
   name: 'customerBrand',
@@ -10,7 +9,7 @@ export class customerBrandPipe implements PipeTransform {
     let resultAdapted: Brand[];
     resultAdapted = customerBrands
       .sort((a, b) => a.brandName.localeCompare(b.brandName))
-      .sort((a, b) => Number(a.isStocked) - Number(b.isStocked));
+      .sort((a, b) => Number(b.isStocked) - Number(a.isStocked));
 
     return resultAdapted;
   }
