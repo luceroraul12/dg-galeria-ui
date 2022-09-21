@@ -2,22 +2,30 @@
   <app-botonera-retorno ruta="cliente"></app-botonera-retorno>
 
   <div *ngFor="let sabor of saboresCreados" class="mt-3 mb-3">
-    <div class="card text-center text-bg-secondary">
+    <div class="card text-center text-bg-dark" style="--bs-bg-opacity: 0.6">
       <div class="card-body">
         <h1>{{ sabor.tasteName }}</h1>
-        <strong>Estado de Formatos</strong>
-        <ul class="list-group">
-          <li *ngFor="let formato of sabor.drinkContainersAvailable" class="align-items-center">
-            <div class="alert alert-success" *ngIf="formato.isStocked; else opcional">
-              {{ formato.containerName }}
-            </div>
-            <ng-template #opcional>
-              <div class="alert alert-danger">
-                {{ formato.containerName }} - SIN STOCK
+        <strong>Envases trabajados</strong>
+        <div class="container text-center">
+          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <div
+              class="col"
+              *ngFor="let item of sabor.drinkContainersAvailable"
+            >
+              <div
+                class="p-3 alert alert-success"
+                *ngIf="item.isStocked; else withoutStock"
+              >
+                {{ item.containerName }}
               </div>
-            </ng-template>
-          </li>
-        </ul>
+              <ng-template #withoutStock>
+                <div class="p-3 alert alert-danger">
+                  {{ item.containerName }} - SIN STOCK
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
