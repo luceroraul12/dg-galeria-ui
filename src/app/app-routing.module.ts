@@ -16,49 +16,50 @@ const routes: Routes = [
   {
     path: 'cliente',
     component: CustomerComponent,
+    pathMatch: 'full',
   },
   {
     path: 'cliente/:idMarca',
     component: DetailedGallery,
   },
   {
-    path: 'administrador',
+    path: 'dgadmbr',
     component: AdminComponent,
   },
   {
-    path: 'administrador/formatos',
+    path: 'dgadmbr/formatos',
     component: DrinkContainerComponent,
   },
   {
-    path: 'administrador/marcas',
+    path: 'dgadmbr/marcas',
     component: BrandComponent,
   },
   {
-    path: 'administrador/sabores',
+    path: 'dgadmbr/sabores',
     component: TasteComponent,
   },
   {
-    path: 'administrador/marcas/estado',
+    path: 'dgadmbr/marcas/estado',
     component: BrandStateComponent,
   },
   {
-    path: 'administrador/sabores/estado',
+    path: 'dgadmbr/sabores/estado',
     component: DrinkContaineredTasteComponent,
   },
   {
-    path: 'administrador/asignacion/marcasabor',
+    path: 'dgadmbr/asignacion/marcasabor',
     component: BrandedTasteComponent,
   },
   {
-    path: 'administrador/asignacion/marcasabor/estado',
+    path: 'dgadmbr/asignacion/marcasabor/estado',
     component: StateBrandedTasteComponent,
   },
   {
-    path: 'administrador/asignacion/saborformato',
+    path: 'dgadmbr/asignacion/saborformato',
     component: DrinkContaineredTasteComponent,
   },
   {
-    path: 'administrador/asignacion/saborformato/estado',
+    path: 'dgadmbr/asignacion/saborformato/estado',
     component: StateDrinkContaineredTasteComponent,
   },
   {
