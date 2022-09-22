@@ -1,0 +1,5 @@
+h1{
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-shadow: 5px 5px 10px hsl(0, 2%, 35%), 5px 5px 10px #357a3b;
+}
