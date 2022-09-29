@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -15,5 +15,12 @@ export class CustomerService {
   resultByIdBrand(idBrand: number): Observable<CustomerResponse> {
     let params = new HttpParams().set('id-brand', idBrand);
     return this.http.get<CustomerResponse>(this.url, { params });
+  }
+
+  getPDF(){
+    return this.http.get(`${this.url}/pdf`,
+    {
+      observe: 'response', responseType: 'blob'
+    });
   }
 }
