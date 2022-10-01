@@ -27,7 +27,7 @@ const routes: Routes = [
     component: AdminComponent,
   },
   {
-    path: 'dgadmbr/formatos',
+    path: 'dgadmbr/tamaños',
     component: DrinkContainerComponent,
   },
   {
@@ -47,19 +47,19 @@ const routes: Routes = [
     component: DrinkContaineredTasteComponent,
   },
   {
-    path: 'dgadmbr/asignacion/marcasabor',
+    path: 'dgadmbr/vinculacion/marcasabor',
     component: BrandedTasteComponent,
   },
   {
-    path: 'dgadmbr/asignacion/marcasabor/estado',
+    path: 'dgadmbr/vinculacion/marcasabor/estado',
     component: StateBrandedTasteComponent,
   },
   {
-    path: 'dgadmbr/asignacion/saborformato',
+    path: 'dgadmbr/vinculacion/sabortamaño',
     component: DrinkContaineredTasteComponent,
   },
   {
-    path: 'dgadmbr/asignacion/saborformato/estado',
+    path: 'dgadmbr/vinculacion/sabortamaño/estado',
     component: StateDrinkContaineredTasteComponent,
   },
   {
