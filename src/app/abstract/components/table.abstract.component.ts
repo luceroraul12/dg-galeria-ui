@@ -55,7 +55,7 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
     console.log('changeState tabla formato');
     item.isStocked = !item.isStocked;
     this.crudService
-      .update(item)
+      .changeStockState(item)
       .pipe(first())
       .subscribe((response) => {
         this.tableService.changeStockState(item);
