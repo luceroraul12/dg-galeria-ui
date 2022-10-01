@@ -1,3 +1,7 @@
+<div class="text-center" *ngIf="isByUpdate">
+  <h6>Modificando:</h6>
+  <h3> {{element.tasteName | titlecase}} </h3>
+</div>
 <form #tasteForm="ngForm" (ngSubmit)="identifyOperationAndValidateAndRun()">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nombre del Sabor</label>
