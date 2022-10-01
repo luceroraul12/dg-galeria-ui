@@ -42,6 +42,11 @@ export abstract class TableAbstractComponent<Entity extends StockData> {
   }
 
   update(item: Entity): void {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+});
     console.log('update tabla formato');
     this.crudService.sendFromtTableToFrom$.next(item);
   }
