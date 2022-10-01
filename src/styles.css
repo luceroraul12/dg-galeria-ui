@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
 
+.card{
+    border: 0px;
+}
+
 .spacer{
     font-size: 0; 
     height: 10px;
