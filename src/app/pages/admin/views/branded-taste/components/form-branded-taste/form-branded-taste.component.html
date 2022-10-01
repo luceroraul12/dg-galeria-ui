@@ -1,13 +1,11 @@
+<div class="text-center" *ngIf="isByUpdate">
+  <h6>Modificando:</h6>
+  <h3> {{ element.brand.brandName}} - {{ element.taste.tasteName}} </h3>
+</div>
 <form
   #brandedTasteForm="ngForm"
   (ngSubmit)="identifyOperationAndValidateAndRun()"
 >
-  <div *ngIf="isByUpdate">
-    <h2 class="text-center display-5">
-      Modificando: {{ element.brand.brandName | titlecase }} -
-      {{ element.taste.tasteName | titlecase }}
-    </h2>
-  </div>
   <hr />
   <label class="form-label">Marcas registradas</label>
   <br />
