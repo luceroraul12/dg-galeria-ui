@@ -4,5 +4,6 @@ export interface Brand extends StockData {
   id?: number;
   brandName: string;
   url?: string;
+  urlIconic?: string;
   isStocked?: boolean;
 }

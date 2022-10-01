@@ -16,7 +16,7 @@ export class BrandFormComponent
   createMany(): void {}
   extraInit(): void {}
   validate(): boolean {
-    return this.element.brandName != '' && this.element.url != '';
+    return this.element.brandName != '' && this.element.url != '' && this.element.urlIconic != '';
   }
   reset(): void {
     this.element = {

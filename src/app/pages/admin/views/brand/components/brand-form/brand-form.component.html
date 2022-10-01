@@ -9,12 +9,21 @@
     />
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enlace de foto</label>
+    <label class="form-label">Enlace del Logo</label>
     <input
       type="text"
       class="form-control"
       name="url"
       [(ngModel)]="element.url"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Enlace del Producto Icónico</label>
+    <input
+      type="text"
+      class="form-control"
+      name="url"
+      [(ngModel)]="element.urlIconic"
     />
   </div>
   <app-button-forms (cancel)="reset()"></app-button-forms>
