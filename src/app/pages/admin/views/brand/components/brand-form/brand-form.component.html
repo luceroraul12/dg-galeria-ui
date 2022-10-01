@@ -1,6 +1,6 @@
-<div class="text-center" *ngIf="">
+<div class="text-center" *ngIf="isByUpdate">
   <h6>Modificando:</h6>
-  <h3>marcaPrueba</h3>
+  <h3> {{element.brandName}} </h3>
 </div>
 <form #brandForm="ngForm" (ngSubmit)="identifyOperationAndValidateAndRun()">
   <div class="mb-3">
