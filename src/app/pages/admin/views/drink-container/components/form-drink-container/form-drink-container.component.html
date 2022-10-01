@@ -1,3 +1,7 @@
+<div class="text-center" *ngIf="isByUpdate">
+  <h6>Modificando:</h6>
+  <h3> {{ element.containerName! | drinkContainerName}} </h3>
+</div>
 <form
   #drinkContainerForm="ngForm"
   autocomplete="off"
