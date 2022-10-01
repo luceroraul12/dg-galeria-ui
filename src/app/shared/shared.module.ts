@@ -19,6 +19,7 @@ import { BrandOrderByName } from './pipes/brand.pipe';
 import { TasteOrderByName } from './pipes/taste.pipe';
 import { BrandedTasteOrder } from './pipes/branded-taste.pipe';
 import { DrinkContaineredTasteOrder } from './pipes/drink-containered-taste.pipe';
+import { DrinkContainerTasteUpdateLabelPipe } from './pipes/drink-container-taste-update-label.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { DrinkContaineredTasteOrder } from './pipes/drink-containered-taste.pipe
     TasteOrderByName,
     BrandedTasteOrder,
     DrinkContaineredTasteOrder,
+    DrinkContainerTasteUpdateLabelPipe,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -52,6 +54,7 @@ import { DrinkContaineredTasteOrder } from './pipes/drink-containered-taste.pipe
     TasteOrderByName,
     BrandedTasteOrder,
     DrinkContaineredTasteOrder,
+    DrinkContainerTasteUpdateLabelPipe
   ],
   providers: [
     CustomerBrandPipe,
@@ -62,6 +65,7 @@ import { DrinkContaineredTasteOrder } from './pipes/drink-containered-taste.pipe
     TasteOrderByName,
     BrandedTasteOrder,
     DrinkContaineredTasteOrder,
+    DrinkContainerTasteUpdateLabelPipe
   ],
 })
 export class SharedModule {}
