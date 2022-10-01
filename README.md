@@ -1,27 +1,10 @@
 # DgGaleriaUi - Deploy Link: https://dgustavo.netlify.app/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+Imagenes:
+![image](https://user-images.githubusercontent.com/106817372/193291704-3c58bcb8-4057-4bab-b089-21a1aba49529.png)
+![image](https://user-images.githubusercontent.com/106817372/193291807-c592c82f-3412-491d-a3b7-84040ba0e297.png)
+![image](https://user-images.githubusercontent.com/106817372/193291909-a85b748d-4782-4a2e-bcea-d2439354d5e1.png)
+![image](https://user-images.githubusercontent.com/106817372/193291922-56325b6c-6413-4b57-ad34-0c0bcc6f9565.png)
+![image](https://user-images.githubusercontent.com/106817372/193291977-b011ff24-4191-4ddd-b1dd-002b79e3f163.png)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/106817372/193292121-1dd45b1b-1441-4938-9d05-01bdb2d91465.png)
