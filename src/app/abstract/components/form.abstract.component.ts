@@ -58,6 +58,7 @@ export abstract class FormAbstractComponent<Entity extends StockData> {
       .pipe(first())
       .subscribe(
         ({ stockDataResult }) => {
+          alert("Elemento/s creado");
           this.tableService.addRowData(stockDataResult[0]);
         },
         (error) => alert('Error al crear')
