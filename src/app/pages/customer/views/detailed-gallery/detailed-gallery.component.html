@@ -4,7 +4,7 @@
     <h1 class="text-center" *ngIf="marcaElegida">{{marcaElegida.brandName | titlecase}}</h1>
 
   </div>
-  <div *ngFor="let sabor of saboresCreados" class="mt-3 mb-3">
+  <div *ngFor="let sabor of saboresCreados | tasteResultOrderByNameAndStockState" class="mt-3 mb-3">
     <div class="card text-center text-bg-dark " style="--bs-bg-opacity: 0.6">
       <div class="card-body">
         <h1>{{ sabor.tasteName | titlecase }}</h1>
@@ -13,10 +13,10 @@
           <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
             <div 
             class="col" 
-            *ngFor="let item of sabor.drinkContainersAvailable | customerDrinkContainerOrder">
+            *ngFor="let item of sabor | drinkContainerStockByTasteStock ">
               <div 
               class="p-3 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
-                {{ item | drinkContainerStockState}}
+                {{ item.containerName! | drinkContainerName}}
               </div>
             </div>
           </div>
