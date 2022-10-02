@@ -13,5 +13,6 @@ export interface CustomerResult {
 
 export interface TasteResult {
   tasteName: string;
+  stockState: boolean;
   drinkContainersAvailable: DrinkContainer[];
 }
