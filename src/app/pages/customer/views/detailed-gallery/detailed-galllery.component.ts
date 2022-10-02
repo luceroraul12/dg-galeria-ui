@@ -15,7 +15,6 @@ import { CustomerService } from 'src/app/pages/customer/views/service/customer.s
 export class DetailedGallery implements OnInit {
   @Output() fueClickeadoCambio = new EventEmitter<boolean>();
 
-  private idMarca: string = '';
   public marcaElegida!: Brand;
   public saboresCreados!: TasteResult[];
 
