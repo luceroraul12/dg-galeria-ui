@@ -1,4 +1,4 @@
-# DgGaleriaUi - Deploy Link: https://dgustavo.netlify.app/
+# DgGaleriaUi
 
 Imagenes:
 ![image](https://user-images.githubusercontent.com/106817372/193291704-3c58bcb8-4057-4bab-b089-21a1aba49529.png)
