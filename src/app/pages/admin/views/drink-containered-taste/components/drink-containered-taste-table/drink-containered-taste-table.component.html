@@ -13,8 +13,8 @@
       <tr *ngFor="let item of listElements | drinkContaineredTasteOrder; let i = index"
         [ngClass]="item.isStocked ? 'table-success' : 'table-danger'">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ item.brandedTaste.brand.brandName }}</td>
-        <td>{{ item.brandedTaste.taste.tasteName }}</td>
+        <td>{{ item.brandedTaste.brand.brandName  | titlecase }}</td>
+        <td>{{ item.brandedTaste.taste.tasteName | titlecase }}</td>
         <td>{{ item.drinkContainer.containerName! | drinkContainerName}}</td>
         <td>
           <app-table-buttons [stockState]="stockState" [rowDataSelected]="item"
