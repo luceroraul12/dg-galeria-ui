@@ -13,7 +13,7 @@
           <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
             <div 
             class="col" 
-            *ngFor="let item of sabor | drinkContainerStockByTasteStock ">
+            *ngFor="let item of sabor | drinkContainerStockByTasteStock | drinkContainerOrderByValue ">
               <div 
               class="p-3 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
                 {{ item | drinkContainerStockState}}
