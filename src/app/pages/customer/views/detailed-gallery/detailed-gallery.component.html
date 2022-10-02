@@ -13,17 +13,11 @@
           <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
             <div 
             class="col" 
-            *ngFor="let item of sabor.drinkContainersAvailable | customerDrinkContainer">
+            *ngFor="let item of sabor.drinkContainersAvailable | customerDrinkContainerOrder">
               <div 
-              class="p-3 alert alert-success" 
-              *ngIf="item.isStocked; else withoutStock">
-                {{ item.containerName! | drinkContainerName}}
+              class="p-3 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
+                {{ item | drinkContainerStockState}}
               </div>
-              <ng-template #withoutStock>
-                <div class="p-3 alert alert-danger">
-                  {{ item.containerName! | drinkContainerName}} - SIN STOCK
-                </div>
-              </ng-template>
             </div>
           </div>
         </div>

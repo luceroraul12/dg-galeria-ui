@@ -17,7 +17,7 @@ export class CustomerBrandPipe implements PipeTransform {
 }
 
 @Pipe({
-  name: 'customerDrinkContainer',
+  name: 'customerDrinkContainerOrder',
 })
 export class CustomerDrinkContainerOrder implements PipeTransform {
   transform(customerDrinkContainer: DrinkContainer[]): DrinkContainer[] {
