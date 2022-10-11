@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormAbstractComponent } from 'src/app/abstract/components/form.abstract.component';
 import { TableService } from 'src/app/services/table.service';
-import { Brand } from '../../interface/brand.interface';
+import { Brand, BrandCategory } from '../../interface/brand.interface';
 import { BrandService } from '../../service/brand.service';
 
 @Component({
@@ -13,6 +13,10 @@ export class BrandFormComponent
   extends FormAbstractComponent<Brand>
   implements OnInit
 {
+  public categories!: BrandCategory[];
+
+
+
   createMany(): void {}
   extraInit(): void {}
   validate(): boolean {
@@ -24,11 +28,15 @@ export class BrandFormComponent
       url: '',
     };
   }
-  constructor(tableService: TableService<Brand>, brandService: BrandService) {
+  constructor(tableService: TableService<Brand>,
+    private brandService: BrandService) {
     super(tableService, brandService);
   }
 
   ngOnInit(): void {
     this.initForm();
+    this.brandService.categories().subscribe(
+      ({stockDataResult}) => this.categories = stockDataResult
+    )
   }
 }

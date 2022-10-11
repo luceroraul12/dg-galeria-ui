@@ -4,6 +4,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Marcas</th>
+        <th scope="col">Categoria</th>
         <ng-container *ngIf="true; else elseTemplate">
           <th scope="col">Opciones</th>
         </ng-container>
@@ -17,6 +18,7 @@
         [ngClass]="item.isStocked ? 'table-success' : 'table-danger'">
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ item.brandName }}</td>
+        <td>{{ item.brandCategory!.categoryName | titlecase}}</td>
         <td>
           <app-table-buttons [stockState]="stockState" (changeStockState)="changeStockState(item)"
             (delete)="delete(item)" (update)="update(item)">

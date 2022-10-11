@@ -30,5 +30,17 @@
       [(ngModel)]="element.urlIconic"
     />
   </div>
+  <div class="mb-3">
+    <label class="form-label">Categoria de Marca</label>
+    <select
+    class="form-select"
+    aria-label="Default select example"
+    name="brandCategory"
+    [(ngModel)]="element.brandCategory"
+    >
+      <option selected>Elegir categoria</option>
+      <option *ngFor="let category of categories"  [ngValue]="category"> {{ category.categoryName | titlecase}} </option>
+    </select>
+  </div>
   <app-button-forms (cancel)="reset()"></app-button-forms>
 </form>
