@@ -1,5 +1,9 @@
 <div class="vistas">
   <app-botonera-retorno message="categorias"></app-botonera-retorno>
+   <!-- TODO: fix category name -->
+  <!-- <div class="card text-bg-dark my-2 animate__animated animate__flipInX " style="--bs-bg-opacity: 0.6">
+    <h2 class="text-center display-5">Categorias</h2>
+  </div> -->
   <div class="row row-cols-1 row-cols-md-4 g-4 mt-1">
     <div class="col" *ngFor="let brand of marcasCreadas | customerBrand | brandsByCategory: idCategorySelected">
       <a routerLink="/cliente/{{brand.brandCategory!.id}}/{{ brand.id }}">

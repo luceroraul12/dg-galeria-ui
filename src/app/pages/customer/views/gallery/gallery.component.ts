@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router, Routes } from '@angular/router';
-import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
+import { Brand, BrandCategory } from 'src/app/pages/admin/views/brand/interface/brand.interface';
 import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 
 @Component({
@@ -15,6 +15,8 @@ export class GalleryComponent implements OnInit {
 
   public idCategorySelected!: number;
 
+  public categorySelected!: BrandCategory;
+
   constructor(
     private brandService: BrandService,
     private activateRoute: ActivatedRoute
@@ -23,6 +25,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
     this.brandService.read().subscribe((response) => {
       this.marcasCreadas = response.stockDataResult;
+      this.categorySelected = this.marcasCreadas[0].brandCategory!;
     });
     this.activateRoute.params.subscribe(
       ({idBrandCategory}) => this.idCategorySelected = idBrandCategory
