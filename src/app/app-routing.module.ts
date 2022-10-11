@@ -11,6 +11,8 @@ import { DrinkContaineredTasteComponent } from './pages/admin/views/drink-contai
 import { BrandedTasteComponent } from './pages/admin/views/branded-taste/branded-taste.component';
 import { StateDrinkContaineredTasteComponent } from './pages/admin/views/drink-containered-taste/state-drink-containered-taste/state-drink-containered-taste.component';
 import { StateBrandedTasteComponent } from './pages/admin/views/branded-taste/state-branded-taste/state-branded-taste.component';
+import { GalleryCategoryComponent } from './pages/customer/views/gallery-category/gallery-category.component';
+import { GalleryComponent } from './pages/customer/views/gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -18,10 +20,15 @@ const routes: Routes = [
     component: CustomerComponent,
     pathMatch: 'full',
   },
+// im updatating routes in this part
   {
-    path: 'cliente/:idMarca',
-    component: DetailedGallery,
+    path: 'cliente/:idBrandCategory',
+    component: GalleryComponent
   },
+  // {
+  //   path: 'cliente/:idMarca',
+  //   component: DetailedGallery,
+  // },
   {
     path: 'dgadmbr',
     component: AdminComponent,
