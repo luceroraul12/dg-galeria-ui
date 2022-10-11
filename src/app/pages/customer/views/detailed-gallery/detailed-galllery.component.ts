@@ -17,6 +17,7 @@ export class DetailedGallery implements OnInit {
 
   public marcaElegida!: Brand;
   public saboresCreados!: TasteResult[];
+  public idCategorySelected!: number;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -24,7 +25,7 @@ export class DetailedGallery implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activateRoute.params.subscribe(({ idMarca }) =>
+    this.activateRoute.params.subscribe(({ idMarca, idBrandCategory}) =>{
       this.customerService
         .resultByIdBrand(idMarca)
         .subscribe(({ customerResult }: CustomerResponse) => {
@@ -38,7 +39,9 @@ export class DetailedGallery implements OnInit {
           });
           this.saboresCreados = tasteResults;
           this.marcaElegida = brandSelected;
-        })
+        });
+      this.idCategorySelected = idBrandCategory;
+    }
     );
   }
 }

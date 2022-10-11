@@ -1,4 +1,5 @@
 <div class="vistas">
+  <app-botonera-retorno message="categorias"></app-botonera-retorno>
   <div class="row row-cols-1 row-cols-md-4 g-4 mt-1">
     <div class="col" *ngFor="let brand of marcasCreadas | customerBrand | brandsByCategory: idCategorySelected">
       <a routerLink="/cliente/{{brand.brandCategory!.id}}/{{ brand.id }}">

@@ -1,5 +1,5 @@
 <div class="vistas">
-  <app-botonera-retorno ruta="cliente"></app-botonera-retorno>
+  <app-botonera-retorno ruta="cliente/{{ idCategorySelected }}"></app-botonera-retorno>
   <div class="card text-bg-dark animate__animated animate__bounce" style="--bs-bg-opacity: 0.6">
     <h1 class="text-center" *ngIf="marcaElegida">{{marcaElegida.brandName | titlecase}}</h1>
 
