@@ -10,9 +10,10 @@ import {
   CustomerDrinkContainerOrder,
 } from 'src/app/shared/pipes/customer.pipe';
 import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
+import { GalleryCategoryComponent } from './views/gallery-category/gallery-category.component';
 
 @NgModule({
-  declarations: [CustomerComponent, GalleryComponent, DetailedGallery],
+  declarations: [CustomerComponent, GalleryComponent, DetailedGallery, GalleryCategoryComponent],
   imports: [CommonModule, AppRoutingModule, SharedModule],
   exports: [CustomerComponent],
 })
