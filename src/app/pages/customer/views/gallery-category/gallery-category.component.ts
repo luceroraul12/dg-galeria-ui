@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandCategory, CategoryName } from 'src/app/pages/admin/views/brand/interface/brand.interface';
+import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 
 @Component({
   selector: 'app-gallery-category',
@@ -8,32 +9,17 @@ import { BrandCategory, CategoryName } from 'src/app/pages/admin/views/brand/int
 })
 export class GalleryCategoryComponent implements OnInit {
 
-  public brandCategories: BrandCategory[] = [
-    {
-      categoryName: CategoryName.Cerveza,
-      id: 1
-    },
-    {
-      categoryName: CategoryName.Espumante,
-      id: 2
-    },
-    {
-      categoryName: CategoryName.Gaseosa,
-      id: 3
-    },
-    {
-      categoryName: CategoryName.Vino,
-      id: 4
-    },
-    {
-      categoryName: CategoryName.Otros,
-      id: 5
-    },
-  ];
+  public brandCategories!: BrandCategory[];
 
-  constructor() { }
+  constructor(
+    private brandService: BrandService
+
+  ) { }
 
   ngOnInit(): void {
+    this.brandService.categories().subscribe(
+      ({stockDataResult}) => this.brandCategories = stockDataResult
+    )
   }
 
 }

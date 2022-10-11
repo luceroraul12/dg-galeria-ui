@@ -1,5 +1,5 @@
 <div class="card text-bg-dark my-2 animate__animated animate__flipInX " style="--bs-bg-opacity: 0.6">
-    <h2 class="text-center display-5">Categorias Disponibles</h2>
+    <h2 class="text-center display-5">Categorias</h2>
 </div>
 
 <div class="row">
@@ -7,7 +7,7 @@
         <a routerLink="/cliente/{{ item.id }}">
             <div class="flex card text-bg-dark my-2 animate__animated animate__flipInX " style="--bs-bg-opacity: 0.6">
                 <div class="card-header">
-                    <h2 class="text-center display-5"> {{item.categoryName}} </h2>
+                    <h2 class="text-center display-5"> {{item.categoryName | titlecase}} </h2>
                 </div>
             </div>
         </a>

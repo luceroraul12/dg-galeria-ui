@@ -23,6 +23,7 @@ import { DrinkContainerTasteUpdateLabelPipe } from './pipes/drink-container-tast
 import { DrinkContainerStockStatePipe } from './pipes/drink-container-stock-state.pipe';
 import { TasteResultApplyStockStatePipe } from './pipes/taste-result-apply-stock-state.pipe';
 import { TasteResultOrderByNameAndStockStatePipe } from './pipes/taste-result-order-by-name-and-stock-state.pipe';
+import { BrandsByCategoryPipe } from './pipes/brands-by-category.pipe';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TasteResultOrderByNameAndStockStatePipe } from './pipes/taste-result-or
     DrinkContainerStockStatePipe,
     TasteResultApplyStockStatePipe,
     TasteResultOrderByNameAndStockStatePipe,
+    BrandsByCategoryPipe,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [
@@ -63,7 +65,9 @@ import { TasteResultOrderByNameAndStockStatePipe } from './pipes/taste-result-or
     DrinkContainerTasteUpdateLabelPipe,
     DrinkContainerStockStatePipe,
     TasteResultApplyStockStatePipe,
-    TasteResultOrderByNameAndStockStatePipe
+    TasteResultOrderByNameAndStockStatePipe,
+    BrandsByCategoryPipe,
+
   ],
   providers: [
     CustomerBrandPipe,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router, Routes } from '@angular/router';
 import { Brand } from 'src/app/pages/admin/views/brand/interface/brand.interface';
 import { BrandService } from 'src/app/pages/admin/views/brand/service/brand.service';
 
@@ -12,11 +13,19 @@ export class GalleryComponent implements OnInit {
 
   public marcasCreadas: Brand[] = [];
 
-  constructor(private brandService: BrandService) {}
+  public idCategorySelected!: number;
+
+  constructor(
+    private brandService: BrandService,
+    private activateRoute: ActivatedRoute
+    ) {}
 
   ngOnInit(): void {
     this.brandService.read().subscribe((response) => {
       this.marcasCreadas = response.stockDataResult;
     });
+    this.activateRoute.params.subscribe(
+      ({idBrandCategory}) => this.idCategorySelected = idBrandCategory
+    )
   }
 }
