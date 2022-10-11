@@ -25,10 +25,10 @@ const routes: Routes = [
     path: 'cliente/:idBrandCategory',
     component: GalleryComponent
   },
-  // {
-  //   path: 'cliente/:idMarca',
-  //   component: DetailedGallery,
-  // },
+  {
+    path: 'cliente/:idBrandCategory/:idMarca',
+    component: DetailedGallery,
+  },
   {
     path: 'dgadmbr',
     component: AdminComponent,
