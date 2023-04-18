@@ -1,5 +1,7 @@
+import { ShoppingCartViewComponent } from './shopping-cart-view/shopping-cart-view.component';
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './service/customer.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer',
@@ -7,7 +9,10 @@ import { CustomerService } from './service/customer.service';
   styleUrls: ['./customer.component.css'],
 })
 export class CustomerComponent implements OnInit {
-  constructor(private customerService: CustomerService) {}
+  constructor(
+    private customerService: CustomerService,
+    private dialog: MatDialog
+    ) {}
 
   ngOnInit(): void {}
 
@@ -29,7 +34,7 @@ export class CustomerComponent implements OnInit {
   }
 
   verMarcado(): void {
-
+    this.dialog.open(ShoppingCartViewComponent);
   }
 }
 

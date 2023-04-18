@@ -11,10 +11,20 @@ import {
 } from 'src/app/shared/pipes/customer.pipe';
 import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
 import { GalleryCategoryComponent } from './views/gallery-category/gallery-category.component';
+import { ShoppingCartViewComponent } from './views/shopping-cart-view/shopping-cart-view.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  declarations: [CustomerComponent, GalleryComponent, DetailedGallery, GalleryCategoryComponent],
-  imports: [CommonModule, AppRoutingModule, SharedModule],
+  declarations: [CustomerComponent, GalleryComponent, DetailedGallery, GalleryCategoryComponent, ShoppingCartViewComponent],
+  imports: [
+    CommonModule,
+    AppRoutingModule, 
+    SharedModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+  ],
   exports: [CustomerComponent],
 })
 export class CustomerModule {}
