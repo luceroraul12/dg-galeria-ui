@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../../app-routing.module';
@@ -13,7 +14,6 @@ import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
 import { GalleryCategoryComponent } from './views/gallery-category/gallery-category.component';
 import { ShoppingCartViewComponent } from './views/shopping-cart-view/shopping-cart-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
