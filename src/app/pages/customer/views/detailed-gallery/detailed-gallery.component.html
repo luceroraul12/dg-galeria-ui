@@ -9,16 +9,17 @@
       <div class="card text-center text-bg-dark " style="--bs-bg-opacity: 0.6">
         <div class="card-body">
           <h1>{{ sabor.tasteName | titlecase }}</h1>
-          <strong>Tamaños trabajados</strong>
+          <strong>Calibres trabajados</strong>
           <div class="container text-center">
             <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
-              <div 
-              class="col" 
+              <div
+              class="row mx-1"
               *ngFor="let item of sabor | drinkContainerStockByTasteStock | drinkContainerOrderByValue ">
-                <div 
-                class="p-3 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
+                <div
+                class="p-1 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
                   {{ item | drinkContainerStockState}}
                 </div>
+                <button class="btn btn-warning" (click)="agregar(item)">Agregar</button>
               </div>
             </div>
           </div>

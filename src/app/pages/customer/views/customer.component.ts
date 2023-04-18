@@ -17,7 +17,7 @@ export class CustomerComponent implements OnInit {
       response => {
 
         let blob: Blob = response.body as Blob;
-        
+
         let a = document.createElement('a');
         a.download = `Distribuidora Gustavo - Resumen`;
         a.href = window.URL.createObjectURL(blob);
@@ -25,9 +25,11 @@ export class CustomerComponent implements OnInit {
         a.click();
 
       }
-
-
     )
+  }
+
+  verMarcado(): void {
+
   }
 }
 

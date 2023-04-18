@@ -1,3 +1,5 @@
+import { ShoppingCartService } from './../../../../services/shopping-cart.service';
+import { DrinkContainer } from './../../../admin/views/drink-container/interface/drink-container.interface';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
@@ -21,7 +23,8 @@ export class DetailedGallery implements OnInit {
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private shoppingCartService: ShoppingCartService
   ) {}
 
   ngOnInit(): void {
@@ -43,5 +46,10 @@ export class DetailedGallery implements OnInit {
       this.idCategorySelected = idBrandCategory;
     }
     );
+  }
+
+  agregar(taste: DrinkContainer): void {
+    this.shoppingCartService.addItem(String(taste.containerName));
+    this.shoppingCartService.getAddedItems();
   }
 }
