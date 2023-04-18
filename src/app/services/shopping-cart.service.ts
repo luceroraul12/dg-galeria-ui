@@ -17,7 +17,8 @@ export class ShoppingCartService {
     this.addedItems = this.addedItems.filter(i => i != item);
   }
 
-  getAddedItems(): void {
+  getAddedItems(): string[] {
     console.log(this.addedItems);
+    return this.addedItems;
   }
 }

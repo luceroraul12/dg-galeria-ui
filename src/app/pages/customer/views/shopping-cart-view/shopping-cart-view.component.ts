@@ -1,3 +1,4 @@
+import { ShoppingCartService } from './../../../../services/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -8,11 +9,15 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ShoppingCartViewComponent implements OnInit {
 
+  public data!: string[];
+
   constructor(
-    private dialogRef: MatDialogRef<ShoppingCartViewComponent>
+    private dialogRef: MatDialogRef<ShoppingCartViewComponent>,
+    private shoppingCartService: ShoppingCartService 
   ) { }
 
   ngOnInit(): void {
+    this.data = this.shoppingCartService.getAddedItems();
   }
 
 }
