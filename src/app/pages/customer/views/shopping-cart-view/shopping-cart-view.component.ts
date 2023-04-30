@@ -37,41 +37,19 @@ export class ShoppingCartViewComponent implements OnInit {
     this.data = this.shoppingCartService.getAddedItems();
   }
 
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataToDisplay = [...ELEMENT_DATA];
-
-  dataSource = new ExampleDataSource(ELEMENT_DATA);
-
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
-    this.dataSource.setData(this.dataToDisplay);
+  plusAmount(item: CartItem): void {
+    this.shoppingCartService.plusAmount(item);
   }
 
-  removeData() {
-    this.dataToDisplay = this.dataToDisplay.slice(0, -1);
-    this.dataSource.setData(this.dataToDisplay);
+  minusAmount(item: CartItem): void {
+    this.shoppingCartService.minusAmount(item);
   }
 
-}
-
-
-class ExampleDataSource {
-  private _dataStream = new ReplaySubject<PeriodicElement[]>();
-
-  constructor(initialData: PeriodicElement[]) {
-    // super();
-    this.setData(initialData);
+  generateMessage(): void {
+    this.shoppingCartService.generateMessage();
   }
 
-  connect(): Observable<PeriodicElement[]> {
-    return this._dataStream;
-  }
-
-  disconnect() {}
-
-  setData(data: PeriodicElement[]) {
-    this._dataStream.next(data);
+  removeItem(item: CartItem): void {
+    this.data = this.shoppingCartService.removeItem(item);
   }
 }

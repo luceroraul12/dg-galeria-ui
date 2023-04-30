@@ -28,13 +28,13 @@
           </td>
           <td>
             <div class="input-group limitada">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
-              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
+              <button class="btn btn-warning" type="button" (click)="minusAmount(item)">-</button>
+              <input type="text" class="form-control text-center" min="1" [value]="item.amount">
+              <button class="btn btn-success" type="button" (click)="plusAmount(item)">+</button>
             </div>
           </td>
           <td>
-            <button mat-mini-fab color="warn" aria-label="Quitar de la lista">
+            <button mat-mini-fab color="warn" (click)="removeItem(item)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>
@@ -44,6 +44,6 @@
   </div>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button color="primary">Enviar</button>
+  <button mat-button color="primary" (click)="generateMessage()">Enviar</button>
   <button mat-button color="green">Contactarme por Whatsapp</button>
 </mat-dialog-actions>
