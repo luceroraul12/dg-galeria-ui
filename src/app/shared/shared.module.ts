@@ -67,7 +67,7 @@ import { BrandsByCategoryPipe } from './pipes/brands-by-category.pipe';
     TasteResultApplyStockStatePipe,
     TasteResultOrderByNameAndStockStatePipe,
     BrandsByCategoryPipe,
-
+    ButtonComponent
   ],
   providers: [
     CustomerBrandPipe,

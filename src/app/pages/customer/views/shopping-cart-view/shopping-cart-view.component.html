@@ -1,1 +1,49 @@
-<pre>{{data}}</pre>
+<h5>Productos Marcados</h5>
+<mat-dialog-content>
+  <div class="table-responsive">
+    <table class="table" *ngIf="data.length > 0">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Sabor</th>
+          <th scope="col">Calibre</th>
+          <th scope="col">Paquete</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{item.tasteResul.brandName}}</td>
+          <td>{{item.tasteResul.tasteName}}</td>
+          <td>{{item.containerSelected.containerName! | drinkContainerName}}</td>
+          <td>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option *ngFor="let package of item.tasteResul.packageAvailable">{{package.description}}-{{package.amount}}U</option>
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="input-group limitada">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
+              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
+            </div>
+          </td>
+          <td>
+            <button mat-mini-fab color="warn" aria-label="Quitar de la lista">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="primary">Enviar</button>
+  <button mat-button color="green">Contactarme por Whatsapp</button>
+</mat-dialog-actions>

@@ -19,7 +19,7 @@
                 class="p-1 alert alert-success" [ngClass]="item.isStocked ? 'alert-success' : 'alert-danger'">
                   {{ item | drinkContainerStockState}}
                 </div>
-                <button class="btn btn-warning" (click)="agregar(item)">Agregar</button>
+                <button class="btn btn-warning" (click)="agregar(sabor, item)">Agregar</button>
               </div>
             </div>
           </div>

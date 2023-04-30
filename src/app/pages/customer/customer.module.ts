@@ -1,3 +1,4 @@
+import { AngularModule } from './../../angular/angular.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -24,6 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     SharedModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    AngularModule,
   ],
   exports: [CustomerComponent],
 })

@@ -11,8 +11,17 @@ export interface CustomerResult {
   tasteResults: TasteResult[];
 }
 
+export interface Package {
+  id: number;
+  description: string;
+  amount: number;
+}
+
 export interface TasteResult {
+  id: number;
   tasteName: string;
+  brandName: string;
   stockState: boolean;
   drinkContainersAvailable: DrinkContainer[];
+  packageAvailable: Package[];
 }

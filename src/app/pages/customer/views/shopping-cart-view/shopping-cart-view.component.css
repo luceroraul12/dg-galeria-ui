@@ -1,0 +1,15 @@
+th, td {
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    overflow-y: hidden
+}
+td,th{
+    vertical-align: middle;
+}
+
+.limitada{
+    width: 120px;
+}

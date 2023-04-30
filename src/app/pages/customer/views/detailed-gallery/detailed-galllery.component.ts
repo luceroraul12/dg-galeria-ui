@@ -1,5 +1,5 @@
+import { DrinkContainer } from 'src/app/pages/admin/views/drink-container/interface/drink-container.interface';
 import { ShoppingCartService } from './../../../../services/shopping-cart.service';
-import { DrinkContainer } from './../../../admin/views/drink-container/interface/drink-container.interface';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
@@ -48,8 +48,8 @@ export class DetailedGallery implements OnInit {
     );
   }
 
-  agregar(taste: DrinkContainer): void {
-    this.shoppingCartService.addItem(String(taste.containerName));
+  agregar(tasteResult: TasteResult, drinkContainer: DrinkContainer): void {
+    this.shoppingCartService.addItem(tasteResult, drinkContainer);
     this.shoppingCartService.getAddedItems();
   }
 }
