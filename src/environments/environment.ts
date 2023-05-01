@@ -5,13 +5,13 @@
 export const environment = {
   // https://dg-galeria-api.herokuapp.com/
   production: false,
-  apiCliente: 'http://localhost:8080/customer',
-  apiFormato: 'http://localhost:8080/drink-containers',
-  apiMarca: 'http://localhost:8080/brands',
+  apiCliente: 'http://192.168.0.16:8080/customer',
+  apiFormato: 'http://192.168.0.16:8080/drink-containers',
+  apiMarca: 'http://192.168.0.16:8080/brands',
 
-  apiSabor: 'http://localhost:8080/tastees',
-  apiSaborAsociado: 'http://localhost:8080/branded-taste',
-  apiSaborFormateado: 'http://localhost:8080/drink-containered-taste',
+  apiSabor: 'http://192.168.0.16:8080/tastees',
+  apiSaborAsociado: 'http://192.168.0.16:8080/branded-taste',
+  apiSaborFormateado: 'http://192.168.0.16:8080/drink-containered-taste',
 };
 
 /*
@@ -22,3 +22,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+// 192.168.0.16
