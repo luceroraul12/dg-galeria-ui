@@ -34,7 +34,7 @@ export class ShoppingCartViewComponent implements OnInit {
   }
 
   generateMessage(): void {
-    this.shoppingCartService.generateMessage();
+    this.shoppingCartService.sendCartMessage();
   }
 
   removeItem(item: CartItem): void {
@@ -42,7 +42,7 @@ export class ShoppingCartViewComponent implements OnInit {
   }
 
   contactFromWhatsapp(): void {
-    this.shoppingCartService.contactFromWhatsapp();
+    this.shoppingCartService.sendSimpleMessage();
   }
 
   

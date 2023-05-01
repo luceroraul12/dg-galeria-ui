@@ -23,11 +23,16 @@ export interface CustomerData {
 export class ShoppingCartService {
   private customerKey: string = 'customerData';
   private cartItemsKey: string = 'cartItems';
-
   private items: CartItem[];
   private customerData!: CustomerData;
 
-  public deleteItem$: Subject<CartItem> = new Subject();
+
+  public get hasData(): boolean{
+    return this.items.length > 0;
+  }
+  
+  // Esta hecho para que los componentes que dependan del carrito puedan volver a pedir el estado de la informacion
+  public update$: Subject<boolean> = new Subject();
 
   constructor(
     private localstorageService: LocalstorageService
@@ -44,12 +49,15 @@ export class ShoppingCartService {
       tasteResul: {...tasteResult},
       amount: 1
     });
+    this.saveCart();
+    this.update$.next(true);
   }
 
   removeItem(item: CartItem): CartItem[] {
     this.items = this.items.filter(i => i != item);
     this.saveCart();
     return [...this.items];
+    this.update$.next(true);
   }
 
   getAddedItems(): CartItem[] {
@@ -69,7 +77,7 @@ export class ShoppingCartService {
     item.amount--;
   }
 
-  generateMessage(): void {
+  sendCartMessage(): void {
     //ordeno el arreglo en funcion del nombre de las marcas
     this.items.sort((a,b) => b.tasteResul.brandName.localeCompare(a.tasteResul.brandName));
     let pipe = new DrinkContainerName();
@@ -87,7 +95,7 @@ export class ShoppingCartService {
     this.saveCart();
   }
 
-  contactFromWhatsapp(): void {
+  sendSimpleMessage(): void {
     let phone: string = '542657678661';
     let url: string = `https://wa.me/${phone}?text=${encodeURIComponent("Hola queria consultarte algo sobre las bebidas")}`;
     window.open(url);
@@ -98,6 +106,7 @@ export class ShoppingCartService {
   // almacena los datos de los productos marcados
   private saveCart(): void {
     this.localstorageService.setData(this.cartItemsKey, this.items);
+    this.update$.next(true);
   }
 
   // almacena los datos del cliente

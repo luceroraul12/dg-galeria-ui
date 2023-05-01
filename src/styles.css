@@ -18,14 +18,11 @@
 }
 
 body{
-    background-image: url("assets/img/wpPrueba.png") ;
+    background-image: url("assets/img/test.jpeg") ;
     background-repeat: repeat;
     background-position: center;
     background-size: auto;
     background-attachment: fixed;
-    
-
-    
 }
 
 ::-webkit-scrollbar {

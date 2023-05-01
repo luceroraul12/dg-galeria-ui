@@ -1,12 +1,37 @@
-<nav class="navbar  bg-light">
-  <div class="container">
-    <a class="navbar-brand" routerLink="">Distribuidora Gustavo</a>
-    <div class="navbar-brand">
-      <img src="../../../favicon.ico" width="40" height="40">
-
-    </div>
-
+<mat-toolbar>
+  <span>Distribuidora Gustavo</span>
+  <span class="example-spacer"></span>
+  <div class="row">
+    <button type="button" class="btn btn-success col mx-1">
+      <i class="bi bi-whatsapp"></i>
+    </button>
+    <button type="button"  class="btn btn-secondary col mx-1">
+      <i class="bi bi-share"></i>
+    </button>
+    <button type="button"  class="btn btn-warning col mx-1" *ngIf="hasCartItems">
+      <i class="bi bi-cart-check"></i>
+    </button>
   </div>
+</mat-toolbar>
 
-</nav>
 <router-outlet></router-outlet>
+
+<div class="fixedbutton">
+  <div class="col">
+    <div class="row my-2">
+      <button type="button"  class="btn btn-success">
+        <i class="bi bi-whatsapp"></i>
+      </button>
+    </div>
+    <div class="row my-2">
+      <button type="button"  class="btn btn-secondary">
+        <i class="bi bi-share"></i>
+      </button>
+    </div>
+    <div class="row my-2" *ngIf="hasCartItems">
+      <button type="button"  class="btn btn-warning">
+        <i class="bi bi-cart-check"></i>
+      </button>
+    </div>
+  </div>
+</div>

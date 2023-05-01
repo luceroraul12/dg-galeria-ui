@@ -1,3 +1,4 @@
+import { ShoppingCartService } from './../../services/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraComponent implements OnInit {
 
-  constructor() { }
+  public hasCartItems!: boolean;
+
+  constructor(
+    private shoppingCartService: ShoppingCartService
+  ) { }
 
   ngOnInit(): void {
+    this.hasCartItems = this.shoppingCartService.hasData;
+    this.shoppingCartService.update$.subscribe(r => this.hasCartItems = this.shoppingCartService.hasData);
   }
-
 }

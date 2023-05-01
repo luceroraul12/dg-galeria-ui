@@ -24,6 +24,7 @@ import { DrinkContainerStockStatePipe } from './pipes/drink-container-stock-stat
 import { TasteResultApplyStockStatePipe } from './pipes/taste-result-apply-stock-state.pipe';
 import { TasteResultOrderByNameAndStockStatePipe } from './pipes/taste-result-order-by-name-and-stock-state.pipe';
 import { BrandsByCategoryPipe } from './pipes/brands-by-category.pipe';
+import { AngularModule } from '../angular/angular.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,11 @@ import { BrandsByCategoryPipe } from './pipes/brands-by-category.pipe';
     TasteResultOrderByNameAndStockStatePipe,
     BrandsByCategoryPipe,
   ],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [
+    CommonModule, 
+    AppRoutingModule,
+    AngularModule
+  ],
   exports: [
     BotoneraRetornoComponent,
     BarraComponent,
