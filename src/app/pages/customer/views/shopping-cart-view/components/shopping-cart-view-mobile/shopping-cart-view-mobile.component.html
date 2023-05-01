@@ -1,0 +1,48 @@
+<mat-tab-group mat-align-tabs="center" headerPosition="below">
+    <mat-tab label="{{i+1}}" *ngFor="let item of cartItems; let i = index">
+        <div class="d-grid gap-2">
+            <button class="btn btn-danger" type="button" (click)="removeItem(item)">Eliminar Producto</button>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class=" me-auto">
+                <div class="fw-bold">Marca</div>
+                {{item.tasteResul.brandName}}
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="me-auto">
+                <div class="fw-bold">Sabor</div>
+                {{item.tasteResul.tasteName}}
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="me-auto">
+                <div class="fw-bold">Calibre</div>
+                {{item.containerSelected.containerName! | drinkContainerName}}
+              </div>
+            </li>
+            <li class="list-group-item">
+                <div class="me-auto">
+                  <div class="fw-bold">Paquete</div>
+                  <div class="form-group">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option *ngFor="let package of item.tasteResul.packageAvailable">
+                        {{package.description}}-{{package.amount}}U</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="me-auto">
+                  <div class="fw-bold">Calibre</div>
+                  <div class="input-group">
+                    <button class="btn btn-warning" type="button" (click)="minusAmount(item)">-</button>
+                    <input type="text" class="form-control text-center" min="1" [value]="item.amount">
+                    <button class="btn btn-success" type="button" (click)="plusAmount(item)">+</button>
+                </div>
+                </div>
+              </li>
+          </ul>
+    </mat-tab>
+</mat-tab-group>

@@ -1,6 +1,6 @@
-<h1 mat-dialog-title>Productos Marcados</h1>
+<!-- <h1 mat-dialog-title>Productos Marcados</h1> -->
 <mat-dialog-content>
-  <div class="table-responsive">
+  <div class="table-responsive" *ngIf="!isMobile else forMobile">
     <table class="table" *ngIf="data.length > 0">
       <thead>
         <tr>
@@ -43,8 +43,11 @@
       </tbody>
     </table>
   </div>
-  <h6>Datos Personales</h6>
-  <div class="row">
+  <ng-template #forMobile>
+    <app-shopping-cart-view-mobile [cartItems]="data"></app-shopping-cart-view-mobile>
+  </ng-template>
+  <h6 *ngIf="false">Datos Personales</h6>
+  <div class="row" *ngIf="false">
     <div class="col">
       <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>

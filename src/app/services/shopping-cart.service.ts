@@ -28,7 +28,6 @@ export class ShoppingCartService {
   private cartItemsKey: string = 'cartItems';
   private items: CartItem[];
   private customerData!: CustomerData;
-  private isMobile!: boolean;
 
 
   public get hasData(): boolean {
@@ -37,6 +36,7 @@ export class ShoppingCartService {
 
   // Esta hecho para que los componentes que dependan del carrito puedan volver a pedir el estado de la informacion
   public update$: Subject<boolean> = new Subject();
+  public isMobile!: boolean;
 
   constructor(
     private localstorageService: LocalstorageService,

@@ -13,6 +13,7 @@ export class ShoppingCartViewComponent implements OnInit {
 
   public data!: CartItem[];
   public customerData!: CustomerData;
+  public isMobile!: boolean;
 
   constructor(
     private dialogRef: MatDialogRef<ShoppingCartViewComponent>,
@@ -23,6 +24,8 @@ export class ShoppingCartViewComponent implements OnInit {
   ngOnInit(): void {
     this.customerData = this.shoppingCartService.getCustomerData();
     this.data = this.shoppingCartService.getAddedItems();
+    // this.isMobile = this.shoppingCartService.isMobile;
+    this.isMobile = true;
   }
 
   plusAmount(item: CartItem): void {

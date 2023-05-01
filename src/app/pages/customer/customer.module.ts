@@ -16,10 +16,11 @@ import { GalleryCategoryComponent } from './views/gallery-category/gallery-categ
 import { ShoppingCartViewComponent } from './views/shopping-cart-view/shopping-cart-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { ShoppingCartViewMobileComponent } from './views/shopping-cart-view/components/shopping-cart-view-mobile/shopping-cart-view-mobile.component';
 
 
 @NgModule({
-  declarations: [CustomerComponent, GalleryComponent, DetailedGallery, GalleryCategoryComponent, ShoppingCartViewComponent],
+  declarations: [CustomerComponent, GalleryComponent, DetailedGallery, GalleryCategoryComponent, ShoppingCartViewComponent, ShoppingCartViewMobileComponent],
   imports: [
     CommonModule,
     AppRoutingModule, 

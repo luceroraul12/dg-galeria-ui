@@ -7,6 +7,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {PlatformModule} from '@angular/cdk/platform'; 
+import {MatTabsModule} from '@angular/material/tabs'; 
+import {MatListModule} from '@angular/material/list'; 
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,9 @@ import {PlatformModule} from '@angular/cdk/platform';
     MatTableModule,
     MatInputModule,
     MatToolbarModule,
-    PlatformModule
+    PlatformModule,
+    MatTabsModule,
+    MatListModule
   ]
 })
 export class AngularModule { }
