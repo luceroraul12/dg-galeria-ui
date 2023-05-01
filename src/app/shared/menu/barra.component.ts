@@ -18,4 +18,12 @@ export class BarraComponent implements OnInit {
     this.hasCartItems = this.shoppingCartService.hasData;
     this.shoppingCartService.update$.subscribe(r => this.hasCartItems = this.shoppingCartService.hasData);
   }
+
+  openDialogDetails(): void {
+    this.shoppingCartService.openDialogDetails();
+  }
+
+  sendSimpleMessage(): void {
+    this.shoppingCartService.sendSimpleMessage();
+  }
 }
