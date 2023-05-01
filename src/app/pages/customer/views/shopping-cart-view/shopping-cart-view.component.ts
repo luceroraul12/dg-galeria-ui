@@ -1,23 +1,7 @@
-import { CartItem, ShoppingCartService } from './../../../../services/shopping-cart.service';
+import { LocalstorageService } from './../../../../services/localstorage.service';
+import { CartItem, CustomerData, ShoppingCartService } from './../../../../services/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Observable, ReplaySubject } from 'rxjs';
-
-
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
 
 @Component({
   selector: 'app-shopping-cart-view',
@@ -26,14 +10,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ShoppingCartViewComponent implements OnInit {
 
+
   public data!: CartItem[];
+  public customerData!: CustomerData;
 
   constructor(
     private dialogRef: MatDialogRef<ShoppingCartViewComponent>,
-    private shoppingCartService: ShoppingCartService 
+    private shoppingCartService: ShoppingCartService,
+    private localstorageService: LocalstorageService
   ) { }
 
   ngOnInit(): void {
+    this.customerData = this.shoppingCartService.getCustomerData();
     this.data = this.shoppingCartService.getAddedItems();
   }
 
@@ -52,4 +40,10 @@ export class ShoppingCartViewComponent implements OnInit {
   removeItem(item: CartItem): void {
     this.data = this.shoppingCartService.removeItem(item);
   }
+
+  contactFromWhatsapp(): void {
+    this.shoppingCartService.contactFromWhatsapp();
+  }
+
+  
 }

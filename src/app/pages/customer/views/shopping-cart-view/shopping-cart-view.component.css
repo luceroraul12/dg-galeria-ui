@@ -12,4 +12,5 @@ td,th{
 
 .limitada{
     width: 120px;
+    display: inline-flex;
 }

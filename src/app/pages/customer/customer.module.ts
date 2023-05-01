@@ -15,6 +15,7 @@ import { DrinkContainerName } from 'src/app/shared/pipes/drink-container.pipe';
 import { GalleryCategoryComponent } from './views/gallery-category/gallery-category.component';
 import { ShoppingCartViewComponent } from './views/shopping-cart-view/shopping-cart-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
     BrowserAnimationsModule,
     AngularModule,
+    FormsModule,
   ],
   exports: [CustomerComponent],
 })
