@@ -75,7 +75,7 @@ export class ShoppingCartService {
     let pipe = new DrinkContainerName();
     let {firstName, lastName, phone}= this.customerData;
 
-    let message = `*Nombre:*:${firstName} \n*TEL:* ${lastName}\n *Pedido:*\n`;
+    let message = `*Nombre:*:${firstName},${lastName} \n*TEL:* ${phone}\n *Pedido:*\n`;
     this.items.forEach((item, index) => {
       let {brandName, tasteName, packageAvailable} = item.tasteResul;
       let amount = item.amount;
