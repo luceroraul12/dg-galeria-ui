@@ -9,6 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {PlatformModule} from '@angular/cdk/platform'; 
 import {MatTabsModule} from '@angular/material/tabs'; 
 import {MatListModule} from '@angular/material/list'; 
+import {MatSelectModule} from '@angular/material/select'; 
 
 @NgModule({
   declarations: [],
@@ -24,7 +25,8 @@ import {MatListModule} from '@angular/material/list';
     MatToolbarModule,
     PlatformModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ]
 })
 export class AngularModule { }
