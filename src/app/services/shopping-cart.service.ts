@@ -103,8 +103,8 @@ export class ShoppingCartService {
   }
 
   sendSimpleMessage(): void {
-    let phone: string = '542657678661';
-    let url: string = `https://wa.me/${phone}?text=${encodeURIComponent("Hola queria consultarte algo sobre las bebidas")}`;
+    let phone: string = '542657234330';
+    let url: string = `https://wa.me/${phone}?text=${encodeURIComponent("Hola, encontre el numero de contacto en su pagina. quisiera hacerte unas preguntas sobre las bebidas.")}`;
     window.open(url);
     this.saveCustomer();
   }
