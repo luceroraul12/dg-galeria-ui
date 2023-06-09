@@ -90,14 +90,15 @@ export class ShoppingCartService {
     let pipe = new DrinkContainerName();
     let { firstName, lastName, phone } = this.customerData;
 
-    let message = `*Nombre:*:${firstName},${lastName} \n*TEL:* ${phone}\n *Pedido:*\n`;
+    let message = `Hola, quisiera hacer un *Pedido:*\n`;
     this.items.forEach((item, index) => {
       let { brandName, tasteName, packageAvailable } = item.tasteResul;
       let amount = item.amount;
       let containerSelectedName: string = pipe.transform(item.containerSelected.containerName!);
       message = message.concat(`*${index + 1})Marca:* ${brandName}, *Sabor:* ${tasteName}, *Calibre:* ${containerSelectedName}, *Paquete:* ${packageAvailable[0].amount}U, *Cantidad:* ${amount}\n`);
     });
-    let url: string = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    let phoneDir: string = '542657234330';
+    let url: string = `https://wa.me/${phoneDir}?text=${encodeURIComponent(message)}`;
     window.open(url);
     this.saveCart();
   }
